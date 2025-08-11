@@ -1,0 +1,27 @@
+# Our regular development environment is dual-OS - the same working directory is accessed
+# from both Windows and Linux. This means they need to agree on the line endings! All text
+# is therefore using Linux line endings (LF).
+* text eol=lf
+
+# Binary files often seen in our documentation.
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+
+# We do not expect any of the following to be present in our repo but if someone is crazy
+# enough to commit such file types, we definitely want them to be stored in LFS.
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.lib filter=lfs diff=lfs merge=lfs -text
+*.so filter=lfs diff=lfs merge=lfs -text
+*.doc filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
+*.xls filter=lfs diff=lfs merge=lfs -text
+*.xlsx filter=lfs diff=lfs merge=lfs -text
+*.ppt filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Temporary while checked in, will be auto-generated later on CI.
+src/agents/all* filter=lfs diff=lfs merge=lfs -text

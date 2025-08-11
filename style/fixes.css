@@ -1,0 +1,6 @@
+
+/* If we put h{} elements inside blockquotes, there otherwise a large 
+   gap at the top. */
+blockquote h3 {
+    margin-block-start: 1em;
+}

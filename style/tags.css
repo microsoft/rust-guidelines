@@ -1,0 +1,107 @@
+/*
+Used below images to provide sources.
+<citation><a href="https://...">Blah</a></citation>
+*/
+citation {
+    display: block;
+    text-align: right;
+    font-size: 80%;
+}
+
+
+/*
+Common item header elements done via "grid" layout
+
+Used at the top of guidelines to indicate why they exist, e.g.,
+
+<why>Blah</why>
+<guideline-status>...</guideline-status>
+*/
+why, guideline-status {
+    font-size: 80%;
+    display: grid;
+    grid-template-columns:11em 1fr;
+    column-gap:1em;
+    align-items:start;
+}
+
+why::before {
+    content: "Why this entry exists:";
+    display: inline-block;
+    margin: 0 1em 0em 0;
+    font-weight: bold;
+    width: 11em;
+    vertical-align: top;
+}
+
+guideline-status::before {
+    content: "Status:";
+    display: inline-block;
+    margin: 0 1em 1em 0;
+    font-weight: bold;
+    width: 11em;
+    vertical-align: top;
+}
+
+guideline-status::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+
+/*
+Items inside <guideline-status>...</guideline-status>
+*/
+/* active { color: green; } */
+active::before { content: "Active (v"; }
+active::after { content: ")"; }
+/* draft { color: yellow; } */
+draft::before { content: "Draft"; }
+/* deprecated { color: gray; } */
+deprecated::before { content: "Deprecated"; }
+experimental::before { content: "Experimental (see text below)"; }
+experimental { color: yellow; }
+
+
+/*
+Used inside `>` blocks to mark them as tips.
+<tip></tip> Something ...
+*/
+tip { display: inline-block; }
+tip::before { content: "💡"; }
+
+
+/*
+Used inside `>` blocks to mark them as alerts.
+<alert></alert> Something ...
+*/
+alert { display: inline-block; }
+alert::before { content: "⚠️"; }
+
+
+
+/*
+Used to mark missing items
+<todo>blah</todo>
+*/
+todo {
+    display: inline-block;
+    color: black;
+    background-color: red;
+}
+
+todo::before {
+    content: "TODO: ";
+}
+
+
+
+
+/*
+Contains <sup>1</sup> footnotes below tables and such
+<footnotes> <sup>1</sup> ... </footnotes>
+*/
+footnotes {
+    font-size: 80%;
+}

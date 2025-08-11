@@ -1,0 +1,6 @@
+book
+output
+.idea
+*.local.json
+.*/**/*.md
+

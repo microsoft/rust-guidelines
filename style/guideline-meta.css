@@ -1,0 +1,22 @@
+/*
+Used in the header of a guideline to provide meta information
+*/
+status {
+    display: block;
+    font-size: 80%;
+    color: gray;
+}
+
+status severity {
+    display: inline;
+}
+
+status severity::after {
+    content: ",";
+}
+
+
+status version {
+    display: inline;
+}
+
