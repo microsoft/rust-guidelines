@@ -11,7 +11,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 SRC_DIR="$PROJECT_ROOT/src"
 GUIDELINES_DIR="$SRC_DIR/guidelines"
-OUTPUT_FILE="$SRC_DIR/agents/all.md"
+OUTPUT_FILE="$SRC_DIR/agents/all.txt"
 META_FILE="$SRC_DIR/agents/all.meta"
 
 # Create output directory if it doesn't exist
