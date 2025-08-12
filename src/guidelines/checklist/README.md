@@ -61,62 +61,62 @@
   - [ ] Mark `pub use` Items with `#[doc(inline)]` ([M-DOC-INLINE])
 
 <!-- Universal  -->
-[M-UPSTREAM-GUIDELINES]: /guidelines/universal/#M-UPSTREAM-GUIDELINES
-[M-STATIC-VERIFICATION]: /guidelines/universal/#M-STATIC-VERIFICATION
-[M-LINT-OVERRIDE-EXPECT]: /guidelines/universal/#M-LINT-OVERRIDE-EXPECT
-[M-PUBLIC-DEBUG]: /guidelines/universal/#M-PUBLIC-DEBUG
-[M-PUBLIC-DISPLAY]: /guidelines/universal/#M-PUBLIC-DISPLAY
-[M-SMALLER-CRATES]: /guidelines/universal/#M-SMALLER-CRATES
-[M-CONCISE-NAMES]: /guidelines/universal/#M-CONCISE-NAMES
-[M-REGULAR-FN]: /guidelines/universal/#M-REGULAR-FN
-[M-PANIC-IS-STOP]: /guidelines/universal/#M-PANIC-IS-STOP
-[M-PANIC-ON-BUG]: /guidelines/universal/#M-PANIC-ON-BUG
-[M-DOCUMENTED-MAGIC]: /guidelines/universal/#M-DOCUMENTED-MAGIC
+[M-UPSTREAM-GUIDELINES]: ../universal/#M-UPSTREAM-GUIDELINES
+[M-STATIC-VERIFICATION]: ../universal/#M-STATIC-VERIFICATION
+[M-LINT-OVERRIDE-EXPECT]: ../universal/#M-LINT-OVERRIDE-EXPECT
+[M-PUBLIC-DEBUG]: ../universal/#M-PUBLIC-DEBUG
+[M-PUBLIC-DISPLAY]: ../universal/#M-PUBLIC-DISPLAY
+[M-SMALLER-CRATES]: ../universal/#M-SMALLER-CRATES
+[M-CONCISE-NAMES]: ../universal/#M-CONCISE-NAMES
+[M-REGULAR-FN]: ../universal/#M-REGULAR-FN
+[M-PANIC-IS-STOP]: ../universal/#M-PANIC-IS-STOP
+[M-PANIC-ON-BUG]: ../universal/#M-PANIC-ON-BUG
+[M-DOCUMENTED-MAGIC]: ../universal/#M-DOCUMENTED-MAGIC
 
 <!-- Libs -->
-[M-TYPES-SEND]: /guidelines/libs/interop/#M-TYPES-SEND
-[M-DONT-LEAK-TYPES]: /guidelines/libs/interop/#M-DONT-LEAK-TYPES
-[M-ESCAPE-HATCHES]: /guidelines/libs/interop/#M-ESCAPE-HATCHES
-[M-NEWTYPES-OVER-PRIMITIVES]: /guidelines/libs/resilience/#M-NEWTYPES-OVER-PRIMITIVES
-[M-STRONG-TYPES]: /guidelines/libs/resilience/#M-STRONG-TYPES
-[M-NO-GLOB-REEXPORTS]: /guidelines/libs/resilience/#M-NO-GLOB-REEXPORTS
-[M-ESSENTIAL-FN-INHERENT]: /guidelines/libs/ux/#M-ESSENTIAL-FN-INHERENT
-[M-MOCKABLE-SYSCALLS]: /guidelines/libs/resilience/#M-MOCKABLE-SYSCALLS
-[M-SIMPLE-ABSTRACTIONS]: /guidelines/libs/ux/#M-SIMPLE-ABSTRACTIONS
-[M-AVOID-WRAPPERS]: /guidelines/libs/ux/#M-AVOID-WRAPPERS
-[M-DI-HIERARCHY]: /guidelines/libs/ux/#M-DI-HIERARCHY
-[M-ERRORS-CANONICAL-STRUCTS]: /guidelines/libs/ux/#M-ERRORS-CANONICAL-STRUCTS
-[M-INIT-BUILDER]: /guidelines/libs/ux/#M-INIT-BUILDER
-[M-INIT-CASCADED]: /guidelines/libs/ux/#M-INIT-CASCADED
-[M-SERVICES-CLONE]: /guidelines/libs/ux/#M-SERVICES-CLONE
-[M-IMPL-ASREF]: /guidelines/libs/ux/#M-IMPL-ASREF
-[M-IMPL-RANGEBOUNDS]: /guidelines/libs/ux/#M-IMPL-RANGEBOUNDS
-[M-IMPL-IO]: /guidelines/libs/ux/#M-IMPL-IO
-[M-TEST-UTIL]: /guidelines/libs/resilience/#M-TEST-UTIL
-[M-AVOID-STATICS]: /guidelines/libs/resilience/#M-AVOID-STATICS
-[M-OOBE]: /guidelines/libs/building/#M-OOBE
-[M-SYS-CRATES]: /guidelines/libs/resilience/#M-SYS-CRATES
-[M-FEATURES-ADDITIVE]: /guidelines/libs/building/#M-FEATURES-ADDITIVE
+[M-TYPES-SEND]: ../libs/interop/#M-TYPES-SEND
+[M-DONT-LEAK-TYPES]: ../libs/interop/#M-DONT-LEAK-TYPES
+[M-ESCAPE-HATCHES]: ../libs/interop/#M-ESCAPE-HATCHES
+[M-NEWTYPES-OVER-PRIMITIVES]: ../libs/resilience/#M-NEWTYPES-OVER-PRIMITIVES
+[M-STRONG-TYPES]: ../libs/resilience/#M-STRONG-TYPES
+[M-NO-GLOB-REEXPORTS]: ../libs/resilience/#M-NO-GLOB-REEXPORTS
+[M-ESSENTIAL-FN-INHERENT]: ../libs/ux/#M-ESSENTIAL-FN-INHERENT
+[M-MOCKABLE-SYSCALLS]: ../libs/resilience/#M-MOCKABLE-SYSCALLS
+[M-SIMPLE-ABSTRACTIONS]: ../libs/ux/#M-SIMPLE-ABSTRACTIONS
+[M-AVOID-WRAPPERS]: ../libs/ux/#M-AVOID-WRAPPERS
+[M-DI-HIERARCHY]: ../libs/ux/#M-DI-HIERARCHY
+[M-ERRORS-CANONICAL-STRUCTS]: ../libs/ux/#M-ERRORS-CANONICAL-STRUCTS
+[M-INIT-BUILDER]: ../libs/ux/#M-INIT-BUILDER
+[M-INIT-CASCADED]: ../libs/ux/#M-INIT-CASCADED
+[M-SERVICES-CLONE]: ../libs/ux/#M-SERVICES-CLONE
+[M-IMPL-ASREF]: ../libs/ux/#M-IMPL-ASREF
+[M-IMPL-RANGEBOUNDS]: ../libs/ux/#M-IMPL-RANGEBOUNDS
+[M-IMPL-IO]: ../libs/ux/#M-IMPL-IO
+[M-TEST-UTIL]: ../libs/resilience/#M-TEST-UTIL
+[M-AVOID-STATICS]: ../libs/resilience/#M-AVOID-STATICS
+[M-OOBE]: ../libs/building/#M-OOBE
+[M-SYS-CRATES]: ../libs/resilience/#M-SYS-CRATES
+[M-FEATURES-ADDITIVE]: ../libs/building/#M-FEATURES-ADDITIVE
 
 <!-- Apps -->
-[M-APP-ERROR]: /guidelines/apps/#M-APP-ERROR
-[M-MIMALLOC-APP]: /guidelines/apps/#M-MIMALLOC-APP
+[M-APP-ERROR]: ../apps/#M-APP-ERROR
+[M-MIMALLOC-APP]: ../apps/#M-MIMALLOC-APP
 
 <!-- FFI -->
-[M-ISOLATE-DLL-STATE]: /guidelines/ffi/#M-ISOLATE-DLL-STATE
+[M-ISOLATE-DLL-STATE]: ../ffi/#M-ISOLATE-DLL-STATE
 
 <!-- Safety -->
-[M-UNSAFE]: /guidelines/safety/#M-UNSAFE
-[M-UNSAFE-IMPLIES-UB]: /guidelines/safety/#M-UNSAFE-IMPLIES-UB
-[M-UNSOUND]: /guidelines/safety/#M-UNSOUND
+[M-UNSAFE]: ../safety/#M-UNSAFE
+[M-UNSAFE-IMPLIES-UB]: ../safety/#M-UNSAFE-IMPLIES-UB
+[M-UNSOUND]: ../safety/#M-UNSOUND
 
 <!-- Performance -->
-[M-HOTPATH]: /guidelines/performance/#M-HOTPATH
-[M-THROUGHPUT]: /guidelines/performance/#M-THROUGHPUT
-[M-YIELD-POINTS]: /guidelines/performance/#M-YIELD-POINTS
+[M-HOTPATH]: ../performance/#M-HOTPATH
+[M-THROUGHPUT]: ../performance/#M-THROUGHPUT
+[M-YIELD-POINTS]: ../performance/#M-YIELD-POINTS
 
 <!-- Docs -->
-[M-FIRST-DOC-SENTENCE]: /guidelines/docs/#M-FIRST-DOC-SENTENCE
-[M-MODULE-DOCS]: /guidelines/docs/#M-MODULE-DOCS
-[M-CANONICAL-DOCS]: /guidelines/docs/#M-CANONICAL-DOCS
-[M-DOC-INLINE]: /guidelines/docs/#M-DOC-INLINE
+[M-FIRST-DOC-SENTENCE]: ../docs/#M-FIRST-DOC-SENTENCE
+[M-MODULE-DOCS]: ../docs/#M-MODULE-DOCS
+[M-CANONICAL-DOCS]: ../docs/#M-CANONICAL-DOCS
+[M-DOC-INLINE]: ../docs/#M-DOC-INLINE
