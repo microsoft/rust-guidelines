@@ -3,7 +3,7 @@
 ## Types are Send (M-TYPES-SEND) { #M-TYPES-SEND }
 
 <why>To enable the use of types in Tokio and behind runtime abstractions</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 Public types should be `Send` for compatibility reasons:
 
@@ -33,8 +33,8 @@ const fn assert_send<T: Send>() {}
 const _: () = assert_send::<Foo>();
 ```
 
-When returning futures implicitly through `async` method calls, you should make sure these are `Send` too. You do not have to test every single method,
-but you should at least validate your main entry points.
+When returning futures implicitly through `async` method calls, you should make sure these are `Send` too.
+You do not have to test every single method, but you should at least validate your main entry points.
 
 ```rust,edition2021
 async fn foo() { }

@@ -15,9 +15,9 @@ Common item header elements done via "grid" layout
 Used at the top of guidelines to indicate why they exist, e.g.,
 
 <why>Blah</why>
-<guideline-status>...</guideline-status>
+<version>...</version>
 */
-why, guideline-status {
+why, version {
     font-size: 80%;
     display: grid;
     grid-template-columns:11em 1fr;
@@ -34,8 +34,8 @@ why::before {
     vertical-align: top;
 }
 
-guideline-status::before {
-    content: "Status:";
+version::before {
+    content: "Version:";
     display: inline-block;
     margin: 0 1em 1em 0;
     font-weight: bold;
@@ -43,7 +43,7 @@ guideline-status::before {
     vertical-align: top;
 }
 
-guideline-status::after {
+version::after {
     content:"";
     display: table;
     clear: both;
@@ -51,7 +51,7 @@ guideline-status::after {
 
 
 /*
-Items inside <guideline-status>...</guideline-status>
+Items inside <version>...</version>
 */
 /* active { color: green; } */
 active::before { content: "Active (v"; }

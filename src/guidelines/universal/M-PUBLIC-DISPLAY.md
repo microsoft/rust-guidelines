@@ -3,7 +3,7 @@
 ## Public Types Meant to be Read are Display (M-PUBLIC-DISPLAY) { #M-PUBLIC-DISPLAY }
 
 <why>To improve usability.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 If your type is expected to be read by upstream consumers, be it developers or end users, it should implement `Display`. This in particular includes:
 

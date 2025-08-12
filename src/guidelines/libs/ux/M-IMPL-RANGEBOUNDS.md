@@ -3,7 +3,7 @@
 ## Accept `impl RangeBounds<>` Where Feasible (M-IMPL-RANGEBOUNDS) { #M-IMPL-RANGEBOUNDS }
 
 <why>To give users flexibility and clarity when specifying ranges.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 Functions that accept a range of numbers must use a `Range` type or trait over hand-rolled parameters:
 

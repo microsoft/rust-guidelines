@@ -35,14 +35,9 @@ issues and we should update it, or it does not apply (and we might update it any
 
 ## Guideline Maturity
 
-Since the guidelines are under active development, each is marked to indicate its maturity:
-
-- <active>X.Y</active> guidelines are meant to be _taken seriously_, and teams should treat them as enabled lints. Active guidelines come with a semantic
-version `X.Y`, where `Y` will be incremented if the guideline changed in a significant way, and `X` if the guideline would be outright conflicting with its
-previous version. Minor changes and clarifications are not tracked.
-- <draft></draft> guidelines have been newly added. You should attempt to apply them, but not at a significant refactoring cost yet. If you run into issues
-please let us know.
-- <deprecated></deprecated> guidelines are not active anymore and preserved for archeological reasons.
+We expect our guidelines to evolve over time, taking into account lessons learned, and following changes to the
+language. Each guideline therefore comes with a version number, analogous to Rust's semver usage in
+spirit.
 
 ## Submitting New Guidelines
 

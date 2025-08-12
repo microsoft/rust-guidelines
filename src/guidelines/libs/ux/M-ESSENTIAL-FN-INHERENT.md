@@ -3,7 +3,7 @@
 ## Essential Functionality Should be Inherent (M-ESSENTIAL-FN-INHERENT) { #M-ESSENTIAL-FN-INHERENT }
 
 <why>To make essential functionality easily discoverable.</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 Types should implement core functionality inherently. Trait implementations should forward to inherent functions, and not replace them. Instead of this
 

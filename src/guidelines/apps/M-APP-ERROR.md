@@ -3,7 +3,7 @@
 ## Applications may use Anyhow or Derivatives (M-APP-ERROR) { #M-APP-ERROR }
 
 <why>To simplify application-level error handling.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.1</version>
 
 > Note, this guideline is primarily a relaxation and clarification of [M-ERRORS-CANONICAL-STRUCTS].
 

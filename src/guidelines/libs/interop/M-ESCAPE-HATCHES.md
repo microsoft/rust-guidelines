@@ -3,7 +3,7 @@
 ## Native Escape Hatches (M-ESCAPE-HATCHES) { #M-ESCAPE-HATCHES }
 
 <why>To allow users to work around unsupported use cases until alternatives are available.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.1</version>
 
 Types wrapping native handles should provide `unsafe` escape hatches. In interop scenarios your users might have gotten a native handle from somewhere
 else, or they might have to pass your wrapped handle over FFI. To enable these use cases you should provide `unsafe` conversion methods.

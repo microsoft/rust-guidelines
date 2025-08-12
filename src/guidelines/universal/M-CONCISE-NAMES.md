@@ -3,7 +3,7 @@
 ## Names are Free of Weasel Words (M-CONCISE-NAMES) { #M-CONCISE-NAMES }
 
 <why>To improve readability.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 Symbol names, especially types and traits names, should be free of weasel words that do not meaningfully
 add information. Common offenders include `Service`, `Manager`, and `Factory`. For example:
@@ -21,7 +21,7 @@ way they are needed, their disposal is governed by `Drop`, and only `Drop`.
 Regarding factories, at least the term should be avoided. While the concept `FooFactory` has its use, its canonical
 Rust name is `Builder` (compare [M-INIT-BUILDER](/guidelines/libs/ux/#M-INIT-BUILDER)). A builder that can produce items repeatedly is still a builder.
 
-In addition, accepting factories (builders) in parameters is an unidiomatic import of OO concepts into Rust. If the
-repeatable instantiation of values is required, functions should ask for an `impl Fn() -> Foo` over a `FooBuilder` or
+In addition, accepting factories (builders) as parameters is an unidiomatic import of OO concepts into Rust. If
+repeatable instantiation is required, functions should ask for an `impl Fn() -> Foo` over a `FooBuilder` or
 similar. In contrast, standalone builders have their use, but primarily to reduce parametric permutation complexity
 around optional values (again, [M-INIT-BUILDER](/guidelines/libs/ux/#M-INIT-BUILDER)).

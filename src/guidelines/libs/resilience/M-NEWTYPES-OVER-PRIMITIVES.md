@@ -3,7 +3,7 @@
 ## Use Newtypes if Primitives have Units (M-NEWTYPES-OVER-PRIMITIVES) { #M-NEWTYPES-OVER-PRIMITIVES }
 
 <why>To prevent accidental API misuse.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 Wherever a primitive type (e.g., a number or bool), has a unit and could be ambiguous, it should become a newtype.
 

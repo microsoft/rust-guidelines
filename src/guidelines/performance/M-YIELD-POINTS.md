@@ -3,7 +3,7 @@
 ## Long-Running Tasks Should Have Yield Points. (M-YIELD-POINTS) { #M-YIELD-POINTS }
 
 <why>To ensure you don't starve other tasks of CPU time.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.2</version>
 
 If you perform long running computations, they should contain `yield().await` points.
 

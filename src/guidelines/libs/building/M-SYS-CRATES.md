@@ -3,7 +3,7 @@
 ## Native `-sys` Crates Compile Without Dependencies (M-SYS-CRATES) { #M-SYS-CRATES }
 
 <why>To have libraries that 'just work' on all platforms.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.2</version>
 
 If you author a pair of `foo` and `foo-sys` crates wrapping a native `foo.lib`, you are likely to run into the issues described
 in [M-OOBE].

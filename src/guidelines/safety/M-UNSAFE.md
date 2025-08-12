@@ -3,7 +3,7 @@
 ## Unsafe Needs Reason, Should be Avoided (M-UNSAFE) { #M-UNSAFE }
 
 <why>To prevent undefined behavior, attack surface, and similar 'happy little accidents'.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.2</version>
 
 You must have a valid reason to use `unsafe`. The only valid reasons are
 

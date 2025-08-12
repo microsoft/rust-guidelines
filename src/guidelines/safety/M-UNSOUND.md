@@ -3,7 +3,7 @@
 ## All Code Must be Sound (M-UNSOUND) { #M-UNSOUND }
 
 <why>To prevent unexpected runtime behavior, leading to potential bugs and incompatibilities.</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 Unsound code is seemingly _safe_ code that may produce undefined behavior when called from other safe code, or on its own accord.
 

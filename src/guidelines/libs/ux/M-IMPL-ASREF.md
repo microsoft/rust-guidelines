@@ -3,7 +3,7 @@
 ## Accept `impl AsRef<>` Where Feasible (M-IMPL-ASREF) { #M-IMPL-ASREF }
 
 <why>To give users flexibility calling in with their own types.</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 In **function** signatures, accept `impl AsRef<T>` for types that have a
 [clear reference hierarchy](https://doc.rust-lang.org/stable/std/convert/trait.AsRef.html#implementors), where you
@@ -31,10 +31,10 @@ fn new_instance(x: impl AsRef<str>) -> HoldsString {}
 fn send_to_other_thread(x: impl AsRef<[u8]>) {}
 ```
 
-In contrast, '**type** signatures' should generally not be infected by these bounds:
+In contrast, **types** should generally not be infected by these bounds:
 
 ```rust,ignore
-// Generally not ok. There might be exceptions for high performance
+// Generally not ok. There might be exceptions for performance
 // reasons, but those should not be user visible.
 struct User<T: AsRef<str>> {
     name: T

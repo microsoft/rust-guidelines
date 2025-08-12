@@ -3,7 +3,7 @@
 ## Don't Leak External Types (M-DONT-LEAK-TYPES) { #M-DONT-LEAK-TYPES }
 
 <why>To prevent accidental breakage and long-term maintenance cost.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.1</version>
 
 Where possible, you should prefer `std`<sup>1</sup> types in public APIs over types coming from external crates. Exceptions should be carefully considered.
 

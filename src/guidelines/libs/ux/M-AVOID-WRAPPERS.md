@@ -3,7 +3,7 @@
 ## Avoid Smart Pointers and Wrappers in APIs (M-AVOID-WRAPPERS) { #M-AVOID-WRAPPERS }
 
 <why>To reduce cognitive load and improve API ergonomics.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 As a specialization of [M-ABSTRACTIONS-DONT-NEST], generic wrappers and smart pointers like
 `Rc<T>`, `Arc<T>`, `Box<T>`, or `RefCell<T>` should be avoided in public APIs.

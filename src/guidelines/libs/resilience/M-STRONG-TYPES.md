@@ -3,7 +3,7 @@
 ## Use the Proper Type Family (M-STRONG-TYPES) { #M-STRONG-TYPES }
 
 <why>To have and maintain the right data and safety variants, at the right time.</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 Use the appropriate `std` type for your task. In general you should use the strongest type available, as early as possible in your API flow. Common offenders are
 

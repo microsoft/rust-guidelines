@@ -3,7 +3,7 @@
 ## Documentation Has Canonical Sections (M-CANONICAL-DOCS) { #M-CANONICAL-DOCS }
 
 <why>To follow established and expected Rust best practices.</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 Public library items must contain the canonical doc sections. The summary sentence must always be present. Extended documentation and examples
 are strongly encouraged. The other sections must be present when applicable.

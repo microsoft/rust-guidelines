@@ -3,7 +3,7 @@
 ## Detected Programming Bugs are Panics, Not Errors (M-PANIC-ON-BUG) { #M-PANIC-ON-BUG }
 
 <why>To avoid impossible error handling code and ensure runtime consistency.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 As an extension of [M-PANIC-IS-STOP](M-PANIC-IS-STOP) above, when an unrecoverable programming error has been
 detected, libraries and applications must panic, i.e., request program termination.

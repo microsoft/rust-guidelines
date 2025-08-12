@@ -3,7 +3,7 @@
 ## Public Types are Debug (M-PUBLIC-DEBUG) { #M-PUBLIC-DEBUG }
 
 <why>To simplify debugging and prevent leaking sensitive data.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 All public types exposed by a crate should implement `Debug`. Most types can do so via `#[derive(Debug)]`:
 
@@ -13,7 +13,7 @@ struct Endpoint(String);
 ```
 
 Types designed to hold sensitive data should also implement `Debug`, but do so via a custom implementation.
-This implementation must employ unit tests to ensure the sensitive data isn't actually leaked, and will not be in the future.
+This implementation must employ unit tests to ensure sensitive data isn't actually leaked, and will not be in the future.
 
 ```rust
 use std::fmt::{Debug, Formatter};

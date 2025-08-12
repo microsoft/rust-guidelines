@@ -3,7 +3,7 @@
 ## First Sentence is One Line; Approx. 15 Words (M-FIRST-DOC-SENTENCE) { #M-FIRST-DOC-SENTENCE }
 
 <why>To make API docs easily skimmable.</why>
-<guideline-status><active>1.0</active></guideline-status>
+<version>1.0</version>
 
 When you document your item, the first sentence becomes the "summary sentence" that is extracted and shown in the module summary:
 

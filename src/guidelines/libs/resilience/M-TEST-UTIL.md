@@ -3,7 +3,7 @@
 ## Test Utilities are Feature Gated (M-TEST-UTIL) { #M-TEST-UTIL }
 
 <why>To prevent production builds from accidentally bypassing safety checks.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.2</version>
 
 Testing functionality must be guarded behind a feature flag. This includes
 

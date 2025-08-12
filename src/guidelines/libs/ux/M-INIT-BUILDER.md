@@ -3,7 +3,7 @@
 ## Complex Type Construction has Builders (M-INIT-BUILDER) { #M-INIT-BUILDER }
 
 <why>To future-proof type construction in complex scenarios.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.3</version>
 
 Types that could support 4 or more arbitrary initialization permutations should provide builders. In other words, types with up to
 2 optional initialization parameters can be constructed via inherent methods:

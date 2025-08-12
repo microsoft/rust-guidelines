@@ -3,7 +3,7 @@
 ## I/O and System Calls Are Mockable (M-MOCKABLE-SYSCALLS) { #M-MOCKABLE-SYSCALLS }
 
 <why>To make otherwise hard-to-evoke edge cases testable.</why>
-<guideline-status><draft/></guideline-status>
+<version>0.2</version>
 
 Any user-facing type doing I/O, or sys calls with side effects, should be mockable to these effects. This includes file and
 network access, clocks, entropy sources and seeds, and similar. More generally, any operation that is

@@ -3,7 +3,7 @@
 ## Complex Type Initialization Hierarchies are Cascaded (M-INIT-CASCADED) { #M-INIT-CASCADED }
 
 <why>To prevent misuse and accidental parameter mix ups.</why>
-<guideline-status><draft/></guideline-status>
+<version>1.0</version>
 
 Types that require 4+ parameters should cascade their initialization via helper types.
 
