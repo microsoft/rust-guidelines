@@ -2,7 +2,7 @@
 
 # About
 
-A collection of pragmatic design guidelines helping service developers to produce idiomatic Rust that scales.
+A collection of pragmatic design guidelines helping application and library developers to produce idiomatic Rust that scales.
 
 ## Meta Design Principles
 
