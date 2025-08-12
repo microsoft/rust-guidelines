@@ -14,10 +14,12 @@ Instead, you should annotate them with `#[doc(inline)]` at the `use` site, for t
 
 ```rust,edition2021,ignore
 # pub(crate) mod foo { pub struct Foo; }
+#[doc(inline)]
 pub use foo::*;
 
 // or
 
+#[doc(inline)]
 pub use foo::Foo;
 ```
 
