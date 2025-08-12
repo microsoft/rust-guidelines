@@ -34,3 +34,9 @@ jobs:
       
     - name: Build
       run: mdbook build
+      
+    - name: Upload book artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: book
+        path: book/

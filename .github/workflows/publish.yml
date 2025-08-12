@@ -1,6 +1,8 @@
 name: Publish
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 on:
   push:
@@ -10,11 +12,25 @@ jobs:
   Common:
     uses: ./.github/workflows/common.yml
   
-  Publish:
+  Deploy:
     needs: Common
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Publish
-      run: echo "Publishing would happen here"
-      
+    - name: Download book artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: book
+        path: ./book
+        
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./book
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
     
