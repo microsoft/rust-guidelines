@@ -21,21 +21,21 @@ jobs:
       uses: DavidAnson/markdownlint-cli2-action@v20
       with:
         globs: '**/*.md'
-
-    - name: MdBook Test
-      run: |
-        mdbook test
-
+        
     - name: Preprocess
       run: |
         chmod +x ./scripts/*.sh
         bash ./scripts/update_agents.sh
         bash ./scripts/update_meta.sh
       
+    - name: MdBook Test
+      run: |
+        mdbook test
+
     - name: Build
       run: mdbook build
       
-    - name: Upload book artifact
+    - name: Store Book Artifact
       uses: actions/upload-artifact@v4
       with:
         name: book

@@ -11,7 +11,7 @@ We offer condensed versions you can include in your agent sessions when authorin
 
 | Name | Size | Description |
 |------|------|-------------|
-| [all](https://microsoft.github.com/rust-guidelines/agents/all.txt) [📋](#) | {{#include all.meta}} | The entire Pragmatic Rust Guidelines in one file. |
+| [all](https://microsoft.github.io/rust-guidelines/agents/all.txt) [📋](#) | {{#include all.meta}} | The entire Pragmatic Rust Guidelines in one file. |
 
 <script>
 // Makes the paste buttons works
