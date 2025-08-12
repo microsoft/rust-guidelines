@@ -1,8 +1,8 @@
-# Practical Rust Guidelines
+# Pragmatic Rust Guidelines
 
 A collection of pragmatic design guidelines helping developers to produce idiomatic Rust that scales.
 
-[TODO THE GUIDELINES ARE ACCESSIBLE HERE ON GITHUB PAGES](TODO)
+👉 [**Pragmatic Rust Guidelines**](https://microsoft.github.io/rust-guidelines)
 
 ## Development
 

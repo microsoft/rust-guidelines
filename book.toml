@@ -1,6 +1,5 @@
 [book]
 title = "Pragmatic Rust Guidelines"
-authors = ["Ralf Biedert"]
 description = "A collection of pragmatic design guidelines helping service developers to produce idiomatic Rust that scales."
 language = "en"
 multilingual = false
@@ -11,10 +10,3 @@ additional-css = [ "style/tags.css", "style/fixes.css", "style/guideline-meta.cs
 
 [output.html.print]
 enable = true
-
-# Enable for PDF, disable otherwise (it'd run all the time even in dev mode)
-#
-# [output.pdf]
-# print-background = true
-# generate-tagged-pdf = true
-# theme = "light"
