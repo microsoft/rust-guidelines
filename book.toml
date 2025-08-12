@@ -1,6 +1,6 @@
 [book]
 title = "Pragmatic Rust Guidelines"
-description = "A collection of pragmatic design guidelines helping service developers to produce idiomatic Rust that scales."
+description = "A collection of pragmatic design guidelines helping application and library developers to produce idiomatic Rust that scales."
 language = "en"
 multilingual = false
 src = "src"
