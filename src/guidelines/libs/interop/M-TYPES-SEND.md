@@ -88,7 +88,7 @@ async fn foo() {
 >
 > <div style="background-color:white;">
 >
-> ![TEXT](M-TYPES-SEND.svg)
+> ![TEXT](M-TYPES-SEND.png)
 >
 > </div>
 >

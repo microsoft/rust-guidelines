@@ -5,7 +5,7 @@
 <why>To ensure you don't starve other tasks of CPU time.</why>
 <version>0.2</version>
 
-If you perform long running computations, they should contain `yield().await` points.
+If you perform long running computations, they should contain `yield_now().await` points.
 
 Your future might be executed in a runtime that cannot work around blocking or long-running tasks. Even then, such tasks are
 considered bad design and cause runtime overhead. If your complex task performs I/O regularly it will simply utilize these await points to preempt itself:
@@ -26,7 +26,7 @@ async fn process_items(zip_file: File) {
     let items = zip_file.read().async;
     for i in items {
         decompress(i);
-        yield().await;
+        yield_now().await;
     }
 }
 ```
