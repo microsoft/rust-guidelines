@@ -23,4 +23,4 @@ impl HttpClient {
 }
 ```
 
-[M-MOCKABLE-SYSCALLS]: /guidelines/libs/resilience/#M-MOCKABLE-SYSCALLS
+[M-MOCKABLE-SYSCALLS]: ./#M-MOCKABLE-SYSCALLS

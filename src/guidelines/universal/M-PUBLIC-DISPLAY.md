@@ -13,4 +13,4 @@ If your type is expected to be read by upstream consumers, be it developers or e
 Implementations of `Display` should follow Rust customs; this includes rendering newlines and escape sequences.
 The handling of sensitive data outlined in [M-PUBLIC-DEBUG] applies analogously.
 
-[M-PUBLIC-DEBUG]: /guidelines/universal/#M-PUBLIC-DEBUG
+[M-PUBLIC-DEBUG]: ./#M-PUBLIC-DEBUG

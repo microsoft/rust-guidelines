@@ -5,7 +5,7 @@
 ## How can I contribute?
 
 Go to [our GitHub page](https://github.com/microsoft/rust-guidelines) and file an issue or PR. New guidelines should be compatible with the
-[meta design principles](/guidelines/#meta-design-principles).
+[meta design principles](../guidelines/#meta-design-principles).
 
 <!-- markdownlint-disable-next-line no-trailing-punctuation -->
 ## I disagree with a guideline ...

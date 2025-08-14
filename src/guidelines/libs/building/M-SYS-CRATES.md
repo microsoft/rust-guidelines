@@ -27,4 +27,4 @@ comparable to crates.io should be used. In addition, the specific hashes of acce
 
 Downloading sources can fail on hermetic build environments, therefore alternative source roots should also be specifiable (e.g., via environment variables).
 
-[M-OOBE]: /guidelines/libs/building/#M-OOBE
+[M-OOBE]: ./#M-OOBE

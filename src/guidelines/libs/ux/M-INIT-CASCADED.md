@@ -32,4 +32,4 @@ impl Account {
 }
 ```
 
-[M-NEWTYPES-OVER-PRIMITIVES]: /guidelines/libs/resilience/#M-NEWTYPES-OVER-PRIMITIVES
+[M-NEWTYPES-OVER-PRIMITIVES]: ../resilience/#M-NEWTYPES-OVER-PRIMITIVES

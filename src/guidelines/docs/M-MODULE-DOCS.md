@@ -33,4 +33,4 @@ The rest of the module documentation should be comprehensive, i.e., cover the mo
 This does not mean every module should contain all of these items. But if there is something to say about the interaction of the contained types,
 their module documentation is the right place.
 
-[M-DOC-FIRST-SENTENCE]: /guidelines/docs/#M-DOC-FIRST-SENTENCE
+[M-DOC-FIRST-SENTENCE]: ./#M-DOC-FIRST-SENTENCE

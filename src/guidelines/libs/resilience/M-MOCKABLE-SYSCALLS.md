@@ -123,4 +123,4 @@ impl Library {
 }
 ```
 
-[M-RUNTIME-ABSTRACTED]: /guidelines/libs/ux/#M-RUNTIME-ABSTRACTED
+[M-RUNTIME-ABSTRACTED]: ../ux/#M-RUNTIME-ABSTRACTED
