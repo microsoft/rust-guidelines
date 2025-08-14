@@ -27,7 +27,7 @@ impl Handle {
 
     // Various extra methods to permanently or temporarily obtain
     // a native handle.
-    pub unsafe fn into_native(self) -> HNATIVE { self.0 }
-    pub unsafe fn to_native(&self) -> HNATIVE { self.0 }
+    pub fn into_native(self) -> HNATIVE { self.0 }
+    pub fn to_native(&self) -> HNATIVE { self.0 }
 }
 ```
