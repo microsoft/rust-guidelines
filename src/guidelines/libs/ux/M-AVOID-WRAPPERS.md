@@ -29,4 +29,4 @@ Smart pointers in APIs are acceptable when:
 
 - The smart pointer, based on benchmarks, significantly improves performance and the complexity is justified.
 
-[M-ABSTRACTIONS-DONT-NEST]: /guidelines/libs/ux/#M-ABSTRACTIONS-DONT-NEST
+[M-ABSTRACTIONS-DONT-NEST]: ./#M-ABSTRACTIONS-DONT-NEST

@@ -83,6 +83,6 @@ enum DataAccess {
 async fn read_database(x: &DataAccess) { ... }
 ```
 
-[M-AVOID-WRAPPERS]: /guidelines/libs/ux/#M-AVOID-WRAPPERS
-[M-MOCKABLE-SYSCALLS]: /guidelines/libs/resilience/#M-MOCKABLE-SYSCALLS
-[M-ABSTRACTIONS-DONT-NEST]: /guidelines/libs/ux/#M-ABSTRACTIONS-DONT-NEST
+[M-AVOID-WRAPPERS]: ./#M-AVOID-WRAPPERS
+[M-MOCKABLE-SYSCALLS]: ../resilience/#M-MOCKABLE-SYSCALLS
+[M-ABSTRACTIONS-DONT-NEST]: ./#M-ABSTRACTIONS-DONT-NEST

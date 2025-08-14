@@ -31,4 +31,4 @@ This does not apply to `std` or 3rd party types; these should always be re-expor
 >
 > The `#[doc(inline)]` trick above does not change [M-NO-GLOB-REEXPORTS]; you generally should not re-export items via wildcards.
 
-[M-NO-GLOB-REEXPORTS]: /guidelines/libs/resilience/#M-NO-GLOB-REEXPORTS
+[M-NO-GLOB-REEXPORTS]: ../libs/resilience/#M-NO-GLOB-REEXPORTS
