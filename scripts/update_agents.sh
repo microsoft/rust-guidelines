@@ -19,7 +19,9 @@ mkdir -p "$(dirname "$OUTPUT_FILE")"
 
 # Start with header
 cat > "$OUTPUT_FILE" << 'EOF'
-# Single Page Guidelines
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+
+# Rust Guidelines
 
 This file contains all guidelines concatenated for easy reference.
 
@@ -88,7 +90,8 @@ process_guidelines_dir() {
             m_file=$(echo "$m_file" | tr -d '\r')
             echo "Including: $(basename "$m_file")"
             echo "" >> "$OUTPUT_FILE"
-            cat "$m_file" >> "$OUTPUT_FILE"
+            # Skip the BOM + copyright line at the top of each file
+            tail -n +2 "$m_file" >> "$OUTPUT_FILE"
             echo "" >> "$OUTPUT_FILE"
         done
     else
