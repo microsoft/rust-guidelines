@@ -5,7 +5,7 @@
 <why>To ensure COGS savings at scale.</why>
 <version>0.1</version>
 
-Your should optimize your library for throughput, and one of your key metrics should be _items per CPU cycle_.
+You should optimize your library for throughput, and one of your key metrics should be _items per CPU cycle_.
 
 This does not mean to neglect latency&mdash;after all you can scale for throughput, but not for latency. However,
 in most cases you should not pay for latency with _empty cycles_ that come with single-item processing, contended locks and frequent task switching.
