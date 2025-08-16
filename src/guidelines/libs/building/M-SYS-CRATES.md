@@ -16,7 +16,7 @@ Follow these steps to produce a crate that _just works_ across platforms:
 - [ ] embed the upstream source code in your crate,
 - [ ] make the embedded sources verifiable (e.g., include Git URL + hash),
 - [ ] pre-generate `bindgen` glue if possible,
-- [ ] support both static linking, and dynamic linking via [libloading](https://crates.io/crates/libloading/0.8.6).
+- [ ] support both static linking, and dynamic linking via [libloading](https://crates.io/crates/libloading).
 
 Deviations from these points can work, and can be considered on a case-by-case basis:
 

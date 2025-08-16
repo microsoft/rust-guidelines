@@ -11,7 +11,7 @@ on:
 jobs:
   Common:
     uses: ./.github/workflows/common.yml
-  
+
   Deploy:
     needs: Common
     runs-on: ubuntu-latest
@@ -23,14 +23,13 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: book
-        path: ./book
-        
+        path: ./book/html
+
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./book
-        
+        path: ./book/html
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
-    
