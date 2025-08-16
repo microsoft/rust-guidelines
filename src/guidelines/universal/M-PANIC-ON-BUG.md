@@ -5,7 +5,7 @@
 <why>To avoid impossible error handling code and ensure runtime consistency.</why>
 <version>1.0</version>
 
-As an extension of [M-PANIC-IS-STOP](M-PANIC-IS-STOP) above, when an unrecoverable programming error has been
+As an extension of [M-PANIC-IS-STOP] above, when an unrecoverable programming error has been
 detected, libraries and applications must panic, i.e., request program termination.
 
 In these cases, no `Error` type should be introduced or returned, as any such error could not be acted upon at runtime.
@@ -40,3 +40,5 @@ fn parse_uri(s: &str) -> Result<Uri, ParseError> { };
 > While panicking on a detected programming error is the 'least bad option', your panic might still ruin someone's day.
 > For any user input or calling sequence that would otherwise panic, you should also explore if you can use the type
 > system to avoid panicking code paths altogether.
+
+[M-PANIC-IS-STOP]: ../universal/#M-PANIC-IS-STOP

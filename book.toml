@@ -9,6 +9,15 @@ src = "src"
 additional-css = [ "style/tags.css", "style/fixes.css", "style/guideline-meta.css" ]
 git-repository-url = "https://github.com/microsoft/rust-guidelines"
 
-
 [output.html.print]
 enable = true
+
+[output.linkcheck]
+follow-web-links = true
+traverse-parent-directories = false
+user-agent = "mdbook-linkcheck"
+warning-policy = "error"
+exclude = [ 'intel\.com' ]
+
+[output.linkcheck.http-headers]
+'crates\.io' = ["Accept: text/html"]
