@@ -6,7 +6,7 @@ multilingual = false
 src = "src"
 
 [output.html]
-additional-css = [ "style/tags.css", "style/fixes.css", "style/guideline-meta.css" ]
+additional-css = [ "style/tags.css", "style/fixes.css", "style/guideline-meta.css", "style/build-date.css" ]
 git-repository-url = "https://github.com/microsoft/rust-guidelines"
 
 [output.html.print]
