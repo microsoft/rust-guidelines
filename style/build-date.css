@@ -1,0 +1,7 @@
+#build-date {
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: center;
+  border-top: 1px solid gray;
+  padding: 5px 0;
+}

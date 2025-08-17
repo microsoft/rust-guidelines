@@ -47,3 +47,5 @@ Here is the process you should follow:
 - Check if your guideline follows the [meta design principles](#meta-design-principles) above.
 - Check if your suggestion is not already covered by the [API Guidelines](https://rust-lang.github.io/api-guidelines/checklist.html) or [Clippy](https://rust-lang.github.io/rust-clippy/master/?groups).
 - File a [PR or issue](https://github.com/microsoft/rust-guidelines).
+
+<div id="build-date">This book was last generated on: BUILD_DATE</div>
