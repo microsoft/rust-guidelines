@@ -27,8 +27,8 @@ jobs:
     - name: Preprocess
       run: |
         chmod +x ./scripts/*.sh
-        bash ./scripts/update_agents.sh
-        bash ./scripts/update_meta.sh
+        bash ./scripts/agents_summary.sh
+        bash ./scripts/agents_meta.sh
         bash ./scripts/build_date.sh
 
     - name: MdBook Test

@@ -6,4 +6,4 @@
 DATE=$(date +"%Y-%m-%d")
 
 # Replace the placeholder in your markdown file
-sed -i "s/BUILT_ON_DATE/$DATE/" src/guidelines/README.md
+sed -i "s/BUILD_DATE/$DATE/" src/guidelines/README.md
