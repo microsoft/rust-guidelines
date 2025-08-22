@@ -21,7 +21,7 @@ mkdir -p "$(dirname "$OUTPUT_FILE")"
 cat > "$OUTPUT_FILE" << 'EOF'
 <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-# Rust Guidelines
+# Pragmatic Rust Guidelines
 
 This file contains all guidelines concatenated for easy reference.
 
@@ -33,7 +33,7 @@ EOF
 extract_title_from_readme() {
     local readme_file="$1"
     if [[ -f "$readme_file" ]]; then
-        # Extract first line that starts with # 
+        # Extract first line that starts with #
         grep '^#' "$readme_file" | head -n1
     fi
 }
@@ -42,20 +42,20 @@ extract_title_from_readme() {
 process_guidelines_dir() {
     local dir="$1"
     local dir_name=$(basename "$dir")
-    
+
     # Skip checklist directory as requested
     if [[ "$dir_name" == "checklist" ]]; then
         echo "Skipping checklist directory"
         return
     fi
-    
+
     # Skip if not a directory
     if [[ ! -d "$dir" ]]; then
         return
     fi
-    
+
     echo "Processing directory: $dir_name"
-    
+
     # Add section header using the title from README.md
     if [[ -f "$dir/README.md" ]]; then
         local title=$(extract_title_from_readme "$dir/README.md")
@@ -71,7 +71,7 @@ process_guidelines_dir() {
         echo "# $(echo "$dir_name" | tr '[:lower:]' '[:upper:]') Guidelines" >> "$OUTPUT_FILE"
         echo "" >> "$OUTPUT_FILE"
     fi
-    
+
     # Include all M-*.md files in alphabetical order
     local m_files=()
     if ls "$dir"/M-*.md >/dev/null 2>&1; then
@@ -80,11 +80,11 @@ process_guidelines_dir() {
                 m_files+=("$m_file")
             fi
         done
-        
+
         # Sort the array and clean up any carriage returns
         IFS=$'\n' m_files=($(printf '%s\n' "${m_files[@]}" | sort))
         unset IFS
-        
+
         for m_file in "${m_files[@]}"; do
             # Strip any carriage returns from the filename
             m_file=$(echo "$m_file" | tr -d '\r')
@@ -97,7 +97,7 @@ process_guidelines_dir() {
     else
         echo "No M-*.md files found in $dir"
     fi
-    
+
     # Add separator between sections
     echo "" >> "$OUTPUT_FILE"
     echo "---" >> "$OUTPUT_FILE"
@@ -119,14 +119,14 @@ if [[ -f "$OUTPUT_FILE" ]]; then
     # Get file size in KB
     file_size_bytes=$(wc -c < "$OUTPUT_FILE")
     file_size_kb=$((file_size_bytes / 1024))
-    
+
     # Estimate tokens (roughly 4 characters per token for English text)
     estimated_tokens=$((file_size_bytes / 4))
     estimated_ktokens=$((estimated_tokens / 1000))
-    
+
     # Format the output
     echo "~${file_size_kb} kb, ~${estimated_ktokens}k tokens" > "$META_FILE"
-    
+
     echo "Successfully generated $OUTPUT_FILE (~${file_size_kb} kb, ~${estimated_ktokens}k tokens)"
     echo "Metadata saved to $META_FILE"
 else

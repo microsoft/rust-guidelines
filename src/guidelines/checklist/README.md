@@ -34,7 +34,6 @@
   - [ ] I/O and System Calls Are Mockable ([M-MOCKABLE-SYSCALLS])
   - [ ] Test Utilities are Feature Gated ([M-TEST-UTIL])
   - [ ] Use the Proper Type Family ([M-STRONG-TYPES])
-  - [ ] Use Newtypes if Primitives have Units ([M-NEWTYPES-OVER-PRIMITIVES])
   - [ ] Don't Glob Re-Export Items ([M-NO-GLOB-REEXPORTS])
   - [ ] Avoid Statics ([M-AVOID-STATICS])
 - **Library / Building**
@@ -77,7 +76,6 @@
 [M-TYPES-SEND]: ../libs/interop/#M-TYPES-SEND
 [M-DONT-LEAK-TYPES]: ../libs/interop/#M-DONT-LEAK-TYPES
 [M-ESCAPE-HATCHES]: ../libs/interop/#M-ESCAPE-HATCHES
-[M-NEWTYPES-OVER-PRIMITIVES]: ../libs/resilience/#M-NEWTYPES-OVER-PRIMITIVES
 [M-STRONG-TYPES]: ../libs/resilience/#M-STRONG-TYPES
 [M-NO-GLOB-REEXPORTS]: ../libs/resilience/#M-NO-GLOB-REEXPORTS
 [M-ESSENTIAL-FN-INHERENT]: ../libs/ux/#M-ESSENTIAL-FN-INHERENT

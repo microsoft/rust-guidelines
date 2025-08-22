@@ -13,7 +13,7 @@ configured to run on a developer's machine during normal work, and should be use
 * [rustfmt](https://github.com/rust-lang/rustfmt) ensures consistent source formatting.
 * [cargo-audit](https://crates.io/crates/cargo-audit) verifies crate dependencies for security vulnerabilities.
 * [cargo-hack](https://crates.io/crates/cargo-hack) validates that all combinations of crate features work correctly.
-* [cargo-machete](https://crates.io/crates/cargo-machete) detects unused dependencies in Cargo.toml files.
+* [cargo-udeps](https://crates.io/crates/cargo-udeps) detects unused dependencies in Cargo.toml files.
 * [miri](https://github.com/rust-lang/miri) validates the correctness of unsafe code.
 
 ### Compiler Lints
