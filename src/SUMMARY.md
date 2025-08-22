@@ -17,5 +17,6 @@
 
 ---
 
-[FAQ](./FAQ/README.md)
+[Designing for AI](./designing_for_ai/README.md)
 [Agents & LLMs](./agents/README.md)
+[FAQ](./FAQ/README.md)

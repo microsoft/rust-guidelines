@@ -1,11 +1,9 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-
 # Agents & LLMs
 
-While these guidelines have been carefully handcrafted, they have been written with LLM consumption in mind. 
+While these guidelines have been carefully handcrafted, they have been written with LLM consumption in mind.
 We offer condensed versions you can include in your agent sessions when authoring or reviewing code.
-
 
 ## Available Resources
 

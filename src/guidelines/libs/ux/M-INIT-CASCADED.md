@@ -16,7 +16,7 @@ impl Transaction {
 ```
 
 Instead of providing a long parameter list, parameters should be grouped semantically. When applying this guideline,
-also check if [M-NEWTYPES-OVER-PRIMITIVES] is applicable:
+also check if [C-NEWTYPE] is applicable:
 
 ```rust, ignore
 # struct Transaction;
@@ -32,4 +32,4 @@ impl Account {
 }
 ```
 
-[M-NEWTYPES-OVER-PRIMITIVES]: ../resilience/#M-NEWTYPES-OVER-PRIMITIVES
+[C-NEWTYPE]: https://rust-lang.github.io/api-guidelines/type-safety.html#c-newtype
