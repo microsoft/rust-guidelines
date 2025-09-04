@@ -8,10 +8,10 @@
 Types that require 4+ parameters should cascade their initialization via helper types.
 
 ```rust, ignore
-# struct Transaction;
-impl Transaction {
+# struct Deposit;
+impl Deposit {
     // Easy to confuse parameters and signature generally unwieldy.
-    pub fn new(from_bank: &str, from_customer: &str, to_bank: &str, to_customer: &str) -> Self { }
+    pub fn new(bank_name: &str, customer_name: &str, currency_name: &str, currency_amount: u64) -> Self { }
 }
 ```
 
@@ -19,11 +19,12 @@ Instead of providing a long parameter list, parameters should be grouped semanti
 also check if [C-NEWTYPE] is applicable:
 
 ```rust, ignore
-# struct Transaction;
+# struct Deposit;
 # struct Account;
-impl Transaction {
+# struct Currency
+impl Deposit {
     // Better, signature cleaner
-    pub fn new(from: Account, to: Account) -> Self { }
+    pub fn new(account: Account, amount: Currency) -> Self { }
 }
 
 impl Account {
