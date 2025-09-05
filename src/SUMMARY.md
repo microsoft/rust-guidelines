@@ -14,9 +14,9 @@
 - [Safety](./guidelines/safety/README.md)
 - [Performance](./guidelines/performance/README.md)
 - [Documentation](./guidelines/docs/README.md)
+- [AI](./guidelines/ai/README.md)
 
 ---
 
-[Designing for AI](./designing_for_ai/README.md)
 [Agents & LLMs](./agents/README.md)
 [FAQ](./FAQ/README.md)

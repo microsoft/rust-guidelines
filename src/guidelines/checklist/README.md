@@ -58,6 +58,8 @@
   - [ ] Has Module Documentation ([M-MODULE-DOCS])
   - [ ] Documentation Has Canonical Sections ([M-CANONICAL-DOCS])
   - [ ] Mark `pub use` Items with `#[doc(inline)]` ([M-DOC-INLINE])
+- **AI**
+  - [ ] Design with AI use in Mind ([M-DESIGN-FOR-AI])
 
 <!-- Universal  -->
 [M-UPSTREAM-GUIDELINES]: ../universal/#M-UPSTREAM-GUIDELINES
@@ -118,3 +120,6 @@
 [M-MODULE-DOCS]: ../docs/#M-MODULE-DOCS
 [M-CANONICAL-DOCS]: ../docs/#M-CANONICAL-DOCS
 [M-DOC-INLINE]: ../docs/#M-DOC-INLINE
+
+<!-- AI -->
+[M-DESIGN-FOR-AI]: ../ai/#M-DESIGN-FOR-AI

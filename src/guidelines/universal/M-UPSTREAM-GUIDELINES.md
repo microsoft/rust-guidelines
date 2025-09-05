@@ -12,8 +12,7 @@ The guidelines in this book complement existing Rust guidelines, in particular:
 - [Rust Design Patterns](https://rust-unofficial.github.io/patterns//intro.html)
 - [Rust Reference - Undefined Behavior](https://doc.rust-lang.org/reference/behavior-considered-undefined.html)
 
-We recommend you read through these as well, and apply them in addition to this book's guidelines. Pay special attention to these
-guidelines, as they are frequently forgotten:
+We recommend you read through these as well, and apply them in addition to this book's items. Pay special attention to the ones below, as they are frequently forgotten:
 
 - [ ] [C-CONV](https://rust-lang.github.io/api-guidelines/naming.html#ad-hoc-conversions-follow-as_-to_-into_-conventions-c-conv) - Ad-hoc conversions
   follow  `as_`, `to_`, `into_` conventions
