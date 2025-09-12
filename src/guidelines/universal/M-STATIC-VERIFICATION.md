@@ -42,7 +42,7 @@ Undesired lints (e.g., numeric casts) can be opted back out of on a case-by-case
 cargo = { level = "warn", priority = -1 }
 complexity = { level = "warn", priority = -1 }
 correctness = { level = "warn", priority = -1 }
-nursery = { level = "warn", priority = -1 }
+suspicious = { level = "warn", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
 perf = { level = "warn", priority = -1 }
 style = { level = "warn", priority = -1 }
