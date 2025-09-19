@@ -46,7 +46,7 @@ but instead:
 
 ```rust,ignore
 /// Copies a file from `src` to `dst`.
-fn copy(from: File, to: File) {}
+fn copy(src: File, dst: File) {}
 ```
 
 ### Related Reading
