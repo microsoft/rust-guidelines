@@ -2,7 +2,7 @@
 
 ## Optimize for Throughput, Avoid Empty Cycles (M-THROUGHPUT) { #M-THROUGHPUT }
 
-<why>To ensure COGS savings at scale.</why>
+<why>To ensure efficiency at scale.</why>
 <version>0.1</version>
 
 You should optimize your library for throughput, and one of your key metrics should be _items per CPU cycle_.

@@ -9,7 +9,7 @@ A collection of pragmatic design guidelines helping application and library deve
 We build on existing high-quality guidelines, most notably the [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/checklist.html),
 addressing topics often encountered by Rust developers. For a guideline to make it into this book, we expect it to meet the following criteria:
 
-- [ ] It positively affects { safety, COGs, maintenance }; i.e., it must where applicable
+- [ ] It positively affects { safety, efficiency, maintenance }; i.e., it must where applicable
   - [ ] promote **safety best-practices** and prevent sources of risk
   - [ ] lead to **high throughput**, **low latency**, and **low memory usage**
   - [ ] make code **readable and understandable**
@@ -41,7 +41,7 @@ spirit.
 
 ## Submitting New Guidelines
 
-Do you have a practical guideline that leads to better safety, COGS or maintainability? We'd love to hear from you!
+Do you have a practical guideline that leads to better safety, efficiency or maintainability? We'd love to hear from you!
 Here is the process you should follow:
 
 - Check if your guideline follows the [meta design principles](#meta-design-principles) above.
