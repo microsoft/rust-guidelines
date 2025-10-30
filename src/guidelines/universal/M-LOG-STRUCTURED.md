@@ -54,8 +54,7 @@ Named events enable grouping and filtering across log entries.
 
 ### Follow OpenTelemetry Semantic Conventions
 
-Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes if needed.
-This enables standardization and interoperability.
+Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes if needed. This enables standardization and interoperability.
 
 ```rust
 event!(
