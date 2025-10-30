@@ -5,13 +5,17 @@
 <why>To minimize the cost of logging and to improve filtering capabilities.</why>
 <version>0.1</version>
 
-Logging should use structured events with named properties and message templates following the [message templates](https://messagetemplates.org/) specification.
+Logging should use structured events with named properties and message templates following
+the [message templates](https://messagetemplates.org/) specification.
 
-> **Note:** Examples use the [`tracing`](https://docs.rs/tracing/) crate's `event!` macro, but these principles apply to any logging API that supports structured logging (e.g., `log`, `slog`, custom telemetry systems).
+> **Note:** Examples use the [`tracing`](https://docs.rs/tracing/) crate's `event!` macro,
+but these principles apply to any logging API that supports structured logging (e.g., `log`,
+`slog`, custom telemetry systems).
 
 ### Avoid String Formatting
 
-String formatting allocates memory at runtime, even if logs are filtered out. Message templates defer formatting until viewing time.
+String formatting allocates memory at runtime, even if logs are filtered out. Message templates defer
+formatting until viewing time.
 
 ```rust
 // DON'T: String formatting causes allocations
@@ -27,7 +31,8 @@ event!(
 );
 ```
 
-Message templates use `{{property}}` syntax for placeholders. Double braces escape Rust's formatting syntax, preserving the template literal. Properties are captured at log time, but string formatting happens only when viewing logs.
+Message templates use `{{property}}` syntax for placeholders. Double braces escape Rust's formatting syntax,
+preserving the template literal. Properties are captured at log time, but string formatting happens only when viewing logs.
 
 ### Name Your Events
 
@@ -54,7 +59,8 @@ Named events enable grouping and filtering across log entries.
 
 ### Follow OpenTelemetry Semantic Conventions
 
-Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes if needed. This enables standardization and interoperability.
+Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes if needed.
+This enables standardization and interoperability.
 
 ```rust
 event!(
@@ -100,7 +106,8 @@ event!(
 );
 ```
 
-Sensitive data include user email, file paths revealing user identity, filenames containing secrets or tokens, file contents with PII, temporary file paths with session IDs and more.
+Sensitive data include user email, file paths revealing user identity, filenames containing secrets or tokens,
+file contents with PII, temporary file paths with session IDs and more.
 
 Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
 
