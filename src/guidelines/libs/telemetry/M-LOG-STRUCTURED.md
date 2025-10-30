@@ -2,113 +2,108 @@
 
 ## Use Structured Logging with Message Templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
 
-<why>To enable efficient querying and analysis of log data while avoiding runtime allocation overhead and improving maintainability.</why>
+<why>To minimize the cost of logging and to improve filtering capabilities.</why>
 <version>0.1</version>
 
-Logging should use structured events with named properties following the [message templates](https://messagetemplates.org/) specification. This avoids string formatting allocations, enables property-based querying, and makes debugging production issues significantly easier.
+Logging should use structured events with named properties and message templates following the [message templates](https://messagetemplates.org/) specification.
 
 > **Note:** Examples use the [`tracing`](https://docs.rs/tracing/) crate's `event!` macro, but these principles apply to any logging API that supports structured logging (e.g., `log`, `slog`, custom telemetry systems).
 
-### Core Principles
+### Avoid String Formatting
 
-#### 1. Avoid String Formatting - Use Message Templates
-
-<why>String formatting allocates memory at runtime even if logs are filtered out. Message templates defer formatting until viewing time, avoiding unnecessary allocations.</why>
+String formatting allocates memory at runtime, even if logs are filtered out. Message templates defer formatting until viewing time.
 
 ```rust
-// ❌ DON'T: String formatting causes allocations at runtime
-tracing::info!("Request started: {} {}", method, uri);
-tracing::info!(format!("User {} logged in from {}", username, ip));
+// DON'T: String formatting causes allocations
+tracing::info!("file opened: {}", path);
+tracing::info!(format!("file opened: {}", path));
 
-// ✅ DO: Use message templates with named properties
+// DO: Use message templates with named properties
 event!(
-    name: "http.request.started",
+    name: "file.open.success",
     Level::INFO,
-    http.request.method = method.as_str(),
-    url.path.redacted = redacted_path,
-    http.request.body_size = body.len(),  // Captured but not in message template
-    "request started: {{http.request.method}} {{url.path.redacted}}",
+    file.path = path.display(),
+    "file opened: {{file.path}}",
 );
 ```
 
-Properties not referenced in the message template (like `http.request.body_size` above) are still captured as structured data for querying, without cluttering the human-readable message.
+Message templates use `{{property}}` syntax for placeholders. Double braces escape Rust's formatting syntax, preserving the template literal. Properties are captured at log time, but string formatting happens only when viewing logs.
 
-Message templates use `{{property}}` syntax for placeholders. Double braces `{{` escape Rust's formatting syntax, preserving the template literal in the string rather than formatting the value immediately. Properties are captured at log time, but string formatting happens only when viewing logs.
-
-#### 2. Name Your Events
-
-<why>Named events enable grouping, filtering, and aggregating related log entries across your system. This makes debugging production issues tractable—you can find all instances of "payment.processing.failed" rather than searching through arbitrary text.</why>
+### Name Your Events
 
 Use hierarchical dot-notation: `<component>.<operation>.<state>`
 
 ```rust
-// ❌ DON'T: Unnamed events
-tracing::info!("Processing complete");
-
-// ✅ DO: Named events
+// DON'T: Unnamed events
 event!(
-    name: "payment.processing.completed",
     Level::INFO,
-    payment.id = payment_id,
-    payment.amount = amount,
-    "payment {{payment.id}} processed",
+    file.path = file_path,
+    "file {{file.path}} processed succesfully",
+);
+
+// DO: Named events
+event!(
+    name: "file.processing.success", // event identifier
+    Level::INFO,
+    file.path = file_path,
+    "file {{file.path}} processed succesfully",
 );
 ```
 
-#### 3. Follow OpenTelemetry Semantic Conventions
+Named events enable grouping and filtering across log entries.
 
-<why>Standardized property names enable consistent querying across services, automatic correlation in observability tools, and easier onboarding for developers familiar with OTel conventions.</why>
+### Follow OpenTelemetry Semantic Conventions
 
-Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes:
+Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes if needed.
+This enables standardization and interoperability.
 
 ```rust
 event!(
-    name: "http.request.completed",
+    name: "file.write.success",
     Level::INFO,
-    http.request.method = method.as_str(),          // Standard OTel name
-    http.response.status_code = status.as_u16(),    // Standard OTel name
-    url.scheme = url.scheme_str(),                  // Standard OTel name
-    url.path.template = "/api/users/{id}",          // Standard OTel name
-    server.address = server_host,                   // Standard OTel name
-    "{{http.request.method}} {{url.path.template}} returned {{http.response.status_code}}",
+    file.path = path.display(),         // Standard OTel name
+    file.size = bytes_written,          // Standard OTel name
+    file.directory = dir_path,          // Standard OTel name
+    file.extension = extension,         // Standard OTel name
+    file.operation = "write",           // Custom name
+    "{{file.operation}} {{file.size}} bytes to {{file.path}} in {{file.directory}} extension={{file.extension}}",
 );
 ```
 
 Common conventions:
+
 - HTTP: `http.request.method`, `http.response.status_code`, `url.scheme`, `url.path`, `server.address`
+- File: `file.path`, `file.directory`, `file.name`, `file.extension`, `file.size`
 - Database: `db.system`, `db.name`, `db.operation`, `db.statement`
 - Errors: `error.type`, `error.message`, `exception.type`, `exception.stacktrace`
 
-#### 4. Redact Sensitive Data
+### Redact Sensitive Data
 
-<why>Logs often contain PII, authentication tokens, or secrets that violate privacy regulations (GDPR, CCPA) or security policies. Redaction prevents data leaks and compliance violations.</why>
-
-Consider privacy when logging URLs, headers, or bodies. Add redaction where needed based on your data sensitivity:
+Do not log plain sensitive data as this might lead to privacy and security incidents.
 
 ```rust
-// ❌ DON'T: Log potentially sensitive data
+// DON'T: Log potentially sensitive data
 event!(
-    name: "http.request.started",
+    name: "file.operation.started",
     Level::INFO,
-    url.full = url.to_string(), // May contain tokens in query params!
-    "request to {{url.full}}",
+    user.email = user.email,  // Sensitive data
+    file.name = "license.txt",
+    "reading file {{file.name}} for user {{user.email}}",
 );
 
-// ✅ DO: Redact sensitive parts
-let redacted_path = redact_sensitive_query_params(&url);
+// DO: Redact sensitive parts
 event!(
-    name: "http.request.started",
+    name: "file.operation.started",
     Level::INFO,
-    url.scheme = url.scheme_str(),
-    url.path.template = template.as_deref(),
-    url.path.redacted = redacted_path,
-    "request to {{url.scheme}}://{{url.path.redacted}}",
+    user.email.redacted = redact_email(user.email),
+    file.name = "license.txt",
+    "reading file {{file.name}} for user {{user.email.redacted}}",
 );
 ```
 
-Common items requiring redaction: query parameters with tokens, authorization headers, cookies, request/response bodies with secrets, file paths revealing user identity, IP addresses (when considered PII).
+Sensitive data include user email, file paths revealing user identity, filenames containing secrets or tokens, file contents with PII, temporary file paths with session IDs and more.
 
-Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction across your application.
+Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
 
 ### Further Reading
 
