@@ -9,7 +9,6 @@
   - [UX](./guidelines/libs/ux/README.md)
   - [Resilience](./guidelines/libs/resilience/README.md)
   - [Building](./guidelines/libs/building/README.md)
-  - [Telemetry](./guidelines/libs/telemetry/README.md)
 - [Applications](./guidelines/apps/README.md)
 - [FFI](./guidelines/ffi/README.md)
 - [Safety](./guidelines/safety/README.md)

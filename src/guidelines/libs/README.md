@@ -8,4 +8,3 @@ Guidelines for libraries. If your crate contains a `lib.rs` you should consider 
 - [UX](./ux/)
 - [Resilience](./resilience/)
 - [Building](./building/)
-- [Telemetry](./telemetry/)
