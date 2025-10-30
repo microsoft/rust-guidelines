@@ -17,7 +17,7 @@ but these principles apply to any logging API that supports structured logging (
 String formatting allocates memory at runtime, even if logs are filtered out. Message templates defer
 formatting until viewing time.
 
-```rust
+```rust,ignore
 // DON'T: String formatting causes allocations
 tracing::info!("file opened: {}", path);
 tracing::info!(format!("file opened: {}", path));
@@ -38,7 +38,7 @@ preserving the template literal. Properties are captured at log time, but string
 
 Use hierarchical dot-notation: `<component>.<operation>.<state>`
 
-```rust
+```rust,ignore
 // DON'T: Unnamed events
 event!(
     Level::INFO,
@@ -62,7 +62,7 @@ Named events enable grouping and filtering across log entries.
 Use [OTel semantic conventions](https://opentelemetry.io/docs/specs/semconv/) for common attributes if needed.
 This enables standardization and interoperability.
 
-```rust
+```rust,ignore
 event!(
     name: "file.write.success",
     Level::INFO,
@@ -86,7 +86,7 @@ Common conventions:
 
 Do not log plain sensitive data as this might lead to privacy and security incidents.
 
-```rust
+```rust,ignore
 // DON'T: Log potentially sensitive data
 event!(
     name: "file.operation.started",
