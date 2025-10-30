@@ -79,7 +79,7 @@ Common conventions:
 
 - HTTP: `http.request.method`, `http.response.status_code`, `url.scheme`, `url.path`, `server.address`
 - File: `file.path`, `file.directory`, `file.name`, `file.extension`, `file.size`
-- Database: `db.system`, `db.name`, `db.operation`, `db.statement`
+- Database: `db.system.name`, `db.namespace`, `db.operation.name`, `db.query.text`
 - Errors: `error.type`, `error.message`, `exception.type`, `exception.stacktrace`
 
 ### Redact Sensitive Data
