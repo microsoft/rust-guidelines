@@ -14,6 +14,7 @@
   - [ ] Panic Means 'Stop the Program' ([M-PANIC-IS-STOP])
   - [ ] Detected Programming Bugs are Panics, Not Errors ([M-PANIC-ON-BUG])
   - [ ] All Magic Values and Behaviors are Documented ([M-DOCUMENTED-MAGIC])
+  - [ ] Use Structured Logging with Message Templates ([M-LOG-STRUCTURED])
 - **Library / Interoperability**
   - [ ] Types are Send ([M-TYPES-SEND])
   - [ ] Native Escape Hatches ([M-ESCAPE-HATCHES])
@@ -73,6 +74,7 @@
 [M-PANIC-IS-STOP]: ../universal/#M-PANIC-IS-STOP
 [M-PANIC-ON-BUG]: ../universal/#M-PANIC-ON-BUG
 [M-DOCUMENTED-MAGIC]: ../universal/#M-DOCUMENTED-MAGIC
+[M-LOG-STRUCTURED]: ../universal/#M-LOG-STRUCTURED
 
 <!-- Libs -->
 [M-TYPES-SEND]: ../libs/interop/#M-TYPES-SEND
