@@ -31,8 +31,11 @@ event!(
 );
 ```
 
-Message templates use `{{property}}` syntax for placeholders. Double braces escape Rust's formatting syntax,
-preserving the template literal. Properties are captured at log time, but string formatting happens only when viewing logs.
+> **Note**: Use `{{property}}` syntax in message templates. Double braces preserve the literal text
+> while escaping Rust's format syntax. String formatting is deferred until logs are viewed.
+>
+> This pattern may trigger Clippy's [`literal_string_with_formatting_args`](https://rust-lang.github.io/rust-clippy/stable/index.html#literal_string_with_formatting_args)
+> warning so consider suppressing it for logging.
 
 ### Name Your Events
 
