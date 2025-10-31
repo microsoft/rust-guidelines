@@ -73,6 +73,9 @@ unnecessary_safety_doc = "warn"
 unneeded_field_pattern = "warn"
 unused_result_ok = "warn"
 
+# May cause issues with structured logging otherwise.
+literal_string_with_formatting_args = "allow"
+
 # Define custom opt outs here
 # ...
 ```

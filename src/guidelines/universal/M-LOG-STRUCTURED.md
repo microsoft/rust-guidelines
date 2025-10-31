@@ -18,11 +18,11 @@ String formatting allocates memory at runtime. Message templates defer formattin
 We recommend that message template includes all named properties for easier inspection at viewing time.
 
 ```rust,ignore
-// DON'T: String formatting causes allocations
+// Bad: String formatting causes allocations
 tracing::info!("file opened: {}", path);
 tracing::info!(format!("file opened: {}", path));
 
-// DO: Use message templates with named properties
+// Good: Message templates with named properties
 event!(
     name: "file.open.success",
     Level::INFO,
@@ -31,25 +31,22 @@ event!(
 );
 ```
 
-> **Note**: Use `{{property}}` syntax in message templates. Double braces preserve the literal text
+> **Note**: Use `{{property}}` the syntax in message templates which preserves the literal text
 > while escaping Rust's format syntax. String formatting is deferred until logs are viewed.
->
-> This pattern may trigger Clippy's [`literal_string_with_formatting_args`](https://rust-lang.github.io/rust-clippy/stable/index.html#literal_string_with_formatting_args)
-> warning so consider suppressing it for logging.
 
 ### Name Your Events
 
 Use hierarchical dot-notation: `<component>.<operation>.<state>`
 
 ```rust,ignore
-// DON'T: Unnamed events
+// Bad: Unnamed events
 event!(
     Level::INFO,
     file.path = file_path,
     "file {{file.path}} processed succesfully",
 );
 
-// DO: Named events
+// Good: Named events
 event!(
     name: "file.processing.success", // event identifier
     Level::INFO,
@@ -90,7 +87,7 @@ Common conventions:
 Do not log plain sensitive data as this might lead to privacy and security incidents.
 
 ```rust,ignore
-// DON'T: Log potentially sensitive data
+// Bad: Logs potentially sensitive data
 event!(
     name: "file.operation.started",
     Level::INFO,
@@ -99,7 +96,7 @@ event!(
     "reading file {{file.name}} for user {{user.email}}",
 );
 
-// DO: Redact sensitive parts
+// Good: Redact sensitive parts
 event!(
     name: "file.operation.started",
     Level::INFO,
@@ -110,9 +107,7 @@ event!(
 ```
 
 Sensitive data include user email, file paths revealing user identity, filenames containing secrets or tokens,
-file contents with PII, temporary file paths with session IDs and more.
-
-Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
+file contents with PII, temporary file paths with session IDs and more. Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
 
 ### Further Reading
 
