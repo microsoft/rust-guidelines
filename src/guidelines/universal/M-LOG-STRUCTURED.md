@@ -15,7 +15,8 @@ but these principles apply to any logging API that supports structured logging (
 ### Avoid String Formatting
 
 String formatting allocates memory at runtime, even if logs are filtered out. Message templates defer
-formatting until viewing time.
+formatting until viewing time. We recommend that message template includes all named properties for easier
+inspection at viewing time.
 
 ```rust,ignore
 // DON'T: String formatting causes allocations
