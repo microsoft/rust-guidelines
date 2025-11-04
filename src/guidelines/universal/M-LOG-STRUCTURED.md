@@ -31,7 +31,7 @@ event!(
 );
 ```
 
-> **Note**: Use `{{property}}` the syntax in message templates which preserves the literal text
+> **Note**: Use the `{{property}}` syntax in message templates which preserves the literal text
 > while escaping Rust's format syntax. String formatting is deferred until logs are viewed.
 
 ### Name Your Events
@@ -106,7 +106,7 @@ event!(
 );
 ```
 
-Sensitive data include user email, file paths revealing user identity, filenames containing secrets or tokens,
+Sensitive data includes email addresses, file paths revealing user identity, filenames containing secrets or tokens,
 file contents with PII, temporary file paths with session IDs and more. Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
 
 ### Further Reading
