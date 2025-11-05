@@ -51,24 +51,24 @@ The proper name for a builder that builds `Foo` is `FooBuilder`. Its methods mus
 ### Builders and Required Parameters
 
 Required parameters should be passed when creating the builder, not as setter methods. For builders with multiple required
-parameters, encapsulate them into a parameters struct and use the `args: impl Into<Args>` pattern to provide flexibility:
+parameters, encapsulate them into a parameters struct and use the `deps: impl Into<Deps>` pattern to provide flexibility:
 
-> **Note:** A dedicated args struct is not required if the builder has no required parameters or only a single simple parameter. However,
-> for backward compatibility and API evolution, it's preferable to use a dedicated struct for args even in simple cases, as it makes it
+> **Note:** A dedicated deps struct is not required if the builder has no required parameters or only a single simple parameter. However,
+> for backward compatibility and API evolution, it's preferable to use a dedicated struct for deps even in simple cases, as it makes it
 > easier to add new required parameters in the future without breaking existing code.
 
 ```rust, ignore
 #[derive(Debug, Clone)]
-pub struct FooArgs {
+pub struct FooDeps {
     pub logger: Logger,
     pub config: Config,
 }
 
-impl From<(Logger, Config)> for FooArgs { ... }
-impl From<Logger> for FooArgs { ... } // In case we could use default Config instance
+impl From<(Logger, Config)> for FooDeps { ... }
+impl From<Logger> for FooDeps { ... } // In case we could use default Config instance
 
 impl Foo {
-    pub fn builder(args: impl Into<FooArgs>) -> FooBuilder { ... }
+    pub fn builder(deps: impl Into<FooDeps>) -> FooBuilder { ... }
 }
 ```
 
@@ -76,7 +76,20 @@ This pattern allows for convenient usage:
 
 - `Foo::builder(logger)` - when only the logger is needed
 - `Foo::builder((logger, config))` - when both parameters are needed
-- `Foo::builder(FooArgs { logger, config })` - explicit struct construction
+- `Foo::builder(FooDeps { logger, config })` - explicit struct construction
+
+Alternatively, you can use [`fundle`](https://docs.rs/fundle) to simplify the creation of `FooDeps`:
+
+```rust, ignore
+#[derive(Debug, Clone)]
+#[fundle::deps]
+pub struct FooDeps {
+    pub logger: Logger,
+    pub config: Config,
+}
+```
+
+This pattern enables "dependency injection", see [these docs](https://docs.rs/fundle/latest/fundle/attr.deps.html) for more details.
 
 ### Runtime-Specific Builders
 
@@ -85,29 +98,30 @@ For types that are runtime-specific or require runtime-specific configuration, p
 ```rust, ignore
 #[cfg(feature="smol")]
 #[derive(Debug, Clone)]
-pub struct SmolArgs {
+pub struct SmolDeps {
     pub clock: Clock,
     pub io_context: Context,
 }
 
 #[cfg(feature="tokio")]
 #[derive(Debug, Clone)]
-pub struct TokioArgs {
+pub struct TokioDeps {
     pub clock: Clock,
 }
 
 impl Foo {
     #[cfg(feature="smol")]
-    pub fn builder_smol(args: impl Into<SmolArgs>) -> FooBuilder { ... }
+    pub fn builder_smol(deps: impl Into<SmolDeps>) -> FooBuilder { ... }
 
     #[cfg(feature="tokio")]
-    pub fn builder_tokio(args: impl Into<TokioArgs>) -> FooBuilder { ... }
+    pub fn builder_tokio(deps: impl Into<TokioDeps>) -> FooBuilder { ... }
 }
 ```
 
 This approach ensures type safety at compile time and makes the runtime dependency explicit in the API surface. The resulting
-builder methods follow the pattern `builder_{runtime}(args)` where `{runtime}` indicates the specific runtime or execution environment.
+builder methods follow the pattern `builder_{runtime}(deps)` where `{runtime}` indicates the specific runtime or execution environment.
 
 ### Further Reading
 
 - [Builder pattern in Rust: self vs. &mut self, and method vs. associated function](https://users.rust-lang.org/t/builder-pattern-in-rust-self-vs-mut-self-and-method-vs-associated-function/72892)
+- [fundle](https://docs.rs/fundle)
