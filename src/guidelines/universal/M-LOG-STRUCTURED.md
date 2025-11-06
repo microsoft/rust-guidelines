@@ -3,7 +3,7 @@
 ## Use Structured Logging with Message Templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
 
 <why>To minimize the cost of logging and to improve filtering capabilities.</why>
-<version>0.1</version>
+<version>0.2</version>
 
 Logging should use structured events with named properties and message templates following
 the [message templates](https://messagetemplates.org/) specification.
@@ -69,9 +69,8 @@ event!(
     file.path = path.display(),         // Standard OTel name
     file.size = bytes_written,          // Standard OTel name
     file.directory = dir_path,          // Standard OTel name
-    file.extension = extension,         // Standard OTel name
     file.operation = "write",           // Custom name
-    "{{file.operation}} {{file.size}} bytes to {{file.path}} in {{file.directory}} extension={{file.extension}}",
+    "modified {{file.path}} in {{file.directory}}, operation: {{file.operation}}, size: {{file.size}} bytes"",
 );
 ```
 
@@ -108,6 +107,56 @@ event!(
 
 Sensitive data includes email addresses, file paths revealing user identity, filenames containing secrets or tokens,
 file contents with PII, temporary file paths with session IDs and more. Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
+
+### Consistent Logs Style
+
+Logs should follow a consistent style to ensure good readability. When adding or modifying logs
+in an existing system, follow the established style conventions of that system.
+
+Here are some recommended message template styles:
+
+#### Single Sentence
+
+Use for logs that fit within a single sentence. These should start with lowercase and have no ending period. You can append
+extra properties at the end with a comma and space: `<sentence>, prop: {{prop.value}}, other: {{other.value}}`.
+Most logs should be single sentences.
+
+> **Note:** Include all reported properties in the message template for easier debuggability. This allows
+> viewing the full context of the log entry without needing to inspect the structured data separately.
+
+Examples:
+
+```rust,ignore
+// Simple statement with a single property
+"opened file {{file.path}}"
+
+// All properties integrated into the sentence naturally
+"processed {{file.count}} files in {{duration_ms}}ms"
+
+// Multiple properties appended when all have equal informational value
+"added entry to cache, key: {{cache.key}}, size: {{cache.size}} bytes"
+
+// High-value properties in main message, additional context appended at end
+"{{http.request.method}} {{url.path}} completed, status: {{http.response.status_code}}, duration: {{duration_ms}}ms"
+```
+
+#### Multiple Sentences
+
+Use for logs that require multiple sentences. Each sentence should start with an uppercase letter and end with a period. You can append
+extra properties at the end with a dot and space: `<Sentence>. prop: {{prop.value}}, other: {{other.value}}`.
+
+Examples:
+
+```rust,ignore
+// Multiple sentences with properties appended
+"Failed to acquire lock. Retrying after backoff. attempt: {{retry.attempt}}, backoff: {{retry.backoff_ms}}ms"
+
+// Detailed error context with multiple sentences
+"Database migration failed. Rolling back changes. error: {{error.message}}, migration: {{db.migration.version}}"
+
+// Complex error with resolution guidance
+"Certificate validation failed. The server certificate has expired and cannot be trusted. Please update the certificate or configure a valid certificate authority. See https://example.com/docs/tls-setup for details. certificate: {{tls.certificate.subject}}, expiry: {{tls.certificate.expiry}}, server: {{server.address}}"
+```
 
 ### Further Reading
 
