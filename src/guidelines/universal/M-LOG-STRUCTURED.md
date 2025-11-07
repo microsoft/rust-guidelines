@@ -3,7 +3,7 @@
 ## Use Structured Logging with Message Templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
 
 <why>To minimize the cost of logging and to improve filtering capabilities.</why>
-<version>0.1</version>
+<version>0.2</version>
 
 Logging should use structured events with named properties and message templates following
 the [message templates](https://messagetemplates.org/) specification.
@@ -69,9 +69,8 @@ event!(
     file.path = path.display(),         // Standard OTel name
     file.size = bytes_written,          // Standard OTel name
     file.directory = dir_path,          // Standard OTel name
-    file.extension = extension,         // Standard OTel name
     file.operation = "write",           // Custom name
-    "{{file.operation}} {{file.size}} bytes to {{file.path}} in {{file.directory}} extension={{file.extension}}",
+    "modified {{file.path}} in {{file.directory}}, operation: {{file.operation}}, size: {{file.size}} bytes"",
 );
 ```
 
@@ -108,6 +107,27 @@ event!(
 
 Sensitive data includes email addresses, file paths revealing user identity, filenames containing secrets or tokens,
 file contents with PII, temporary file paths with session IDs and more. Consider using the [`data_privacy`](https://crates.io/crates/data_privacy) crate for consistent redaction.
+
+### Consistent Logs Style
+
+Follow a consistent style for readability. When modifying existing logs, match the established conventions. If you are unsure about what style to use, refer to the rules below:
+
+**Single sentence** (most common): Start with lowercase, no ending period. Append extra properties with comma and space.
+
+```rust,ignore
+"opened file {{file.path}}"
+"processed {{file.count}} files in {{duration_ms}}ms"
+"added entry to cache, key: {{cache.key}}, size: {{cache.size}} bytes"
+```
+
+**Multiple sentences**: Start with uppercase, end with period. Append extra properties with dot and space.
+
+```rust,ignore
+"Failed to acquire lock. Retrying after backoff. attempt: {{retry.attempt}}, backoff: {{retry.backoff_ms}}ms"
+"Database migration failed. Rolling back changes. error: {{error.message}}, migration: {{db.migration.version}}"
+```
+
+> **Note:** Include all properties in the message template for easier debugging without inspecting structured data separately.
 
 ### Further Reading
 
