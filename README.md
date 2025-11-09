@@ -14,7 +14,7 @@ mdbook serve --open
 
 To submit new guidelines, file a PR. They should be
 
-- beneficial for { safety, COGs, maintenance },
+- beneficial for { safety, efficiency, maintenance },
 - agreeable to a majority of experienced (3+ years) Rust developers,
 - comprehensible to Rust novices (4+ weeks),
 - practically applicable in real world scenarios.

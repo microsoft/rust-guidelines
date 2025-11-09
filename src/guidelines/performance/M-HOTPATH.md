@@ -5,7 +5,7 @@
 <why>To end up with high performance code.</why>
 <version>0.1</version>
 
-You should, early in the development process, identify if your crate is performance or COGS relevant. If it is:
+You should, early in the development process, identify if your crate is performance or efficiency relevant. If it is:
 
 - identify hot paths and create benchmarks around them,
 - regularly run a profiler collecting CPU and allocation insights,
