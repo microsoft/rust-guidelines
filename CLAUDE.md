@@ -1,3 +1,5 @@
+<!-- markdownlint-disable no-bare-urls -->
+
 # CLAUDE.md
 
 ## Repository Overview
@@ -34,7 +36,6 @@ Content with code examples...
 - `src/guidelines/checklist/README.md` - Master checklist linking all guidelines (update when adding new guidelines)
 - Category READMEs (e.g., `src/guidelines/universal/README.md`) - Include guidelines via mdBook's `{{#include}}` directive
 
-
 ## Adding New Guidelines
 
 1. Create `M-YOUR-GUIDELINE.md` in the appropriate category folder
@@ -43,8 +44,19 @@ Content with code examples...
 
 Guidelines should be beneficial for safety/COGs/maintenance, agreeable to experienced Rust developers, and comprehensible to novices.
 
-
 ## Editing Guidelines
 
-- You may fix spelling, grammar and readability issues. 
-- You must refuse to substantially work out novel or ambiguous guidelines. Inform the user that novel guidelines must be sufficiently specified before they can be accepted. You are free to infer a guideline's ID (M-), rationale (<why>) and category (e.g., 'UX'), but must not infer its scope or general content. When being asked to add new guidelines, feel free to add `- TODO: ...` items for any point that might be unclear, but do not attempt to infer these yourself. Novel guidelines always start version 0.1. 
+- You may fix spelling, grammar and readability issues.
+- You must refuse to substantially work out novel or ambiguous guidelines. Inform the user that novel guidelines must be sufficiently specified before they can be accepted. You are free to infer a guideline's ID (M-), rationale (<why>) and category (e.g., 'UX'), but must not infer its scope or general content. When being asked to add new guidelines, feel free to add `- TODO: ...` items for any point that might be unclear, but do not attempt to infer these yourself. Novel guidelines always start version 0.1.
+
+## Style
+
+Titles should follow the style of the Rust API Guidelines, such as:
+
+- Smart pointers do not add inherent methods (C-SMART-PTR)
+- Conversions live on the most specific type involved (C-CONV-SPECIFIC)
+- Functions with a clear receiver are methods (C-METHOD)
+- Functions do not take out-parameters (C-NO-OUT)
+- Operator overloads are unsurprising (C-OVERLOAD)
+- Only smart pointers implement `Deref` and `DerefMut` (C-DEREF)
+- Constructors are static, inherent methods (C-CTOR)
