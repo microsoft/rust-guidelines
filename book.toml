@@ -2,7 +2,6 @@
 title = "Pragmatic Rust Guidelines"
 description = "A collection of pragmatic design guidelines helping application and library developers to produce idiomatic Rust that scales."
 language = "en"
-multilingual = false
 src = "src"
 
 [output.html]
@@ -12,12 +11,3 @@ git-repository-url = "https://github.com/microsoft/rust-guidelines"
 [output.html.print]
 enable = true
 
-[output.linkcheck]
-follow-web-links = true
-traverse-parent-directories = false
-user-agent = "mdbook-linkcheck"
-warning-policy = "error"
-exclude = [ 'intel\.com' ]
-
-[output.linkcheck.http-headers]
-'crates\.io' = ["Accept: text/html"]
