@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Applications may use Anyhow or Derivatives (M-APP-ERROR) { #M-APP-ERROR }
+## Applications may use Anyhow or derivatives (M-APP-ERROR) { #M-APP-ERROR }
 
 <why>To simplify application-level error handling.</why>
 <version>0.1</version>

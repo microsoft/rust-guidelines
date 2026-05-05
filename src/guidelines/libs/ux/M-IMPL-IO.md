@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Accept `impl 'IO'` Where Feasible ('Sans IO') (M-IMPL-IO) { #M-IMPL-IO }
+## Accept `impl 'IO'` where feasible ('sans IO') (M-IMPL-IO) { #M-IMPL-IO }
 
 <why>To untangle business logic from I/O logic, and have N*M composability.</why>
 <version>0.1</version>

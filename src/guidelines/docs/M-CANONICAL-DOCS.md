@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Documentation Has Canonical Sections (M-CANONICAL-DOCS) { #M-CANONICAL-DOCS }
+## Documentation has canonical sections (M-CANONICAL-DOCS) { #M-CANONICAL-DOCS }
 
 <why>To follow established and expected Rust best practices.</why>
 <version>1.0</version>

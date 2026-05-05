@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Features are Additive  (M-FEATURES-ADDITIVE) { #M-FEATURES-ADDITIVE }
+## Features are additive (M-FEATURES-ADDITIVE) { #M-FEATURES-ADDITIVE }
 
 <why>To prevent compilation breakage in large and complex projects.</why>
 <version>1.0</version>

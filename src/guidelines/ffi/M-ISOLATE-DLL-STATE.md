@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Isolate DLL State Between FFI Libraries (M-ISOLATE-DLL-STATE) { #M-ISOLATE-DLL-STATE }
+## Isolate DLL state between FFI libraries (M-ISOLATE-DLL-STATE) { #M-ISOLATE-DLL-STATE }
 
 <why>To prevent data corruption and undefined behavior.</why>
 <version>0.1</version>

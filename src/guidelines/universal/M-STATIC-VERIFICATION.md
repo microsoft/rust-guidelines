@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Use Static Verification (M-STATIC-VERIFICATION) { #M-STATIC-VERIFICATION }
+## Use static verification (M-STATIC-VERIFICATION) { #M-STATIC-VERIFICATION }
 
 <why>To ensure consistency and avoid common issues.</why>
 <version>1.0</version>

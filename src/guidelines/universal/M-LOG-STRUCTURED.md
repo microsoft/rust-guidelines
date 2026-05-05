@@ -1,6 +1,6 @@
 <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Use Structured Logging with Message Templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
+## Use structured logging with message templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
 
 <why>To minimize the cost of logging and to improve filtering capabilities.</why>
 <version>0.1</version>

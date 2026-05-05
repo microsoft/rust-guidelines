@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Design with AI use in Mind (M-DESIGN-FOR-AI) { #M-DESIGN-FOR-AI }
+## Design with AI use in mind (M-DESIGN-FOR-AI) { #M-DESIGN-FOR-AI }
 
 <why>To maximize the utility you get from letting agents work in your code base.</why>
 <version>0.1</version>

@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Native Escape Hatches (M-ESCAPE-HATCHES) { #M-ESCAPE-HATCHES }
+## Native escape hatches (M-ESCAPE-HATCHES) { #M-ESCAPE-HATCHES }
 
 <why>To allow users to work around unsupported use cases until alternatives are available.</why>
 <version>0.1</version>

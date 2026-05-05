@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## First Sentence is One Line; Approx. 15 Words (M-FIRST-DOC-SENTENCE) { #M-FIRST-DOC-SENTENCE }
+## First sentence is one line; approx. 15 words (M-FIRST-DOC-SENTENCE) { #M-FIRST-DOC-SENTENCE }
 
 <why>To make API docs easily skimmable.</why>
 <version>1.0</version>

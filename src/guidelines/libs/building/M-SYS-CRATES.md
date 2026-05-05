@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Native `-sys` Crates Compile Without Dependencies (M-SYS-CRATES) { #M-SYS-CRATES }
+## Native `-sys` crates compile without dependencies (M-SYS-CRATES) { #M-SYS-CRATES }
 
 <why>To have libraries that 'just work' on all platforms.</why>
 <version>0.2</version>

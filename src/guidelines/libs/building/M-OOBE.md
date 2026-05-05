@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Libraries Work Out of the Box (M-OOBE) { #M-OOBE }
+## Libraries work out of the box (M-OOBE) { #M-OOBE }
 
 <why>To be easily adoptable by the Rust ecosystem.</why>
 <version>1.0</version>

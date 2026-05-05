@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Detected Programming Bugs are Panics, Not Errors (M-PANIC-ON-BUG) { #M-PANIC-ON-BUG }
+## Detected programming bugs are panics, not errors (M-PANIC-ON-BUG) { #M-PANIC-ON-BUG }
 
 <why>To avoid impossible error handling code and ensure runtime consistency.</why>
 <version>1.0</version>

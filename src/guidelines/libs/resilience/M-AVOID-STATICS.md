@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Avoid Statics (M-AVOID-STATICS) { #M-AVOID-STATICS }
+## Avoid statics (M-AVOID-STATICS) { #M-AVOID-STATICS }
 
 <why>To prevent consistency and correctness issues between crate versions.</why>
 <version>1.0</version>

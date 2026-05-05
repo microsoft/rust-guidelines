@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Optimize for Throughput, Avoid Empty Cycles (M-THROUGHPUT) { #M-THROUGHPUT }
+## Optimize for throughput, avoid empty cycles (M-THROUGHPUT) { #M-THROUGHPUT }
 
 <why>To ensure COGS savings at scale.</why>
 <version>0.1</version>

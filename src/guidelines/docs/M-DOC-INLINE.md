@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Mark `pub use` Items with `#[doc(inline)]` (M-DOC-INLINE) { #M-DOC-INLINE }
+## Mark `pub use` items with `#[doc(inline)]` (M-DOC-INLINE) { #M-DOC-INLINE }
 
 <why>To make re-exported items 'fit in' with their non re-exported siblings.</why>
 <version>1.0</version>

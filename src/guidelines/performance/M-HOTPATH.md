@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Identify, Profile, Optimize the Hot Path Early (M-HOTPATH) { #M-HOTPATH }
+## Identify, profile, optimize the hot path early (M-HOTPATH) { #M-HOTPATH }
 
 <why>To end up with high performance code.</why>
 <version>0.1</version>

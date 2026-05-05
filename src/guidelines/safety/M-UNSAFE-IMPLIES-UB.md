@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Unsafe Implies Undefined Behavior (M-UNSAFE-IMPLIES-UB) { #M-UNSAFE-IMPLIES-UB }
+## Unsafe implies undefined behavior (M-UNSAFE-IMPLIES-UB) { #M-UNSAFE-IMPLIES-UB }
 
 <why>To ensure semantic consistency and prevent warning fatigue.</why>
 <version>1.0</version>

@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Public Types Meant to be Read are Display (M-PUBLIC-DISPLAY) { #M-PUBLIC-DISPLAY }
+## Public types meant to be read are Display (M-PUBLIC-DISPLAY) { #M-PUBLIC-DISPLAY }
 
 <why>To improve usability.</why>
 <version>1.0</version>

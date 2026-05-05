@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Panic Means 'Stop the Program' (M-PANIC-IS-STOP) { #M-PANIC-IS-STOP }
+## Panic means 'stop the program' (M-PANIC-IS-STOP) { #M-PANIC-IS-STOP }
 
 <why>To ensure soundness and predictability.</why>
 <version>1.0</version>

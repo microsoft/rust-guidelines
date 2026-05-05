@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Don't Leak External Types (M-DONT-LEAK-TYPES) { #M-DONT-LEAK-TYPES }
+## Don't leak external types (M-DONT-LEAK-TYPES) { #M-DONT-LEAK-TYPES }
 
 <why>To prevent accidental breakage and long-term maintenance cost.</why>
 <version>0.1</version>

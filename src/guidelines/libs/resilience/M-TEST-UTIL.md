@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Test Utilities are Feature Gated (M-TEST-UTIL) { #M-TEST-UTIL }
+## Test utilities are feature gated (M-TEST-UTIL) { #M-TEST-UTIL }
 
 <why>To prevent production builds from accidentally bypassing safety checks.</why>
 <version>0.2</version>

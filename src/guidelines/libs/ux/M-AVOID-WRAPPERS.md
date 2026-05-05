@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Avoid Smart Pointers and Wrappers in APIs (M-AVOID-WRAPPERS) { #M-AVOID-WRAPPERS }
+## Avoid smart pointers and wrappers in APIs (M-AVOID-WRAPPERS) { #M-AVOID-WRAPPERS }
 
 <why>To reduce cognitive load and improve API ergonomics.</why>
 <version>1.0</version>

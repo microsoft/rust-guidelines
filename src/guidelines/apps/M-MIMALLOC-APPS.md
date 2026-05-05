@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Use Mimalloc for Apps (M-MIMALLOC-APPS) { #M-MIMALLOC-APPS }
+## Use mimalloc for apps (M-MIMALLOC-APPS) { #M-MIMALLOC-APPS }
 
 <why>To get significant performance for free.</why>
 <version>0.1</version>

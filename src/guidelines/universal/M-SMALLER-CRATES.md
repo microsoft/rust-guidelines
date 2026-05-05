@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## If in Doubt, Split the Crate (M-SMALLER-CRATES) { #M-SMALLER-CRATES }
+## If in doubt, split the crate (M-SMALLER-CRATES) { #M-SMALLER-CRATES }
 
 <why>To improve compile times and modularity.</why>
 <version>1.0</version>

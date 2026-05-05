@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Magic Values are Documented (M-DOCUMENTED-MAGIC) { #M-DOCUMENTED-MAGIC }
+## Magic values are documented (M-DOCUMENTED-MAGIC) { #M-DOCUMENTED-MAGIC }
 
 <why>To ensure maintainability and prevent misunderstandings when refactoring.</why>
 <version>1.0</version>

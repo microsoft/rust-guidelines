@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Prefer Regular over Associated Functions (M-REGULAR-FN) { #M-REGULAR-FN }
+## Prefer regular over associated functions (M-REGULAR-FN) { #M-REGULAR-FN }
 
 <why>To improve readability.</why>
 <version>1.0</version>

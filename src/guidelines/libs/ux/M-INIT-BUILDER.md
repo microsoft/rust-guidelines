@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Complex Type Construction has Builders (M-INIT-BUILDER) { #M-INIT-BUILDER }
+## Complex type construction has builders (M-INIT-BUILDER) { #M-INIT-BUILDER }
 
 <why>To future-proof type construction in complex scenarios.</why>
 <version>0.3</version>

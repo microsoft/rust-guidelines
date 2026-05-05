@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Complex Type Initialization Hierarchies are Cascaded (M-INIT-CASCADED) { #M-INIT-CASCADED }
+## Complex type initialization hierarchies are cascaded (M-INIT-CASCADED) { #M-INIT-CASCADED }
 
 <why>To prevent misuse and accidental parameter mix ups.</why>
 <version>1.0</version>

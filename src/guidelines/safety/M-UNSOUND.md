@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## All Code Must be Sound (M-UNSOUND) { #M-UNSOUND }
+## All code must be sound (M-UNSOUND) { #M-UNSOUND }
 
 <why>To prevent unexpected runtime behavior, leading to potential bugs and incompatibilities.</why>
 <version>1.0</version>
