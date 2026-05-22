@@ -8,9 +8,11 @@
 {{#include M-PUBLIC-DEBUG.md}}
 {{#include M-PUBLIC-DISPLAY.md}}
 {{#include M-SMALLER-CRATES.md}}
-{{#include M-CONCISE-NAMES.md}}
+{{#include M-WEASEL-WORDS.md}}
+{{#include M-SHORT-NAMES.md}}
 {{#include M-REGULAR-FN.md}}
 {{#include M-PANIC-IS-STOP.md}}
 {{#include M-PANIC-ON-BUG.md}}
 {{#include M-DOCUMENTED-MAGIC.md}}
 {{#include M-LOG-STRUCTURED.md}}
+{{#include M-LOG-NOT-PRINT.md}}

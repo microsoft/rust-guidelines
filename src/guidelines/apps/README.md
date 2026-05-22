@@ -4,3 +4,4 @@
 
 {{#include M-MIMALLOC-APPS.md}}
 {{#include M-APP-ERROR.md}}
+{{#include M-TARGET-CPU.md}}

@@ -1,6 +1,6 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Names are free of weasel words (M-CONCISE-NAMES) { #M-CONCISE-NAMES }
+## Names are free of weasel words (M-WEASEL-WORDS) { #M-WEASEL-WORDS }
 
 <why>To improve readability.</why>
 <version>1.0</version>
