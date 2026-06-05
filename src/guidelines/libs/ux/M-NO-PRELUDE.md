@@ -7,7 +7,7 @@
 
 Crates must not define a `prelude` or any namespace intended to be imported as `use foo::*`.
 
-While the Rust Standard Library successfully uses [preludes](https://doc.rust-lang.org/std/prelude/index.html) to define edition items, preludes in crates cause more harm than good. Given today's IDE support they are not needed, and once multiple preludes are used from same crate there is potential for conflicts:
+While the Rust Standard Library successfully uses [preludes](https://doc.rust-lang.org/std/prelude/index.html) to define edition items, preludes in crates cause more harm than good. Given today's IDE support they are not needed, and once multiple preludes are used from different crates there is potential for conflicts:
 
 ```rust
 use foo::prelude::*;

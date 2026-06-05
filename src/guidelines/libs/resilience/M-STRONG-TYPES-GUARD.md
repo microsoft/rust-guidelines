@@ -5,7 +5,7 @@
 <why>To centralize essential correctness invariants.</why>
 <version>0.1</version>
 
-When introducing a strong type or newtype that exists to encode an invariant (a non-empty string, a percentage, a port number, a sanitized path, ...) the type itself must enforce that invariant where applicable. 
+When introducing a strong type or newtype that exists to encode an invariant (a non-empty string, a percentage, a port number, a sanitized path, ...), the type itself must enforce that invariant where applicable. 
 
 Construction should be fallible, returning a proper error when the invariant cannot be upheld, rather than handing the responsibility off to every user:
 

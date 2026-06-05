@@ -9,17 +9,16 @@ Frequently used, internal, immutable sequences that will not be resized after co
 
 Regular growable collections consist of a `(ptr, len, capacity)` triple. Converting them to boxed slices makes them immutable and drops the `capacity` bit, reducing their handle size by 1/3.  For this pattern to be useful, the following preconditions should apply:
 
-- the sequence should be frequently instantiated (e.g., >1000's of instances)
-- it must be immutable
-- it should not be user-visible, i.e., regular users would just deal with `&str` or similar
-- the sequence payload should be relatively small
+- the sequence should be frequently instantiated (e.g., >1000's of instances),
+- it must be immutable,
+- it should not be user-visible, i.e., regular users would just deal with `&str` or similar,
+- the sequence payload should be relatively small.
 
 Some collections provide dedicated methods for this, e.g., `String::into_boxed_str`.
 
 ```rust
 // Bad, with many entries this wastes space and makes
-// traversal ultimately slower. The internal representation
-// won't 
+// traversal ultimately slower. 
 struct Data {
     ids: Vec<String>
 }

@@ -11,10 +11,10 @@ Macros should only be used if no other viable solution exists, compare this adag
 > 
 > @pcwalton
 
-Macros are powerful, but come with several downsides, they 
+Macros are powerful, but come with several downsides. They
 
-- are magic, and can be impossible to predict what they do, or how they do it,
+- are magic, and it can be impossible to predict what they do, or how they do it,
 - disproportionally increase compilation time in projects that otherwise don't rely on them,
 - can cause subtle breakage at edition boundaries where Rust syntax and semantics can change.
 
-Counterintuitively, the more structurally complex the result of a macro expansion is, the worse of an idea it is to use macros for that in the first place. The ideal macro makes your users go "_I know exactly what this will generate, but I don't want to write all of that by hand_".
+Counterintuitively, the more structurally complex the result of a macro expansion is, the worse an idea it is to use macros for that in the first place. The ideal macro makes your users go "_I know exactly what this will generate, but I don't want to write all of that by hand_".

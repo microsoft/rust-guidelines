@@ -5,7 +5,7 @@
 <why>To reduce memory footprint.</why>
 <version>0.1</version>
 
-Where large, long-lived, growable collection such as `Vec`, `String` were built without an exact size reservation (compare M-INITIAL-CAPACITY), the resulting collection should be shrunk via `shrink_to_fit` before storing it.
+Where large, long-lived, growable collections such as `Vec` or `String` were built without an exact size reservation (compare M-INITIAL-CAPACITY), the resulting collection should be shrunk via `shrink_to_fit` before storing it.
 
 Rust's collections grow by powers of two when iteratively adding elements. In the worst case a collection might therefore use ~2x of its needed memory. 
 
@@ -19,4 +19,4 @@ for x in large_iter {
 // Good, frees up extra memory.
 long_lived.shrink_to_fit();
 ```
-Note, this does not apply to conversions done via `into_boxed_` and friends (compare M-BOX-DST), as these generally shrink before converting already.
+Note that this does not apply to conversions done via `into_boxed_*` and friends (compare M-BOX-DST), as these generally shrink before converting already.

@@ -2,7 +2,7 @@
 
 ## Business logic belongs in core crates, FFI only translates (M-FFI-TRANSLATES) { #M-FFI-TRANSLATES }
 
-<why>to maximize safe code and have clean separation of concerns.</why>
+<why>to maximize safe code and have a clean separation of concerns.</why>
 <version>0.1</version>
 
 When Rust is used to create FFI libraries, there should be a clear separation of concerns between the core _business logic_ crate `foo` and the glue crate `foo-ffi`.

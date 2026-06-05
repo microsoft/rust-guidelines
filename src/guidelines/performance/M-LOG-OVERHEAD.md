@@ -19,10 +19,10 @@ for m in messages {
 
 // Better, avoids per-message allocations.
 for m in messages {
-    log(("Emitting message", m.id())
+    log(("Emitting message", m.id()))
 }
 
 // Best: If possible, let telemetry users reconstruct what happened offline 
-log(("Processing message batch", messages.batch_id())
+log(("Processing message batch", messages.batch_id()))
 for m in messages { ... }
 ```

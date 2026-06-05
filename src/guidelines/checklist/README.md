@@ -10,7 +10,7 @@
   - [ ] Public types meant to be read are Display ([M-PUBLIC-DISPLAY])
   - [ ] If in doubt, split the crate ([M-SMALLER-CRATES])
   - [ ] Names are free of weasel words ([M-WEASEL-WORDS])
-  - [ ] Names of items are generally short ([M-SHORT-NAMES])
+  - [ ] Names of items are short ([M-SHORT-NAMES])
   - [ ] Prefer regular over associated functions ([M-REGULAR-FN])
   - [ ] Panic means 'stop the program' ([M-PANIC-IS-STOP])
   - [ ] Detected programming bugs are panics, not errors ([M-PANIC-ON-BUG])
@@ -66,7 +66,7 @@
   - [ ] Proc macros should have separate impl crate incl. tests ([M-PROC-IMPL])
   - [ ] Proc macros don't produce implied or hidden items ([M-PROC-IMPLIED-ITEMS])
 - **Applications**
-  - [ ] Use mimalloc for apps ([M-MIMALLOC-APP])
+  - [ ] Use mimalloc for apps ([M-MIMALLOC-APPS])
   - [ ] Applications may use Anyhow or derivatives ([M-APP-ERROR])
   - [ ] Applications target highest viable target-cpu ([M-TARGET-CPU])
 - **FFI**
@@ -104,7 +104,7 @@
   - [ ] AI-generated code requires human review ([M-HUMAN-REVIEW])
   - [ ] Items are only visible through one path ([M-SINGLE-ITEM-PATH])
   - [ ] Avoid meta design documentation ([M-NO-META-DESIGN-DOCUMENTATION])
-  - [ ] Tests should not assert ground truth ([M-TAUTOLOGICAL-TESTS])
+  - [ ] Tests do not assert ground truth ([M-TAUTOLOGICAL-TESTS])
   - [ ] Rust code solves Rust problems ([M-RUST-SHAPED])
 
 <!-- Universal  -->
@@ -163,7 +163,7 @@
 
 <!-- Apps -->
 [M-APP-ERROR]: ../apps/#M-APP-ERROR
-[M-MIMALLOC-APP]: ../apps/#M-MIMALLOC-APP
+[M-MIMALLOC-APPS]: ../apps/#M-MIMALLOC-APPS
 [M-TARGET-CPU]: ../apps/#M-TARGET-CPU
 
 <!-- FFI -->
@@ -206,7 +206,6 @@
 [M-MBE-OVER-PROC]: ../macros/#M-MBE-OVER-PROC
 [M-MACROS-DONT-LIE]: ../macros/#M-MACROS-DONT-LIE
 [M-MACRO-MAIN-CRATE]: ../macros/#M-MACRO-MAIN-CRATE
-[M-MACROS-USE-MAIN-CRATE]: ../macros/#M-MACROS-USE-MAIN-CRATE
 [M-MACRO-HELPERS]: ../macros/#M-MACRO-HELPERS
 [M-PROC-IMPL]: ../macros/#M-PROC-IMPL
 [M-PROC-IMPLIED-ITEMS]: ../macros/#M-PROC-IMPLIED-ITEMS

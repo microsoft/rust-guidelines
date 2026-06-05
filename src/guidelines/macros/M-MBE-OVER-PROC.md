@@ -7,7 +7,7 @@
 
 When a 'macro by example' can do the job, it should be preferred over proc macros. 
 
-Proc macros are more powerful, but their expansion can't easily be inspected. Where this versatility isn't needed, a simple 'macro by expansion' is the better option. 
+Proc macros are more powerful, but their expansion can't easily be inspected. Where this versatility isn't needed, a simple 'macro by example' is the better option. 
 
 ```rust
 // Bad, attribute macro requires proc macro machinery, can be hard to 

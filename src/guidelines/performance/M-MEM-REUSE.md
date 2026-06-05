@@ -15,7 +15,7 @@ for id in ids {
     let value = db.get(id);
 }
 ```
-While these style of APIs may exist for convenience, they should be auxiliary. Instead, the core APIs should allow users to own the underlying object and re-use it:
+While this style of API may exist for convenience, it should be auxiliary. Instead, the core APIs should allow users to own the underlying object and re-use it:
 
 ```rust
 // Good, allows users to decide whether a new allocation is needed.
@@ -32,7 +32,7 @@ struct Value {
     data: Vec<u8>
 }
 ```
-In heavyweight, deeply nested libraries it can be worthwhile to either pass a bump-style `Arena`, or to encapsulate one inside the user types, so it can used throughout the call stack:
+In heavyweight, deeply nested libraries it can be worthwhile to either pass a bump-style `Arena`, or to encapsulate one inside the user types, so it can be used throughout the call stack:
 
 ```rust
 struct Query {

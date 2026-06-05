@@ -7,7 +7,7 @@
 
 Macros should not define magic types on their own, in particular not public ones, or ones that don't rely on namespace tricks. 
 
-Some macro want to define types, for example
+Some macros want to define types, for example
 
 ```rust
 #[my_macro]
@@ -46,7 +46,7 @@ struct foo;
 impl SomeTrait for foo { ... }
 ```
 
-Here a new type `foo` is introduced with the same name as the function `foo`. Due to Rust's namespace rules they can co-exit and are automatically re-exported with their parent, and due to [Rust's casing rules (C-CASE)](https://rust-lang.github.io/api-guidelines/naming.html#casing-conforms-to-rfc-430-c-case) these are highly unlikely to clash with user-defined types. However, they would still not make for a pretty _public_ type, and are therefore mainly used inside root crates to define request handlers or FFI functions.
+Here a new type `foo` is introduced with the same name as the function `foo`. Due to Rust's namespace rules they can co-exist and are automatically re-exported with their parent, and due to [Rust's casing rules (C-CASE)](https://rust-lang.github.io/api-guidelines/naming.html#casing-conforms-to-rfc-430-c-case) these are highly unlikely to clash with user-defined types. However, they would still not make for a pretty _public_ type, and are therefore mainly used inside root crates to define request handlers or FFI functions.
 
 > ### <tip></tip> Namespaces != Modules
 >

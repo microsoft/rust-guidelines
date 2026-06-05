@@ -5,8 +5,8 @@
 <why>To improve readability.</why>
 <version>1.0</version>
 
-Symbol names, especially types and traits names, should be free of weasel words that do not meaningfully
-add information. Common offenders include `Service`, `Manager`, and `Factory`. For example:
+Symbol names, especially type and trait names, should be free of weasel words that do not meaningfully
+add information. Common offenders include `Service`, `Manager`, and `Factory`.
 
 While your library may very well contain or communicate with a booking service&mdash;or even hold an `HttpClient`
 instance named `booking_service`&mdash;one should rarely encounter a `BookingService` _type_ in code.
@@ -14,7 +14,7 @@ instance named `booking_service`&mdash;one should rarely encounter a `BookingSer
 An item handling many bookings can just be called `Bookings`. If it does anything more specific, then that quality
 should be appended instead. It submits these items elsewhere? Calling it `BookingDispatcher` would be more helpful.
 
-The same is true for `Manager`s. Every code manages _something_, so that moniker is rarely useful. With rare
+The same is true for `Manager`s. All code manages _something_, so that moniker is rarely useful. With rare
 exceptions, life cycle issues should likewise not be made the subject of some manager. Items are created in whatever
 way they are needed, their disposal is governed by `Drop`, and only `Drop`.
 

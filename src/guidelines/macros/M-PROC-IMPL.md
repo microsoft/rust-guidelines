@@ -7,7 +7,7 @@
 
 Proc macros should be thin shims inside some `foo_proc` crate that delegate to a separate, regular library crate, usually called `foo_proc_impl`, which contains the actual token-stream transformation logic and its tests.
 
-As proc macro crates are special, testing them from `foo_proc` usually requires workaround for unit and snapshot tests. Instead, consider having a `foo_proc_impl` crate:
+As proc macro crates are special, testing them from `foo_proc` usually requires workarounds for unit and snapshot tests. Instead, consider having a `foo_proc_impl` crate:
 
 ```rust
 use proc_macro2::TokenStream;

@@ -13,5 +13,4 @@ For crates including proc macros it is common to ship them split in 3 for techni
 - `foo_proc` - facade re-exporting macros from `foo_proc_impl` with `proc-macro = true`,
 - `foo_proc_impl` - the actual macro implementation and unit tests.
 
-In some cases there can be additional crates involved. Authors might be tempted trying to make both `foo`, `foo_proc`, and siblings work, resulting in complex  
-re-export hierarchies or the use of 3rd party helpers. In reality, the minimal UX gain is usually not worth added complexity (or compile time overhead), given the ecosystem precedent of mostly not supporting these usage modes in the first place.
+In some cases there can be additional crates involved. Authors might be tempted to make `foo`, `foo_proc`, and siblings all work, resulting in complex re-export hierarchies or the use of 3rd party helpers. In reality, the minimal UX gain is usually not worth the added complexity (or compile time overhead), given the ecosystem precedent of mostly not supporting these usage modes in the first place.

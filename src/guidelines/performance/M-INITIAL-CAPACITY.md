@@ -7,10 +7,10 @@
 
 Where the final or approximate size of a collection (`Vec`, `String`, `HashMap`, `HashSet`, etc.) is known at construction time, it should be created via   `with_capacity` rather than `new` or `default`. 
 
-Collections created without capacity may be re-allocated multiple times during their initialization, which also includes copying their content. Creating them with sufficient capacity an entirely avoid this needless overhead.
+Collections created without capacity may be re-allocated multiple times during their initialization, which also includes copying their content. Creating them with sufficient capacity can entirely avoid this needless overhead.
 
 ```rust
-// Bad, probably re-allocates and copies concent over multiple times.
+// Bad, probably re-allocates and copies content over multiple times.
 let mut rval = Vec::new();
 for x in &other {
     rval.push(convert(x));

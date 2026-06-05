@@ -5,7 +5,7 @@
 <why>To avoid confusing users and LLMs.</why>
 <version>0.1</version>
 
-Macros must not (make users) misrepresent signatures or shape of items. 
+Macros must not (make users) misrepresent signatures or the shape of items. 
 
 Macros have the ability to arbitrarily rewrite token streams. They could convert structs to enums, traits to functions, or perform any other transformation imaginable. They should, however, do none of that, as the resulting code will be highly confusing and virtually impossible to predict or reason about. 
 
