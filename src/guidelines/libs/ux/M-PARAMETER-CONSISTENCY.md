@@ -1,14 +1,26 @@
 <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Parameter ordering is consistent across crates or ecosystem (M-PARAMETER-CONSISTENCY) { #M-PARAMETER-CONSISTENCY }
+## Parameter ordering is consistent (M-PARAMETER-CONSISTENCY) { #M-PARAMETER-CONSISTENCY }
 
-<why>Consistent parameter order across related APIs reduces cognitive load, prevents argument-swap bugs, and makes it easier to learn and remember a family of functions.</why>
+<why>To reduce development friction.</why>
 <version>0.1</version>
 
-When the same conceptual parameters appear in multiple functions — within a crate or across crates in the same ecosystem — they should appear in the same order everywhere.
+When the same conceptual parameters appear in multiple functions (within a crate or across crates in the same ecosystem), they should appear in the same order everywhere:
 
-- TODO: Define the precedence when conventions conflict (own crate vs. broader ecosystem vs. `std`).
-- TODO: List recurring parameter pairs that need a canonical order (e.g., `src, dst` vs `dst, src`; `key, value`; `haystack, needle`; `expected, actual`).
-- TODO: Provide a concrete bad example (two sibling functions with swapped argument order).
-- TODO: Provide a concrete good example.
-- TODO: Clarify whether this also constrains builder method order, trait method order, or only free/inherent functions.
+- important or call-specific parameters should generally go first,
+- ubiquitous parameters rather go last (e.g., `&logger`),
+- closures always go last (functions should not accept more than one closure).
+
+```rust
+// Bad, the order of `user_id` and `tenant_id` flips between functions, and
+// the logger sometimes appears first, sometimes last.
+fn create_user(logger: &Logger, user_id: UserId, tenant_id: TenantId) -> Result<()> { ... }
+fn delete_user(tenant_id: TenantId, user_id: UserId, logger: &Logger) -> Result<()> { ... }
+fn rename_user(user_id: UserId, new_name: &str, tenant_id: TenantId, logger: &Logger) -> Result<()> { ... }
+
+// Good, call-specific parameters first in a consistent order, ubiquitous
+// `logger` always last.
+fn create_user(tenant_id: TenantId, user_id: UserId, logger: &Logger) -> Result<()> { ... }
+fn delete_user(tenant_id: TenantId, user_id: UserId, logger: &Logger) -> Result<()> { ... }
+fn rename_user(tenant_id: TenantId, user_id: UserId, new_name: &str, logger: &Logger) -> Result<()> { ... }
+```

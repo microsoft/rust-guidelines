@@ -16,7 +16,6 @@
   - [ ] Detected programming bugs are panics, not errors ([M-PANIC-ON-BUG])
   - [ ] Magic values are documented ([M-DOCUMENTED-MAGIC])
   - [ ] Use structured logging with message templates ([M-LOG-STRUCTURED])
-  - [ ] Production code uses telemetry, not println ([M-LOG-NOT-PRINT])
 - **Library / Interoperability**
   - [ ] Types are Send ([M-TYPES-SEND])
   - [ ] Native escape hatches ([M-ESCAPE-HATCHES])
@@ -29,18 +28,15 @@
   - [ ] Errors are canonical structs ([M-ERRORS-CANONICAL-STRUCTS])
   - [ ] Canonical error conversion uses `From`, not `map_err` ([M-FROM-ERROR])
   - [ ] Complex type construction has builders ([M-INIT-BUILDER])
-  - [ ] Builders validate in final `.build()` ([M-BUILD-RESULT])
   - [ ] Complex type initialization hierarchies are cascaded ([M-INIT-CASCADED])
   - [ ] Services are Clone ([M-SERVICES-CLONE])
   - [ ] Accept `impl AsRef<>` where feasible ([M-IMPL-ASREF])
   - [ ] Accept `impl RangeBounds<>` where feasible ([M-IMPL-RANGEBOUNDS])
   - [ ] Accept `impl 'IO'` where feasible ('sans IO') ([M-IMPL-IO])
   - [ ] Essential functionality should be inherent ([M-ESSENTIAL-FN-INHERENT])
-  - [ ] Extension traits are reserved for foreign items ([M-EXT-TRAITS-FOREIGN-ITEMS])
   - [ ] Modules are balanced in size and scope ([M-BALANCED-MODULES])
   - [ ] Don't define preludes ([M-NO-PRELUDE])
-  - [ ] Parameter ordering is consistent across crates or ecosystem ([M-PARAMETER-CONSISTENCY])
-  - [ ] Important parameters go first, closures last ([M-PARAMETER-ORDER])
+  - [ ] Parameter ordering is consistent ([M-PARAMETER-CONSISTENCY])
   - [ ] Collections implement the appropriate iter traits ([M-COLLECTION-TRAITS])
   - [ ] Functions are `async` over returning a Future ([M-ASYNC-FN])
 - **Library / Resilience**
@@ -49,10 +45,12 @@
   - [ ] Integration tests live under `tests/` ([M-INTEGRATION-TESTS])
   - [ ] Use the proper type family ([M-STRONG-TYPES])
   - [ ] Newtypes guard their invariants ([M-STRONG-TYPES-GUARD])
+  - [ ] Builders validate in final `.build()` ([M-BUILD-RESULT])
   - [ ] Don't glob re-export items ([M-NO-GLOB-REEXPORTS])
   - [ ] Avoid statics ([M-AVOID-STATICS])
   - [ ] Panic continuation is last resort ([M-PANIC-CONTINUATION])
   - [ ] Custom panics have a helpful message ([M-PANIC-MESSAGE])
+  - [ ] Production code uses telemetry, not println ([M-LOG-NOT-PRINT])
 - **Library / Building**
   - [ ] Libraries work out of the box ([M-OOBE])
   - [ ] Native `-sys` crates compile without dependencies ([M-SYS-CRATES])
@@ -123,7 +121,7 @@
 [M-PANIC-MESSAGE]: ../libs/resilience/#M-PANIC-MESSAGE
 [M-DOCUMENTED-MAGIC]: ../universal/#M-DOCUMENTED-MAGIC
 [M-LOG-STRUCTURED]: ../universal/#M-LOG-STRUCTURED
-[M-LOG-NOT-PRINT]: ../universal/#M-LOG-NOT-PRINT
+[M-LOG-NOT-PRINT]: ../libs/resilience/#M-LOG-NOT-PRINT
 
 <!-- Libs -->
 [M-TYPES-SEND]: ../libs/interop/#M-TYPES-SEND
@@ -141,7 +139,7 @@
 [M-ERRORS-CANONICAL-STRUCTS]: ../libs/ux/#M-ERRORS-CANONICAL-STRUCTS
 [M-FROM-ERROR]: ../libs/ux/#M-FROM-ERROR
 [M-INIT-BUILDER]: ../libs/ux/#M-INIT-BUILDER
-[M-BUILD-RESULT]: ../libs/ux/#M-BUILD-RESULT
+[M-BUILD-RESULT]: ../libs/resilience/#M-BUILD-RESULT
 [M-INIT-CASCADED]: ../libs/ux/#M-INIT-CASCADED
 [M-SERVICES-CLONE]: ../libs/ux/#M-SERVICES-CLONE
 [M-IMPL-ASREF]: ../libs/ux/#M-IMPL-ASREF

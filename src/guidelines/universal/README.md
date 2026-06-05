@@ -15,4 +15,3 @@
 {{#include M-PANIC-ON-BUG.md}}
 {{#include M-DOCUMENTED-MAGIC.md}}
 {{#include M-LOG-STRUCTURED.md}}
-{{#include M-LOG-NOT-PRINT.md}}

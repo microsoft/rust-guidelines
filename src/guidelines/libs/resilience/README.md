@@ -7,7 +7,9 @@
 {{#include M-INTEGRATION-TESTS.md}}
 {{#include M-STRONG-TYPES.md}}
 {{#include M-STRONG-TYPES-GUARD.md}}
+{{#include M-BUILD-RESULT.md}}
 {{#include M-NO-GLOB-REEXPORTS.md}}
 {{#include M-AVOID-STATICS.md}}
 {{#include M-PANIC-CONTINUATION.md}}
 {{#include M-PANIC-MESSAGE.md}}
+{{#include M-LOG-NOT-PRINT.md}}

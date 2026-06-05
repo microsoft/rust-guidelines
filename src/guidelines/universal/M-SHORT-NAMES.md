@@ -2,14 +2,13 @@
 
 ## Names of items are short (M-SHORT-NAMES) { #M-SHORT-NAMES }
 
-<why>Short names read faster, fit on one line at call sites, and discourage smuggling implementation detail or hedge words into identifiers; the surrounding type and module context usually carries the rest of the meaning.</why>
+<why>To make Rust code idiomatic.</why>
 <version>0.1</version>
 
-Identifiers for items (functions, methods, types, fields, modules) should stay short, leaning on context — the enclosing module, type, or trait — to disambiguate rather than encoding it into the name itself.
+The Rust convention that item identifiers are short should be followed:
 
-- TODO: Give a concrete length guideline or heuristic (e.g., prefer one or two words for methods on a type; avoid restating the type name in its methods).
-- TODO: Specify when longer names are warranted (rare public free functions where disambiguation is unavoidable, low-level safety-critical APIs).
-- TODO: Clarify the relationship to [M-WEASEL-WORDS](#M-WEASEL-WORDS) (which targets weasel words) — this rule is about overall length, not specifically filler words.
-- TODO: Provide a concrete bad example (`UserService::get_user_by_id_from_database`).
-- TODO: Provide a concrete good example (`UserService::get(id)` or `Users::find(id)`).
-- TODO: Note interaction with the Rust API Guidelines naming conventions and [M-WEASEL-WORDS](#M-WEASEL-WORDS).
+- identifiers should not compound more than 2 short words (`AppConfig` over `GlobalApplicationConfig`),
+- module or crate information shouldn't be baked into prefixes (`foo::Id` over `foo::FooId`), in particular when the direct 'super' item is sufficiently descriptive - in these cases users are expected to disambiguate items locally via qualifiers where needed (`fn convert(foo::Id) -> bar::Id`).
+- abbreviations are preferred (`CallbackFn` over `CallbackFunction`),
+
+Any of these rules can be broken where it makes local sense, but on a per-crate bases these exceptions should be _exceptional_ and well motivated.

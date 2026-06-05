@@ -2,13 +2,29 @@
 
 ## Canonical error conversion uses `From`, not `map_err` (M-FROM-ERROR) { #M-FROM-ERROR }
 
-<why>When `From<SourceError>` is implemented for the function's error type, the `?` operator converts automatically; sprinkling `.map_err(...)` at call sites duplicates that mapping, hides it from review, and lets variants drift as new conversions are added in different places.</why>
+<why>To ensure idiomatic error handling.</why>
 <version>0.1</version>
 
-Conversions between error types that are part of the project's canonical error hierarchy should be implemented as `impl From<SourceError> for TargetError` (typically via `#[from]` on a `thiserror`-style derive or an explicit impl) and used implicitly via `?`. Call sites should not reach for `.map_err(...)` to perform the same conversion repeatedly.
+Where an `Error` type is owned, it should `impl From<Other> for Error {}` instead of handling the conversion throughout the code via `.map_error()`. Calling `.map_error()` is only appropriate when dealing with foreign error types, or if contextual information needs to be preserved.
 
-- TODO: Specify when `map_err` is still appropriate (one-off context attachment, lossy summarization, conversions that depend on local context the `From` impl cannot see).
-- TODO: Clarify the policy for canonical error structs (cf. [M-ERRORS-CANONICAL-STRUCTS](#M-ERRORS-CANONICAL-STRUCTS)) — each source error gets at most one `From` impl per target.
-- TODO: Provide a concrete bad example (every call site doing `.map_err(MyError::Io)?` for `std::io::Error`).
-- TODO: Provide a concrete good example (`impl From<std::io::Error> for MyError` once; call sites use `?` directly).
-- TODO: Note interaction with [M-ERRORS-CANONICAL-STRUCTS](#M-ERRORS-CANONICAL-STRUCTS) and [M-APP-ERROR](../../apps/#M-APP-ERROR).
+```rust
+// Bad, repeats the same conversion at every call site and obscures the happy path.
+fn load() -> Result<Config, MyError> {
+    let bytes = read("config.toml").map_err(|e| MyError::Io(e))?;
+    let text = str::from_utf8(&bytes).map_err(|e| MyError::Utf8(e))?;
+    let cfg = toml::from_str(text).map_err(|e| MyError::Parse(e))?;
+    Ok(cfg)
+}
+
+// Good, define the conversion once and let `?` apply it.
+impl From<std::io::Error> for MyError { ... }
+impl From<std::str::Utf8Error> for MyError { ... }
+impl From<toml::de::Error> for MyError { ... }
+
+fn load() -> Result<Config, MyError> {
+    let bytes = read("config.toml")?;
+    let text = str::from_utf8(&bytes)?;
+    let cfg = toml::from_str(text)?;
+    Ok(cfg)
+}
+```
