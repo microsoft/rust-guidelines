@@ -42,7 +42,7 @@
   - [ ] Parameter ordering is consistent across crates or ecosystem ([M-PARAMETER-CONSISTENCY])
   - [ ] Important parameters go first, closures last ([M-PARAMETER-ORDER])
   - [ ] Collections implement the appropriate iter traits ([M-COLLECTION-TRAITS])
-  - [ ] Where possible functions are `async` over returning a Future ([M-ASYNC-FN])
+  - [ ] Functions are `async` over returning a Future ([M-ASYNC-FN])
 - **Library / Resilience**
   - [ ] I/O and system calls are mockable ([M-MOCKABLE-SYSCALLS])
   - [ ] Test utilities are feature gated ([M-TEST-UTIL])

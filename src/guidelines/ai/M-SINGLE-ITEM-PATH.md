@@ -29,4 +29,4 @@ pub(crate) mod db {
 pub use db::Connection;
 ```
 
-Similarly, re-exports of foreign items are not covered by this rule, although they should follow M-FOREIGN-REEXPORTS.
+Similarly, re-exports of foreign items are not covered by this rule, although they should follow [M-FOREIGN-REEXPORTS](../libs/interop/#M-FOREIGN-REEXPORTS).

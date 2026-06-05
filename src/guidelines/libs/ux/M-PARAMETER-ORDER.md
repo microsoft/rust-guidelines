@@ -12,4 +12,4 @@ Order function parameters from most to least important, and place closures (and 
 - TODO: Specify the rule for multiple closures (e.g., `map_or_else(default, f)`) — does any closure count as "last", or only single-closure APIs?
 - TODO: Provide a concrete bad example (a function taking a closure followed by an integer count).
 - TODO: Provide a concrete good example (`fn retry(count: usize, f: impl FnMut() -> Result<T, E>) -> ...`).
-- TODO: Note interaction with M-PARAMETER-CONSISTENCY (which governs cross-crate consistency of the chosen order).
+- TODO: Note interaction with [M-PARAMETER-CONSISTENCY](#M-PARAMETER-CONSISTENCY) (which governs cross-crate consistency of the chosen order).

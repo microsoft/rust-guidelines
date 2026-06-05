@@ -7,7 +7,7 @@
 
 Panic recovery via `catch_unwind()` is a matter of last resort and should generally be followed by a controlled application restart. 
 
-Panics indicate the program has reached an unrecoverable state (compare M-PANIC-IS-STOP and M-PANIC-ON-BUG). Library code in particular should not attempt to catch a panic and continue execution, as there is a risk of observing otherwise impossible state:
+Panics indicate the program has reached an unrecoverable state (compare [M-PANIC-IS-STOP](../../universal/#M-PANIC-IS-STOP) and [M-PANIC-ON-BUG](../../universal/#M-PANIC-ON-BUG)). Library code in particular should not attempt to catch a panic and continue execution, as there is a risk of observing otherwise impossible state:
 
 ```rust
 thread_local! {

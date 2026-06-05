@@ -12,5 +12,5 @@ Custom collection types should implement the iterator-facing traits the standard
 - TODO: Note when *not* to implement a given trait (e.g., `FromIterator` for collections that need extra context to construct).
 - TODO: Provide a concrete bad example (a custom collection missing `IntoIterator for &Collection` so users cannot iterate by reference in a `for` loop).
 - TODO: Provide a concrete good example.
-- TODO: Note interaction with M-ESSENTIAL-FN-INHERENT and M-IMPL-ASREF.
+- TODO: Note interaction with [M-ESSENTIAL-FN-INHERENT](#M-ESSENTIAL-FN-INHERENT) and [M-IMPL-ASREF](#M-IMPL-ASREF).
 

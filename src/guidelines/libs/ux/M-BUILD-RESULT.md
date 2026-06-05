@@ -11,5 +11,5 @@ A builder's per-field setter methods should accept input without failing. All cr
 - TODO: Clarify whether setters may ever return `Result` (e.g., for parsing-style inputs) or whether they must always be infallible.
 - TODO: Specify how errors should aggregate (single error vs. collected errors for multiple problems).
 - TODO: Provide a concrete bad example (a setter that returns `Result`, or validation scattered across setters).
-- TODO: Provide a concrete good example (infallible chainable setters; `.build()` returns `Result<T, BuildError>` with a canonical error type per M-ERRORS-CANONICAL-STRUCTS).
-- TODO: Note interaction with M-INIT-BUILDER and M-INIT-CASCADED.
+- TODO: Provide a concrete good example (infallible chainable setters; `.build()` returns `Result<T, BuildError>` with a canonical error type per [M-ERRORS-CANONICAL-STRUCTS](#M-ERRORS-CANONICAL-STRUCTS)).
+- TODO: Note interaction with [M-INIT-BUILDER](#M-INIT-BUILDER) and [M-INIT-CASCADED](#M-INIT-CASCADED).

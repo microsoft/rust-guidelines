@@ -25,6 +25,6 @@ _ = Client::new();
 //    = note: ambiguous because of multiple glob imports of a name in the same module
 ```
 
-Preludes in particular do not resolve bad module design. If it looks like a prelude would make the crate easier to use or understand, this is almost always an indication that the existing module system needs restructuring, see M-BALANCED-MODULES.
+Preludes in particular do not resolve bad module design. If it looks like a prelude would make the crate easier to use or understand, this is almost always an indication that the existing module system needs restructuring, see [M-BALANCED-MODULES](#M-BALANCED-MODULES).
 
 

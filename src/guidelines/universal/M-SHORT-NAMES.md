@@ -9,7 +9,7 @@ Identifiers for items (functions, methods, types, fields, modules) should stay s
 
 - TODO: Give a concrete length guideline or heuristic (e.g., prefer one or two words for methods on a type; avoid restating the type name in its methods).
 - TODO: Specify when longer names are warranted (rare public free functions where disambiguation is unavoidable, low-level safety-critical APIs).
-- TODO: Clarify the relationship to M-WEASEL-WORDS (which targets weasel words) — this rule is about overall length, not specifically filler words.
+- TODO: Clarify the relationship to [M-WEASEL-WORDS](#M-WEASEL-WORDS) (which targets weasel words) — this rule is about overall length, not specifically filler words.
 - TODO: Provide a concrete bad example (`UserService::get_user_by_id_from_database`).
 - TODO: Provide a concrete good example (`UserService::get(id)` or `Users::find(id)`).
-- TODO: Note interaction with the Rust API Guidelines naming conventions and M-WEASEL-WORDS.
+- TODO: Note interaction with the Rust API Guidelines naming conventions and [M-WEASEL-WORDS](#M-WEASEL-WORDS).
