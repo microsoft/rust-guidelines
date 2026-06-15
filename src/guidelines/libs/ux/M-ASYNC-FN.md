@@ -7,7 +7,7 @@
 
 Functions should be declared `async fn foo()` over `fn foo() -> impl Future` when both are viable. 
 
-Functions marked `async` are more idiomatic and easier to read. An explicit `Future`-returning signature should only be used when required, for example inside traits.
+Functions marked `async` are more idiomatic and easier to read. An explicit `Future`-returning signature should only be used when required, for example inside traits or for _hot 'n heavy_ async functions, compare [M-ASYNC-STACK-SIZE](../../performance/#M-ASYNC-STACK-SIZE).
 
 ```rust
 impl Foo {

@@ -18,4 +18,6 @@ fn checkpoints_are_correct() {
 }
 ```
 
+Where these are used to satisfy mutation tests, the mutation test should be skipped instead. 
+
 Instead, a meaningful test would check a property the constants are supposed to satisfy, for example that they are evenly spaced, monotonically increasing, or impose some direction in related logic.

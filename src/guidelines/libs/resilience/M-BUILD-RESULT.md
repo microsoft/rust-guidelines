@@ -23,3 +23,5 @@ Foo::builder()
     .distance(42)
     .build()?;
 ```
+
+That said, individual settings should prefer strong types carrying their own validation where applicable, compare M-STRONG-TYPES-GUARD.

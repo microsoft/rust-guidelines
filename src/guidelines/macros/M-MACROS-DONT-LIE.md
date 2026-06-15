@@ -11,7 +11,7 @@ Macros have the ability to arbitrarily rewrite token streams. They could convert
 
 Among others, macros must not
 
-- convert the nature of data types (e.g., structs to enums, ...),
+- visibly convert the nature of data types (e.g., structs to enums, ...),
 - alter function signatures,
 - convert the `async`-ness of items,
 - do anything else that materially detaches _what's written_ from _what's happening_.

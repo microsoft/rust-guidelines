@@ -43,6 +43,7 @@
   - [ ] I/O and system calls are mockable ([M-MOCKABLE-SYSCALLS])
   - [ ] Test utilities are feature gated ([M-TEST-UTIL])
   - [ ] Integration tests live under `tests/` ([M-INTEGRATION-TESTS])
+  - [ ] Integration test utilities live in a separate crate ([M-INTEGRATION-TEST-UTILS])
   - [ ] Use the proper type family ([M-STRONG-TYPES])
   - [ ] Newtypes guard their invariants ([M-STRONG-TYPES-GUARD])
   - [ ] Builders validate in final `.build()` ([M-BUILD-RESULT])
@@ -86,6 +87,7 @@
   - [ ] Shrink collections to fit after building ([M-SHRINK-TO-FIT])
   - [ ] Use a fast hasher where possible ([M-FAST-HASHER])
   - [ ] Collections are created with sufficient initial capacity ([M-INITIAL-CAPACITY])
+  - [ ] Hot `async` functions reduce stack size ([M-ASYNC-STACK-SIZE])
 - **Project**
   - [ ] Common settings come from the workspace Cargo.toml ([M-CARGO-WORKSPACE])
   - [ ] The workspace lists and versions all crates ([M-CRATES-IN-WORKSPACE])
@@ -154,6 +156,7 @@
 [M-EXT-TRAITS-FOREIGN-ITEMS]: ../libs/ux/#M-EXT-TRAITS-FOREIGN-ITEMS
 [M-TEST-UTIL]: ../libs/resilience/#M-TEST-UTIL
 [M-INTEGRATION-TESTS]: ../libs/resilience/#M-INTEGRATION-TESTS
+[M-INTEGRATION-TEST-UTILS]: ../libs/resilience/#M-INTEGRATION-TEST-UTILS
 [M-AVOID-STATICS]: ../libs/resilience/#M-AVOID-STATICS
 [M-OOBE]: ../libs/building/#M-OOBE
 [M-SYS-CRATES]: ../libs/resilience/#M-SYS-CRATES
@@ -185,6 +188,7 @@
 [M-SHRINK-TO-FIT]: ../performance/#M-SHRINK-TO-FIT
 [M-FAST-HASHER]: ../performance/#M-FAST-HASHER
 [M-INITIAL-CAPACITY]: ../performance/#M-INITIAL-CAPACITY
+[M-ASYNC-STACK-SIZE]: ../performance/#M-ASYNC-STACK-SIZE
 
 <!-- Project -->
 [M-CARGO-WORKSPACE]: ../project/#M-CARGO-WORKSPACE

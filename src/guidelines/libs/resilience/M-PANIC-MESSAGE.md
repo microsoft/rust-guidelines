@@ -14,3 +14,7 @@ assert!(buffer.len() >= HEADER_SIZE);
 // Good, message contains reason and actual values.
 assert!(buffer.len() >= HEADER_SIZE, "buffer too small for header: got {} bytes, need {HEADER_SIZE}", buffer.len());
 ```
+
+Messages related to API misuse should be useful to the end user. Messages indicating bugs should be helpful to you-as-the-author, or whoever maintains the project after you, to quickly identify the underlying cause. 
+
+Panic messages in tests are not generally needed.

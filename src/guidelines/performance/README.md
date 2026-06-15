@@ -12,3 +12,4 @@
 {{#include M-SHRINK-TO-FIT.md}}
 {{#include M-FAST-HASHER.md}}
 {{#include M-INITIAL-CAPACITY.md}}
+{{#include M-ASYNC-STACK-SIZE.md}}

@@ -7,7 +7,7 @@
 
 Where large, long-lived, growable collections such as `Vec` or `String` were built without an exact size reservation (compare [M-INITIAL-CAPACITY](#M-INITIAL-CAPACITY)), the resulting collection should be shrunk via `shrink_to_fit` before storing it.
 
-Rust's collections grow by powers of two when iteratively adding elements. In the worst case a collection might therefore use ~2x of its needed memory. 
+Many Rust collections grow by powers of two when iteratively adding elements. In the worst case a collection might therefore use ~2x of its needed memory. 
 
 ```rust
 // Bad, long lived object might end up using 2x needed memory.

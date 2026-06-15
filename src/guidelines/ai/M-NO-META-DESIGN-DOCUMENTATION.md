@@ -5,7 +5,7 @@
 <why>to avoid confusing users with information not relevant to them.</why>
 <version>0.1</version>
 
-Crate and module documentation must be free of meta design narratives that were only relevant during the creation of a crate. 
+Crate and module documentation must be free of meta design narratives that were only relevant during the creation of a crate. In other words, it is the end-state that is to be documented, not the design journey. 
 
 Agents frequently produce sections that describe how a change was designed, "why we picked X over Y" essays, and design journals inside user-facing documentation. These artifacts might be interesting diagnostics while working on the project, but they are mostly meaningless to end users. 
 

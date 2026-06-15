@@ -31,6 +31,11 @@ impl Month {
 
 This means for any newtype that is non-total:
 - It must have at least one fallible constructor (e.g., `fn from_foo(...) -> Result<Self, _>`). 
-- Additional panicking constructors are allowed (e.g., `new`), but should preferably be `const`.
+- Additional panicking constructors are allowed (e.g., `new`), and should preferably be `const`.
 - Conversions from weaker types into the newtype must be fallible (`TryFrom`/`FromStr`).
 - Infallible `From` implementations may not be offered.
+
+> ### <tip></tip> Why `const`?
+>
+> Const constructors allows them to be used inside `const {}` blocks, which surfaces these violations as errors. This enables
+> users to do `let month_due = const { Month::new(14) }` and avoids hitting these paths during runtime.
