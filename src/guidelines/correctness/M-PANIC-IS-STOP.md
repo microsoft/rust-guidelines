@@ -6,8 +6,8 @@
 
 Panics are not exceptions. Instead, they suggest immediate program termination.
 
-Although your code must be [panic-safe](https://doc.rust-lang.org/nomicon/exception-safety.html) (i.e., a survived panic may not lead to
-inconsistent state), invoking a panic means _this program should stop now_. It is not valid to:
+Although your code must be [_minimally_ panic-safe](https://doc.rust-lang.org/nomicon/exception-safety.html) (i.e., a survived panic may not lead to
+undefined state), invoking a panic means _this program should stop now_. It is not valid to:
 
 - use panics to communicate (errors) upstream,
 - use panics to handle self-inflicted error conditions,

@@ -148,7 +148,6 @@
 [M-ASYNC-FN]: ../libs/ux/#M-ASYNC-FN
 [M-TEST-UTIL]: ../libs/resilience/#M-TEST-UTIL
 [M-INTEGRATION-TESTS]: ../libs/resilience/#M-INTEGRATION-TESTS
-[M-INTEGRATION-TEST-UTILS]: ../libs/resilience/#M-INTEGRATION-TEST-UTILS
 [M-AVOID-STATICS]: ../libs/resilience/#M-AVOID-STATICS
 [M-OOBE]: ../libs/building/#M-OOBE
 [M-SYS-CRATES]: ../libs/resilience/#M-SYS-CRATES
