@@ -12,8 +12,6 @@
   - [ ] Names are free of weasel words ([M-WEASEL-WORDS])
   - [ ] Names of items are short ([M-SHORT-NAMES])
   - [ ] Prefer regular over associated functions ([M-REGULAR-FN])
-  - [ ] Panic means 'stop the program' ([M-PANIC-IS-STOP])
-  - [ ] Detected programming bugs are panics, not errors ([M-PANIC-ON-BUG])
   - [ ] Magic values are documented ([M-DOCUMENTED-MAGIC])
   - [ ] Use structured logging with message templates ([M-LOG-STRUCTURED])
 - **Library / Interoperability**
@@ -21,6 +19,9 @@
   - [ ] Native escape hatches ([M-ESCAPE-HATCHES])
   - [ ] Don't leak external types ([M-DONT-LEAK-TYPES])
   - [ ] Items come from their original crate ([M-FOREIGN-REEXPORTS])
+  - [ ] Accept `impl AsRef<>` where feasible ([M-IMPL-ASREF])
+  - [ ] Accept `impl RangeBounds<>` where feasible ([M-IMPL-RANGEBOUNDS])
+  - [ ] Accept `impl 'IO'` where feasible ('sans IO') ([M-IMPL-IO])
 - **Library / UX**
   - [ ] Abstractions don't visibly nest ([M-SIMPLE-ABSTRACTIONS])
   - [ ] Avoid smart pointers and wrappers in APIs ([M-AVOID-WRAPPERS])
@@ -30,9 +31,6 @@
   - [ ] Complex type construction has builders ([M-INIT-BUILDER])
   - [ ] Complex type initialization hierarchies are cascaded ([M-INIT-CASCADED])
   - [ ] Services are Clone ([M-SERVICES-CLONE])
-  - [ ] Accept `impl AsRef<>` where feasible ([M-IMPL-ASREF])
-  - [ ] Accept `impl RangeBounds<>` where feasible ([M-IMPL-RANGEBOUNDS])
-  - [ ] Accept `impl 'IO'` where feasible ('sans IO') ([M-IMPL-IO])
   - [ ] Essential functionality should be inherent ([M-ESSENTIAL-FN-INHERENT])
   - [ ] Modules are balanced in size and scope ([M-BALANCED-MODULES])
   - [ ] Don't define preludes ([M-NO-PRELUDE])
@@ -49,8 +47,6 @@
   - [ ] Builders validate in final `.build()` ([M-BUILD-RESULT])
   - [ ] Don't glob re-export items ([M-NO-GLOB-REEXPORTS])
   - [ ] Avoid statics ([M-AVOID-STATICS])
-  - [ ] Panic continuation is last resort ([M-PANIC-CONTINUATION])
-  - [ ] Custom panics have a helpful message ([M-PANIC-MESSAGE])
   - [ ] Production code uses telemetry, not println ([M-LOG-NOT-PRINT])
 - **Library / Building**
   - [ ] Libraries work out of the box ([M-OOBE])
@@ -58,7 +54,7 @@
   - [ ] Features are additive ([M-FEATURES-ADDITIVE])
 - **Macros**
   - [ ] Macros are a last resort ([M-MACRO-LAST-RESORT])
-  - [ ] Prefer 'macros by example' over proc macros ([M-MBE-OVER-PROC])
+  - [ ] Prefer 'macros by example' over proc macros ([M-EXAMPLE-OVER-PROC])
   - [ ] Macros don't lie about signatures ([M-MACROS-DONT-LIE])
   - [ ] Macros assume main crate ([M-MACRO-MAIN-CRATE])
   - [ ] Third party items come from hidden `_private` module ([M-MACRO-HELPERS])
@@ -72,10 +68,14 @@
   - [ ] Isolate DLL state between FFI libraries ([M-ISOLATE-DLL-STATE])
   - [ ] Business logic belongs in core crates, FFI only translates ([M-FFI-TRANSLATES])
   - [ ] FFI crates follow established naming conventions ([M-FFI-NAMING])
-- **Safety**
+- **Correctness**
   - [ ] Unsafe needs reason, should be avoided ([M-UNSAFE])
   - [ ] Unsafe implies undefined behavior ([M-UNSAFE-IMPLIES-UB])
   - [ ] All code must be sound ([M-UNSOUND])
+  - [ ] Panic means 'stop the program' ([M-PANIC-IS-STOP])
+  - [ ] Detected programming bugs are panics, not errors ([M-PANIC-ON-BUG])
+  - [ ] Panic continuation is last resort ([M-PANIC-CONTINUATION])
+  - [ ] Custom panics have a helpful message ([M-PANIC-MESSAGE])
 - **Performance**
   - [ ] Optimize for throughput, avoid empty cycles ([M-THROUGHPUT])
   - [ ] Identify, profile, optimize the hot path early ([M-HOTPATH])
@@ -101,7 +101,6 @@
   - [ ] Mark `pub use` items with `#[doc(inline)]` ([M-DOC-INLINE])
 - **AI**
   - [ ] Design with AI use in mind ([M-DESIGN-FOR-AI])
-  - [ ] AI-generated code requires human review ([M-HUMAN-REVIEW])
   - [ ] Items are only visible through one path ([M-SINGLE-ITEM-PATH])
   - [ ] Avoid meta design documentation ([M-NO-META-DESIGN-DOCUMENTATION])
   - [ ] Tests do not assert ground truth ([M-TAUTOLOGICAL-TESTS])
@@ -117,10 +116,6 @@
 [M-WEASEL-WORDS]: ../universal/#M-WEASEL-WORDS
 [M-SHORT-NAMES]: ../universal/#M-SHORT-NAMES
 [M-REGULAR-FN]: ../universal/#M-REGULAR-FN
-[M-PANIC-IS-STOP]: ../universal/#M-PANIC-IS-STOP
-[M-PANIC-ON-BUG]: ../universal/#M-PANIC-ON-BUG
-[M-PANIC-CONTINUATION]: ../libs/resilience/#M-PANIC-CONTINUATION
-[M-PANIC-MESSAGE]: ../libs/resilience/#M-PANIC-MESSAGE
 [M-DOCUMENTED-MAGIC]: ../universal/#M-DOCUMENTED-MAGIC
 [M-LOG-STRUCTURED]: ../universal/#M-LOG-STRUCTURED
 [M-LOG-NOT-PRINT]: ../libs/resilience/#M-LOG-NOT-PRINT
@@ -144,9 +139,9 @@
 [M-BUILD-RESULT]: ../libs/resilience/#M-BUILD-RESULT
 [M-INIT-CASCADED]: ../libs/ux/#M-INIT-CASCADED
 [M-SERVICES-CLONE]: ../libs/ux/#M-SERVICES-CLONE
-[M-IMPL-ASREF]: ../libs/ux/#M-IMPL-ASREF
-[M-IMPL-RANGEBOUNDS]: ../libs/ux/#M-IMPL-RANGEBOUNDS
-[M-IMPL-IO]: ../libs/ux/#M-IMPL-IO
+[M-IMPL-ASREF]: ../libs/interop/#M-IMPL-ASREF
+[M-IMPL-RANGEBOUNDS]: ../libs/interop/#M-IMPL-RANGEBOUNDS
+[M-IMPL-IO]: ../libs/interop/#M-IMPL-IO
 [M-BALANCED-MODULES]: ../libs/ux/#M-BALANCED-MODULES
 [M-NO-PRELUDE]: ../libs/ux/#M-NO-PRELUDE
 [M-PARAMETER-CONSISTENCY]: ../libs/ux/#M-PARAMETER-CONSISTENCY
@@ -172,10 +167,14 @@
 [M-FFI-TRANSLATES]: ../ffi/#M-FFI-TRANSLATES
 [M-FFI-NAMING]: ../ffi/#M-FFI-NAMING
 
-<!-- Safety -->
-[M-UNSAFE]: ../safety/#M-UNSAFE
-[M-UNSAFE-IMPLIES-UB]: ../safety/#M-UNSAFE-IMPLIES-UB
-[M-UNSOUND]: ../safety/#M-UNSOUND
+<!-- Correctness -->
+[M-UNSAFE]: ../correctness/#M-UNSAFE
+[M-UNSAFE-IMPLIES-UB]: ../correctness/#M-UNSAFE-IMPLIES-UB
+[M-UNSOUND]: ../correctness/#M-UNSOUND
+[M-PANIC-IS-STOP]: ../correctness/#M-PANIC-IS-STOP
+[M-PANIC-ON-BUG]: ../correctness/#M-PANIC-ON-BUG
+[M-PANIC-CONTINUATION]: ../correctness/#M-PANIC-CONTINUATION
+[M-PANIC-MESSAGE]: ../correctness/#M-PANIC-MESSAGE
 
 <!-- Performance -->
 [M-HOTPATH]: ../performance/#M-HOTPATH
@@ -205,7 +204,7 @@
 
 <!-- Macros -->
 [M-MACRO-LAST-RESORT]: ../macros/#M-MACRO-LAST-RESORT
-[M-MBE-OVER-PROC]: ../macros/#M-MBE-OVER-PROC
+[M-EXAMPLE-OVER-PROC]: ../macros/#M-EXAMPLE-OVER-PROC
 [M-MACROS-DONT-LIE]: ../macros/#M-MACROS-DONT-LIE
 [M-MACRO-MAIN-CRATE]: ../macros/#M-MACRO-MAIN-CRATE
 [M-MACRO-HELPERS]: ../macros/#M-MACRO-HELPERS
@@ -214,7 +213,6 @@
 
 <!-- AI -->
 [M-DESIGN-FOR-AI]: ../ai/#M-DESIGN-FOR-AI
-[M-HUMAN-REVIEW]: ../ai/#M-HUMAN-REVIEW
 [M-SINGLE-ITEM-PATH]: ../ai/#M-SINGLE-ITEM-PATH
 [M-NO-META-DESIGN-DOCUMENTATION]: ../ai/#M-NO-META-DESIGN-DOCUMENTATION
 [M-TAUTOLOGICAL-TESTS]: ../ai/#M-TAUTOLOGICAL-TESTS

@@ -12,7 +12,7 @@
 - [Macros](./guidelines/macros/README.md)
 - [Applications](./guidelines/apps/README.md)
 - [FFI](./guidelines/ffi/README.md)
-- [Safety](./guidelines/safety/README.md)
+- [Correctness](./guidelines/correctness/README.md)
 - [Performance](./guidelines/performance/README.md)
 - [Project](./guidelines/project/README.md)
 - [Documentation](./guidelines/docs/README.md)

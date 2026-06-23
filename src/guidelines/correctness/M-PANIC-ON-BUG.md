@@ -41,4 +41,4 @@ fn parse_uri(s: &str) -> Result<Uri, ParseError> { };
 > For any user input or calling sequence that would otherwise panic, you should also explore if you can use the type
 > system to avoid panicking code paths altogether.
 
-[M-PANIC-IS-STOP]: ../universal/#M-PANIC-IS-STOP
+[M-PANIC-IS-STOP]: ./#M-PANIC-IS-STOP

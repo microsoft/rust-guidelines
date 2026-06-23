@@ -3,7 +3,7 @@
 # Macros Guidelines
 
 {{#include M-MACRO-LAST-RESORT.md}}
-{{#include M-MBE-OVER-PROC.md}}
+{{#include M-EXAMPLE-OVER-PROC.md}}
 {{#include M-MACROS-DONT-LIE.md}}
 {{#include M-MACRO-MAIN-CRATE.md}}
 {{#include M-MACRO-HELPERS.md}}

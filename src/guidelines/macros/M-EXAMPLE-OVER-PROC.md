@@ -1,6 +1,6 @@
 <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Prefer 'macros by example' over proc macros (M-MBE-OVER-PROC) { #M-MBE-OVER-PROC }
+## Prefer 'macros by example' over proc macros (M-EXAMPLE-OVER-PROC) { #M-EXAMPLE-OVER-PROC }
 
 <why>For easier macro inspection and faster compilation.</why>
 <version>0.1</version>

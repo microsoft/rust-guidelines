@@ -11,7 +11,5 @@
 {{#include M-WEASEL-WORDS.md}}
 {{#include M-SHORT-NAMES.md}}
 {{#include M-REGULAR-FN.md}}
-{{#include M-PANIC-IS-STOP.md}}
-{{#include M-PANIC-ON-BUG.md}}
 {{#include M-DOCUMENTED-MAGIC.md}}
 {{#include M-LOG-STRUCTURED.md}}

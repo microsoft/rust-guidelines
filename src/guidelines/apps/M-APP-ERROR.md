@@ -7,7 +7,7 @@
 
 > Note, this guideline is primarily a relaxation and clarification of [M-ERRORS-CANONICAL-STRUCTS].
 
-Applications, and crates in your own repository exclusively used from your application, may use [anyhow](https://github.com/dtolnay/anyhow),
+Applications, and crates in your own repository exclusively used from your application, may use [ohno::AppError](https://docs.rs/crate/ohno/latest#structs), [anyhow](https://github.com/dtolnay/anyhow),
 [eyre](https://github.com/eyre-rs/eyre) or similar application-level error crates instead of implementing their own types.
 
 For example, in your application crates you may just re-export and use eyre's common `Result` type, which should be able to automatically
@@ -15,9 +15,9 @@ handle all third party library errors, in particular the ones following
 [M-ERRORS-CANONICAL-STRUCTS].
 
 ```rust,ignore
-use eyre::Result;
+use ohno::AppError;
 
-fn start_application() -> Result<()> {
+fn start_application() -> Result<(), AppError> {
     start_server()?;
     Ok(())
 }

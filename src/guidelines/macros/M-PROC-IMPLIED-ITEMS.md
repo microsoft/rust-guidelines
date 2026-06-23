@@ -17,7 +17,6 @@ struct UserType;
 
 struct UserType;
 struct ExtraType; 
-
 impl UserType {
     fn foo() -> ExtraType { ... };
 }
