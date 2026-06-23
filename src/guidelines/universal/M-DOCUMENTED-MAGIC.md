@@ -3,7 +3,6 @@
 ## Magic values are documented (M-DOCUMENTED-MAGIC) { #M-DOCUMENTED-MAGIC }
 
 <why>To ensure maintainability and prevent misunderstandings when refactoring.</why>
-<version>1.0</version>
 
 Hardcoded _magic_ values in production code must be accompanied by a comment. The comment should outline:
 

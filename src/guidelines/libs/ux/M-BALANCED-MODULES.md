@@ -3,7 +3,6 @@
 ## Modules are balanced in size and scope (M-BALANCED-MODULES) { #M-BALANCED-MODULES }
 
 <why>To help users understand functionality and API usage.</why>
-<version>0.1</version>
 
 Your module design should approximately follow established UX practices of menu design: A _reasonable_ number of your most important items should be placed in the crate root, and a comprehensible grouping of the remaining functionality into subordinate modules.
 

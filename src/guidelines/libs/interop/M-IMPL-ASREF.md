@@ -3,7 +3,6 @@
 ## Accept `impl AsRef<>` where feasible (M-IMPL-ASREF) { #M-IMPL-ASREF }
 
 <why>To give users flexibility calling in with their own types.</why>
-<version>1.0</version>
 
 In **function** signatures, accept `impl AsRef<T>` for types that have a
 [clear reference hierarchy](https://doc.rust-lang.org/stable/std/convert/trait.AsRef.html#implementors), where you

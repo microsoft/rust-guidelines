@@ -3,7 +3,6 @@
 ## The workspace lists and versions all crates (M-CRATES-IN-WORKSPACE) { #M-CRATES-IN-WORKSPACE }
 
 <why>To simplify inter-crate dependencies and debugging.</why>
-<version>0.1</version>
 
 Every crate produced by the project should be listed as a workspace member, and its version should be declared in `[workspace.dependencies]` so that intra-workspace dependencies resolve to a single canonical version.
 

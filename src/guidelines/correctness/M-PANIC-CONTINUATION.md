@@ -3,7 +3,6 @@
 ## Panic continuation is last resort (M-PANIC-CONTINUATION) { #M-PANIC-CONTINUATION }
 
 <why>to avoid subtle bugs and state corruption.</why>
-<version>0.1</version>
 
 Panic recovery via `catch_unwind()` is a matter of last resort and must generally be followed by a controlled application restart.
 

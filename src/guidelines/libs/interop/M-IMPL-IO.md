@@ -3,7 +3,6 @@
 ## Accept `impl 'IO'` where feasible ('sans IO') (M-IMPL-IO) { #M-IMPL-IO }
 
 <why>To untangle business logic from I/O logic, and have N*M composability.</why>
-<version>1.0</version>
 
 Functions and types that only need to perform one-shot I/O during initialization should be written "[sans-io](https://www.firezone.dev/blog/sans-io)",
 and accept some `impl T`, where `T` is the appropriate I/O trait, effectively outsourcing I/O work to another type:

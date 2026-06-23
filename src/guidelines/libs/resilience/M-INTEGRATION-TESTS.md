@@ -3,7 +3,6 @@
 ## Integration tests live under `tests/` (M-INTEGRATION-TESTS) { #M-INTEGRATION-TESTS }
 
 <why>To keep code files reasonably clean.</why>
-<version>0.1</version>
 
 Tests that only touch public API surface are _integration tests_ and belong under `tests/`, not `mod tests {}`.
 

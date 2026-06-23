@@ -3,7 +3,6 @@
 ## Newtypes guard their invariants (M-STRONG-TYPES-GUARD) { #M-STRONG-TYPES-GUARD }
 
 <why>To centralize essential correctness invariants.</why>
-<version>0.1</version>
 
 When introducing a strong type or newtype that exists to encode an invariant (a non-empty string, a percentage, a port number, a sanitized path, ...), the type itself must enforce that invariant where applicable.
 

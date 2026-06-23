@@ -3,7 +3,6 @@
 ## Names are free of weasel words (M-WEASEL-WORDS) { #M-WEASEL-WORDS }
 
 <why>To improve readability.</why>
-<version>1.0</version>
 
 Symbol names, especially type and trait names, should be free of weasel words that do not meaningfully
 add information. Common offenders include `Service`, `Manager`, and `Factory`.

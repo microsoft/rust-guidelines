@@ -3,7 +3,6 @@
 ## Libraries work out of the box (M-OOBE) { #M-OOBE }
 
 <why>To be easily adoptable by the Rust ecosystem.</why>
-<version>1.0</version>
 
 Libraries must _just work_ on all supported platforms, with the exception of libraries that are expressly platform or target specific.
 

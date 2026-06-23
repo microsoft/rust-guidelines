@@ -3,7 +3,6 @@
 ## Follow the upstream guidelines (M-UPSTREAM-GUIDELINES) { #M-UPSTREAM-GUIDELINES }
 
 <why>To avoid repeating mistakes the community has already learned from, and to have a codebase that does not surprise users and contributors.</why>
-<version>1.0</version>
 
 The guidelines in this book complement existing Rust guidelines, in particular:
 

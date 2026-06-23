@@ -3,7 +3,6 @@
 ## Design with AI use in mind (M-DESIGN-FOR-AI) { #M-DESIGN-FOR-AI }
 
 <why>To maximize the utility you get from letting agents work in your code base.</why>
-<version>1.0</version>
 
 As a general rule, making APIs easier to use for humans also makes them easier to use by AI.
 If you follow the guidelines in this book, you should be in good shape.

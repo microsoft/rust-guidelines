@@ -3,7 +3,6 @@
 ## Don't define preludes (M-NO-PRELUDE) { #M-NO-PRELUDE }
 
 <why>To avoid namespace pollution and downstream compilation issues.</why>
-<version>0.1</version>
 
 Crates must not define a `prelude` or any namespace intended to be imported as `use foo::*`.
 

@@ -3,7 +3,6 @@
 ## Rust code solves Rust problems (M-RUST-SHAPED) { #M-RUST-SHAPED }
 
 <why>To ensure code is idiomatic.</why>
-<version>0.1</version>
 
 When (automatically) porting C#, Java, C++, or similar code to Rust, technical constructs must not be copied 1-on-1.
 

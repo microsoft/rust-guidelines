@@ -3,7 +3,6 @@
 ## Parameter ordering is consistent (M-PARAMETER-CONSISTENCY) { #M-PARAMETER-CONSISTENCY }
 
 <why>To reduce development friction.</why>
-<version>0.1</version>
 
 When the same conceptual parameters appear in multiple functions (within a crate or across crates in the same ecosystem), they should appear in the same order everywhere:
 

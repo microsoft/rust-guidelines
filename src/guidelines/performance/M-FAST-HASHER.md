@@ -3,7 +3,6 @@
 ## Use a fast hasher where possible (M-FAST-HASHER) { #M-FAST-HASHER }
 
 <why>to improve performance.</why>
-<version>0.1</version>
 
 When hashing trusted, internal keys, prefer a fast non-cryptographic hasher (e.g., `foldhash`, `FxHash`) over the standard library default.
 

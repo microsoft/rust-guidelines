@@ -3,7 +3,6 @@
 ## Integration test utilities live in a separate crate (M-INTEGRATION-TEST-UTILS) { #M-INTEGRATION-TEST-UTILS }
 
 <why>To keep test scaffolding reusable across integration tests without polluting the production crate or duplicating helpers per test binary.</why>
-<version>0.1</version>
 
 For complex projects, shared helpers used by integration tests (fixtures, builders, mock servers, assertion helpers, ...) should live in a dedicated crate rather than inside the production crate or copied between individual `tests/*.rs` files.
 

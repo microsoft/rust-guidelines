@@ -3,7 +3,6 @@
 ## Unsafe implies undefined behavior (M-UNSAFE-IMPLIES-UB) { #M-UNSAFE-IMPLIES-UB }
 
 <why>To ensure semantic consistency and prevent warning fatigue.</why>
-<version>1.0</version>
 
 The marker `unsafe` may only be applied to functions and traits if misuse implies the risk of undefined behavior (UB).
 It must not be used to mark functions that are dangerous to call for other reasons.

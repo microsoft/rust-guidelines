@@ -3,7 +3,6 @@
 ## Collections implement the appropriate iter traits (M-COLLECTION-TRAITS) { #M-COLLECTION-TRAITS }
 
 <why>To ensure collections compose.</why>
-<version>0.1</version>
 
 Custom collections should implement the iterator-facing traits the standard library offers.
 

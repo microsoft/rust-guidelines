@@ -3,7 +3,6 @@
 ## Use boxed slices and strings for immutable owned sequences (M-BOX-DST) { #M-BOX-DST }
 
 <why>To reduce memory consumption and better utilize caches.</why>
-<version>0.1</version>
 
 Frequently used, internal, immutable sequences that will not be resized after construction should be stored as `Box<[T]>`, `Arc<str>` or similar, rather than their original  `Vec<T>` or `String` counterparts.
 

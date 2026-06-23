@@ -3,7 +3,6 @@
 ## Don't glob re-export items (M-NO-GLOB-REEXPORTS) { #M-NO-GLOB-REEXPORTS }
 
 <why>To prevent accidentally leaking unintended types.</why>
-<version>1.0</version>
 
 Don't `pub use foo::*` from other modules, especially not from other crates. You might accidentally export more than you want,
 and globs are hard to review in PRs. Re-export items individually instead:

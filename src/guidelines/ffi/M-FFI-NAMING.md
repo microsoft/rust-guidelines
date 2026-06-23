@@ -3,7 +3,6 @@
 ## FFI crates follow established naming conventions (M-FFI-NAMING) { #M-FFI-NAMING }
 
 <why>to make the role of crates immediately recognizable across projects.</why>
-<version>0.1</version>
 
 Crates used for FFI should follow established naming practices:
 

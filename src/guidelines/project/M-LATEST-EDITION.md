@@ -3,7 +3,6 @@
 ## New crates target latest edition (M-LATEST-EDITION) { #M-LATEST-EDITION }
 
 <why>To get the latest and greatest Rust.</why>
-<version>0.1</version>
 
 When creating a new crate or workspace, set `edition` to the latest stable edition (at least `2024` at the time of writing); the `resolver` field is generally not needed.
 

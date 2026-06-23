@@ -3,7 +3,6 @@
 ## Macros are a last resort (M-MACRO-LAST-RESORT) { #M-MACRO-LAST-RESORT }
 
 <why>To avoid complexity where it can be avoided.</why>
-<version>0.1</version>
 
 Macros should only be used if no other viable solution exists, compare this adage:
 

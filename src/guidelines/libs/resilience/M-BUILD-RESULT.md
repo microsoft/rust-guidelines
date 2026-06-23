@@ -3,7 +3,6 @@
 ## Builders validate in final `.build()` (M-BUILD-RESULT) { #M-BUILD-RESULT }
 
 <why>To de-noise error builder usage.</why>
-<version>0.1</version>
 
 A builder's per-field setters should accept input without failing, final validation should be done by `.build()`.
 

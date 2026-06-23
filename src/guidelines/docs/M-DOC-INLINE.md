@@ -3,7 +3,6 @@
 ## Mark `pub use` items with `#[doc(inline)]` (M-DOC-INLINE) { #M-DOC-INLINE }
 
 <why>To make re-exported items 'fit in' with their non re-exported siblings.</why>
-<version>1.0</version>
 
 When publicly re-exporting crate items via `pub use foo::Foo` or `pub use foo::*`, they show up in an opaque re-export block. In most cases, this is not
 helpful to the reader:

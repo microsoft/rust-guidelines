@@ -3,7 +3,6 @@
 ## Proc macros should have separate impl crate incl. tests (M-PROC-IMPL) { #M-PROC-IMPL }
 
 <why>To allow for better testing.</why>
-<version>0.1</version>
 
 Proc macros should be thin shims inside some `foo_proc` crate that delegate to a separate, regular library crate, usually called `foo_proc_impl`, which contains the actual token-stream transformation logic and its tests.
 

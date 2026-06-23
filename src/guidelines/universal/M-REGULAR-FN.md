@@ -3,7 +3,6 @@
 ## Prefer regular over associated functions (M-REGULAR-FN) { #M-REGULAR-FN }
 
 <why>To improve readability.</why>
-<version>1.0</version>
 
 Associated functions should primarily be used for instance creation, not general purpose computation.
 
