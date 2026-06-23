@@ -5,19 +5,20 @@
 <why>To reduce allocation overhead and improve performance in hot paths.</why>
 <version>0.1</version>
 
-When designing APIs you should allow users to hold onto reusable resources. Inside your code you should make use of them where available. 
+When designing APIs you should allow users to hold onto reusable resources. Inside your code you should make use of them where available.
 
 The cost of repeated allocations inside hot loops can be significant, and from a user's perspective they can be invisible unless profiled:
 
-```rust
+```rust,ignore
 // Bad, API design forces new allocation per element.
 for id in ids {
     let value = db.get(id);
 }
 ```
+
 While this style of API may exist for convenience, it should be auxiliary. Instead, the core APIs should allow users to own the underlying object and re-use it:
 
-```rust
+```rust,ignore
 // Good, allows users to decide whether a new allocation is needed.
 let mut value = Value::new();
 for id in ids {
@@ -32,9 +33,10 @@ struct Value {
     data: Vec<u8>
 }
 ```
+
 In heavyweight, deeply nested libraries it can be worthwhile to either pass a bump-style `Arena`, or to encapsulate one inside the user types, so it can be used throughout the call stack:
 
-```rust
+```rust,ignore
 struct Query {
     arena: Arena,
     request: Request,

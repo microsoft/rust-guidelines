@@ -3,7 +3,7 @@
 ## Use mimalloc for apps (M-MIMALLOC-APPS) { #M-MIMALLOC-APPS }
 
 <why>To get significant performance for free.</why>
-<version>0.1</version>
+<version>1.0</version>
 
 Applications should set [mimalloc](https://crates.io/crates/mimalloc) as their global allocator. This usually results in notable performance
 increases along allocating hot paths; we have seen up to 25% benchmark improvements.

@@ -5,11 +5,11 @@
 <why>To avoid confusing errors, hygiene and visibility issues.</why>
 <version>0.1</version>
 
-Macros should not define magic types on their own, in particular not public ones, or ones that don't rely on namespace tricks. 
+Macros should not define magic types on their own, in particular not public ones, or ones that don't rely on namespace tricks.
 
 Some macros want to define types, for example
 
-```rust
+```rust,ignore
 #[my_macro]
 struct UserType;
 
@@ -29,11 +29,11 @@ This is almost always a bad idea for several reasons:
 - they can clash with the user's naming conventions,
 - they are invisible at source code level and easily forgotten to be re-exported where needed.
 
-While it is possible for users to work around these limitations somewhat, these are paper cuts your users will have to deal with, possibly months after the fact when refactoring otherwise unrelated code. 
+While it is possible for users to work around these limitations somewhat, these are paper cuts your users will have to deal with, possibly months after the fact when refactoring otherwise unrelated code.
 
 Note that there is one exception to this rule that has generally acceptable UX, the overloaded use of [namespaces](https://doc.rust-lang.org/reference/names/namespaces.html) made prominent by crates like Rocket:
 
-```rust
+```rust,ignore
 #[my_macro]
 fn foo() { ... }
 
@@ -49,5 +49,5 @@ Here a new type `foo` is introduced with the same name as the function `foo`. Du
 
 > ### <tip></tip> Namespaces != Modules
 >
-> Namespaces in Rust have nothing to do with namespaces in other languages. A namespace in C# is approximately a module in Rust. A namespace in Rust 
+> Namespaces in Rust have nothing to do with namespaces in other languages. A namespace in C# is approximately a module in Rust. A namespace in Rust
 is an esoteric property of names (e.g., `fn foo`, `struct Bar {}`, `moo!`) that decides which 'naming bucket' it lives in inside a module.

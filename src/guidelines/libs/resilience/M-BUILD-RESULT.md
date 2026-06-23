@@ -9,7 +9,7 @@ A builder's per-field setters should accept input without failing, final validat
 
 Fallible setters add noise, and still don't guard against interdependent error conditions. Where builders are fallible they should offer a `Result`-carrying `.build()` instead.
 
-```rust
+```rust,ignore
 // Bad, forces repeated error checks that provide no value.
 Foo::builder()
     .name("Foo")?

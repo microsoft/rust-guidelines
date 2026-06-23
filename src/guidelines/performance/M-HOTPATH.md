@@ -3,7 +3,7 @@
 ## Identify, profile, optimize the hot path early (M-HOTPATH) { #M-HOTPATH }
 
 <why>To end up with high performance code.</why>
-<version>0.1</version>
+<version>1.0</version>
 
 You should, early in the development process, identify if your crate is performance or COGS relevant. If it is:
 

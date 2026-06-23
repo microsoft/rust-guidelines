@@ -21,4 +21,5 @@
 ---
 
 [Agents & LLMs](./agents/README.md)
+[Changelog](./changelog/README.md)
 [FAQ](./FAQ/README.md)

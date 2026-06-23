@@ -9,5 +9,5 @@ For complex projects, shared helpers used by integration tests (fixtures, builde
 
 - TODO: Define what counts as a "complex project" (e.g., number of integration tests, crates, or helpers that triggers this rule).
 - TODO: Specify the recommended crate name / location convention (e.g., sibling `foo-test-utils` crate in the workspace).
-- TODO: Clarify the relationship with [M-TEST-UTIL](#M-TEST-UTIL) (feature-gated helpers within a crate) — when to prefer which.
+- TODO: Clarify the relationship with [M-TEST-UTIL](./#M-TEST-UTIL) (feature-gated helpers within a crate) — when to prefer which.
 - TODO: Add a short example showing the crate layout and how integration tests depend on it (likely via `[dev-dependencies]`).

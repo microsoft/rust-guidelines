@@ -5,11 +5,11 @@
 <why>To centralize essential correctness invariants.</why>
 <version>0.1</version>
 
-When introducing a strong type or newtype that exists to encode an invariant (a non-empty string, a percentage, a port number, a sanitized path, ...), the type itself must enforce that invariant where applicable. 
+When introducing a strong type or newtype that exists to encode an invariant (a non-empty string, a percentage, a port number, a sanitized path, ...), the type itself must enforce that invariant where applicable.
 
 Construction should be fallible, returning a proper error when the invariant cannot be upheld, rather than handing the responsibility off to every user:
 
-```rust
+```rust,ignore
 // Bad, creates a new type but enforces nothing. Every caller now has to
 // re-check that the value is actually a valid month, defeating the point of
 // having a dedicated type.
@@ -30,7 +30,8 @@ impl Month {
 ```
 
 This means for any newtype that is non-total:
-- It must have at least one fallible constructor (e.g., `fn from_foo(...) -> Result<Self, _>`). 
+
+- It must have at least one fallible constructor (e.g., `fn from_foo(...) -> Result<Self, _>`).
 - Additional panicking constructors are allowed (e.g., `new`), and should preferably be `const`.
 - Conversions from weaker types into the newtype must be fallible (`TryFrom`/`FromStr`).
 - Infallible `From` implementations may not be offered.

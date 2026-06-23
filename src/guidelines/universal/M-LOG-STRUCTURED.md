@@ -3,7 +3,7 @@
 ## Use structured logging with message templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
 
 <why>To minimize the cost of logging and to improve filtering capabilities.</why>
-<version>0.1</version>
+<version>1.0</version>
 
 Logging should use structured events with named properties and message templates following
 the [message templates](https://messagetemplates.org/) specification.

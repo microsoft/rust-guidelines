@@ -3,7 +3,7 @@
 ## Prefer types over generics, generics over dyn traits (M-DI-HIERARCHY) { #M-DI-HIERARCHY }
 
 <why>To prevent patterns that don't compose, and design lock-in.</why>
-<version>0.1</version>
+<version>1.0</version>
 
 When asking for async dependencies, prefer concrete types over generics, and generics over `dyn Trait`.
 

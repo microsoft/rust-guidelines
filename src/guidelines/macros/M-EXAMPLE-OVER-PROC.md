@@ -5,11 +5,11 @@
 <why>For easier macro inspection and faster compilation.</why>
 <version>0.1</version>
 
-When a 'macro by example' can do the job, it should be preferred over proc macros. 
+When a 'macro by example' can do the job, it should be preferred over proc macros.
 
-Proc macros are more powerful, but their expansion can't easily be inspected. Where this versatility isn't needed, a simple 'macro by example' is the better option. 
+Proc macros are more powerful, but their expansion can't easily be inspected. Where this versatility isn't needed, a simple 'macro by example' is the better option.
 
-```rust
+```rust,ignore
 // Bad, attribute macro requires proc macro machinery, can be hard to 
 // inspect in some IDEs, and isn't needed here.
 #[make_new_id]

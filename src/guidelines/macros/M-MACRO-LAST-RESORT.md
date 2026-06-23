@@ -8,7 +8,7 @@
 Macros should only be used if no other viable solution exists, compare this adage:
 
 > As @littlecalculist always told me, “macros are for when you run out of language”. If you still have language left — and Rust gives you a lot of language — use the language first.
-> 
+>
 > @pcwalton
 
 Macros are powerful, but come with several downsides. They

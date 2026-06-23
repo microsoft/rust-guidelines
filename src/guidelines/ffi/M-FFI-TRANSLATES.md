@@ -9,7 +9,7 @@ When Rust is used to create FFI libraries, there should be a clear separation of
 
 Any operational functionality belongs in the core crate and should be expressed as idiomatic, safe, testable Rust. The FFI crate exists only to translate between native Rust and C constructs, and the core crate must not be infected with interop concerns, even if this means repeating, and slightly adjusting, type and function signatures. For example, given the following type in the core crate `foo`:
 
-```rust
+```rust,ignore
 pub struct Message {
     destination: [u8; 8],
     data: Vec<u8>,
@@ -23,7 +23,7 @@ impl Message {
 
 A proper separation of concerns might collapse construction and transmission into a single FFI entry point in `foo-ffi`:
 
-```rust
+```rust,ignore
 #[no_mangle]
 pub unsafe extern "C" fn transmit_message(
     destination: *const [u8; 8],

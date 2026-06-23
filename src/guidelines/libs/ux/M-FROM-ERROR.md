@@ -7,7 +7,7 @@
 
 Where an `Error` type is owned, it should `impl From<Other> for Error {}` instead of handling the conversion throughout the code via `.map_error()`. Calling `.map_error()` is only appropriate when dealing with foreign error types, or if contextual information needs to be preserved.
 
-```rust
+```rust,ignore
 // Bad, repeats the same conversion at every call site and obscures the happy path.
 fn load() -> Result<Config, MyError> {
     let bytes = read("config.toml").map_err(|e| MyError::Io(e))?;

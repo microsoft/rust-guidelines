@@ -9,7 +9,7 @@ When a macro expansion needs to refer to third-party items, the host crate shoul
 
 For example, a crate `foo` requiring `bar` traits would do:
 
-```rust
+```rust,ignore
 #[doc(hidden)]
 pub mod _private {
     pub use ::bar::Bar;
@@ -20,6 +20,6 @@ pub use foo_proc::my_macro;
 
 The `my_macro!` implementation would then rely on its presence in its emitted code:
 
-```rust
+```rust,ignore
 impl ::foo::_private::Bar for MyType { ... }
 ```

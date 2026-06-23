@@ -11,7 +11,7 @@ When the same conceptual parameters appear in multiple functions (within a crate
 - ubiquitous parameters rather go last (e.g., `&logger`),
 - closures always go last (functions should not accept more than one closure).
 
-```rust
+```rust,ignore
 // Bad, the order of `user_id` and `tenant_id` flips between functions, and
 // the logger sometimes appears first, sometimes last.
 fn create_user(logger: &Logger, user_id: UserId, tenant_id: TenantId) -> Result<()> { ... }

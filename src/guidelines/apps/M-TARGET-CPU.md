@@ -5,7 +5,7 @@
 <why>to improve fleet performance.</why>
 <version>0.1</version>
 
-Server applications should compile against the highest `target-cpu` that the deployment environment is guaranteed to support, rather than defaulting to the generic baseline. 
+Server applications should compile against the highest `target-cpu` that the deployment environment is guaranteed to support, rather than defaulting to the generic baseline.
 
 This can be achieved, for example, by setting inside `.cargo/config.toml`:
 

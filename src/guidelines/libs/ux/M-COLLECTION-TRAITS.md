@@ -5,7 +5,7 @@
 <why>To ensure collections compose.</why>
 <version>0.1</version>
 
-Custom collections should implement the iterator-facing traits the standard library offers. 
+Custom collections should implement the iterator-facing traits the standard library offers.
 
 Whenever you define a new collection type `Collection<T>` for consumption by third parties, the following traits and types should also be implemented, [see here](https://cheats.rs/#iterators) for more details:
 
