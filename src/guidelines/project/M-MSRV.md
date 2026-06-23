@@ -2,7 +2,7 @@
 
 ## MSRV is conservatively updated (M-MSRV) { #M-MSRV }
 
-<why>To enable modern features while maintaining user stability.</why>
+<why>modern features with stability for users.</why>
 
 A Minimum Supported Rust Version (MSRV) should be set when libraries are first created. It can be updated as new Rust features are needed, but should be kept a few versions behind the most recent compiler release.
 

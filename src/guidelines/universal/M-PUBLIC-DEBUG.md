@@ -2,7 +2,7 @@
 
 ## Public types are Debug (M-PUBLIC-DEBUG) { #M-PUBLIC-DEBUG }
 
-<why>To simplify debugging and prevent leaking sensitive data.</why>
+<why>easy debugging without leaking sensitive data.</why>
 
 All public types exposed by a crate should implement `Debug`. Most types can do so via `#[derive(Debug)]`:
 

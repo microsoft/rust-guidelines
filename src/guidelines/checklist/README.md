@@ -41,7 +41,6 @@
   - [ ] I/O and system calls are mockable ([M-MOCKABLE-SYSCALLS])
   - [ ] Test utilities are feature gated ([M-TEST-UTIL])
   - [ ] Integration tests live under `tests/` ([M-INTEGRATION-TESTS])
-  - [ ] Integration test utilities live in a separate crate ([M-INTEGRATION-TEST-UTILS])
   - [ ] Use the proper type family ([M-STRONG-TYPES])
   - [ ] Newtypes guard their invariants ([M-STRONG-TYPES-GUARD])
   - [ ] Builders validate in final `.build()` ([M-BUILD-RESULT])

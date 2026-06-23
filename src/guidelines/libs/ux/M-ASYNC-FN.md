@@ -2,7 +2,7 @@
 
 ## Functions are `async` over returning a Future (M-ASYNC-FN) { #M-ASYNC-FN }
 
-<why>To simplify code and easier to understand APIs.</why>
+<why>simpler code and easier-to-understand APIs.</why>
 
 Functions should be declared `async fn foo()` over `fn foo() -> impl Future` when both are viable.
 

@@ -2,7 +2,7 @@
 
 ## Use static verification (M-STATIC-VERIFICATION) { #M-STATIC-VERIFICATION }
 
-<why>To ensure consistency and avoid common issues.</why>
+<why>consistency and freedom from common issues.</why>
 
 Projects should use the following static verification tools to help maintain the quality of the code. These tools can be
 configured to run on a developer's machine during normal work, and should be used as part of check-in gates.

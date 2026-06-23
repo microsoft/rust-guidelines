@@ -2,7 +2,7 @@
 
 ## Services are Clone (M-SERVICES-CLONE) { #M-SERVICES-CLONE }
 
-<why>To avoid composability issues when sharing common services.</why>
+<why>composable sharing of common services.</why>
 
 Heavyweight _service_ types and 'thread singletons' should implement shared-ownership `Clone` semantics, including any type you expect to be used from your `Application::init`.
 

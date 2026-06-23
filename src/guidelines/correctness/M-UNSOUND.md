@@ -2,7 +2,7 @@
 
 ## All code must be sound (M-UNSOUND) { #M-UNSOUND }
 
-<why>To prevent unexpected runtime behavior, leading to potential bugs and incompatibilities.</why>
+<why>predictable runtime behavior free of bugs and incompatibilities.</why>
 
 Unsound code is seemingly _safe_ code that may produce undefined behavior when called from other safe code, or on its own accord.
 

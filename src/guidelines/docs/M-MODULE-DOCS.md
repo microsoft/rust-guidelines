@@ -2,7 +2,7 @@
 
 ## Has comprehensive module documentation (M-MODULE-DOCS) { #M-MODULE-DOCS }
 
-<why>To allow for better API docs navigation.</why>
+<why>easy API docs navigation.</why>
 
 Any public library module must have `//!` module documentation, and the first sentence must follow [M-DOC-FIRST-SENTENCE].
 

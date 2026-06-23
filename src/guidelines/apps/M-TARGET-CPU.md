@@ -2,7 +2,7 @@
 
 ## Applications target highest viable target-cpu (M-TARGET-CPU) { #M-TARGET-CPU }
 
-<why>to improve fleet performance.</why>
+<why>fleet performance.</why>
 
 Server applications should compile against the highest `target-cpu` that the deployment environment is guaranteed to support, rather than defaulting to the generic baseline.
 

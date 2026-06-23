@@ -2,7 +2,7 @@
 
 ## Proc macros don't produce implied or hidden items (M-PROC-IMPLIED-ITEMS) { #M-PROC-IMPLIED-ITEMS }
 
-<why>To avoid confusing errors, hygiene and visibility issues.</why>
+<why>clear errors and correct hygiene and visibility.</why>
 
 Macros should not define magic types on their own, in particular not public ones, or ones that don't rely on namespace tricks.
 

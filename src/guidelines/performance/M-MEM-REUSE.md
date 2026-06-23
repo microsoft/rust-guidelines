@@ -2,7 +2,7 @@
 
 ## Reuse allocations where possible (M-MEM-REUSE) { #M-MEM-REUSE }
 
-<why>To reduce allocation overhead and improve performance in hot paths.</why>
+<why>low allocation overhead and fast hot paths.</why>
 
 When designing APIs you should allow users to hold onto reusable resources. Inside your code you should make use of them where available.
 

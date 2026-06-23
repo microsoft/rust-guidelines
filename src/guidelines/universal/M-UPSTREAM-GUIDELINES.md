@@ -2,7 +2,7 @@
 
 ## Follow the upstream guidelines (M-UPSTREAM-GUIDELINES) { #M-UPSTREAM-GUIDELINES }
 
-<why>To avoid repeating mistakes the community has already learned from, and to have a codebase that does not surprise users and contributors.</why>
+<why>a codebase that reflects community lessons and does not surprise users or contributors.</why>
 
 The guidelines in this book complement existing Rust guidelines, in particular:
 

@@ -2,7 +2,7 @@
 
 ## Collections are created with sufficient initial capacity (M-INITIAL-CAPACITY) { #M-INITIAL-CAPACITY }
 
-<why>To avoid performance penalties when creating collections.</why>
+<why>efficient collection creation.</why>
 
 Where the final or approximate size of a collection (`Vec`, `String`, `HashMap`, `HashSet`, etc.) is known at construction time, it should be created via   `with_capacity` rather than `new` or `default`.
 

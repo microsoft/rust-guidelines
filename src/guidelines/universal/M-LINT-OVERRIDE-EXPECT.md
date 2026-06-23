@@ -2,7 +2,7 @@
 
 ## Lint overrides should use `#[expect]` (M-LINT-OVERRIDE-EXPECT) { #M-LINT-OVERRIDE-EXPECT }
 
-<why>To prevent the accumulation of outdated lints.</why>
+<why>a current, tidy lint set.</why>
 
 When overriding project-global lints inside a submodule or item, you should do so via `#[expect]`, not `#[allow]`.
 

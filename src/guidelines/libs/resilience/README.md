@@ -5,7 +5,6 @@
 {{#include M-MOCKABLE-SYSCALLS.md}}
 {{#include M-TEST-UTIL.md}}
 {{#include M-INTEGRATION-TESTS.md}}
-{{#include M-INTEGRATION-TEST-UTILS.md}}
 {{#include M-STRONG-TYPES.md}}
 {{#include M-STRONG-TYPES-GUARD.md}}
 {{#include M-BUILD-RESULT.md}}

@@ -2,7 +2,7 @@
 
 ## Items are only visible through one path (M-SINGLE-ITEM-PATH) { #M-SINGLE-ITEM-PATH }
 
-<why>to avoid confusion and clutter from offering the same type multiple times.</why>
+<why>a single, clutter-free path to each type.</why>
 
 Public items within a crate should be reachable only through one path. For example some `crate::db::Connection` should not also be visible as `crate::Connection`:
 

@@ -2,7 +2,7 @@
 
 ## Macros don't lie about signatures (M-MACROS-DONT-LIE) { #M-MACROS-DONT-LIE }
 
-<why>To avoid confusing users and LLMs.</why>
+<why>clarity for users and LLMs.</why>
 
 Macros must not (make users) misrepresent signatures or the shape of items.
 

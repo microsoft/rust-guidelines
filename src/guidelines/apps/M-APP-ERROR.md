@@ -2,7 +2,7 @@
 
 ## Applications may use Anyhow or derivatives (M-APP-ERROR) { #M-APP-ERROR }
 
-<why>To simplify application-level error handling.</why>
+<why>simple application-level error handling.</why>
 
 > Note, this guideline is primarily a relaxation and clarification of [M-ERRORS-CANONICAL-STRUCTS].
 

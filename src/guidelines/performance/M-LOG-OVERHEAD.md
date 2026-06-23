@@ -2,7 +2,7 @@
 
 ## Library telemetry does not tank performance (M-LOG-OVERHEAD) { #M-LOG-OVERHEAD }
 
-<why>To avoid compounding issues when using telemetry to diagnose problems.</why>
+<why>low-overhead telemetry during diagnosis.</why>
 
 Library code that emits telemetry should ensure that doing so does not meaningfully impact throughput or latency on the hot path.
 

@@ -2,7 +2,7 @@
 
 ## Tests do not assert ground truth (M-TAUTOLOGICAL-TESTS) { #M-TAUTOLOGICAL-TESTS }
 
-<why>to avoid adding noise without value.</why>
+<why>tests that add value, not noise.</why>
 
 Unit tests should verify meaningful behavior instead of repeating foundational definitions.
 

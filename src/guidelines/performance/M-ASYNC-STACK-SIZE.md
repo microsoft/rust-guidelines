@@ -2,7 +2,7 @@
 
 ## Hot `async` functions reduce stack size (M-ASYNC-STACK-SIZE) { #M-ASYNC-STACK-SIZE }
 
-<why>To reduce async stack size and reduce memcpy overhead.</why>
+<why>small async stack sizes and low memcpy overhead.</why>
 
 Functions marked `async` in the hot path should track their future sizes, and take one or more of the following steps to reduce their impact:
 

@@ -2,7 +2,7 @@
 
 ## Avoid statics (M-AVOID-STATICS) { #M-AVOID-STATICS }
 
-<why>To prevent consistency and correctness issues between crate versions.</why>
+<why>consistency and correctness across crate versions.</why>
 
 Libraries should avoid `static` and thread-local items, if a consistent view of the item is relevant for correctness.
 Essentially, any code that would be incorrect if the static _magically_ had another value must not use them. Statics

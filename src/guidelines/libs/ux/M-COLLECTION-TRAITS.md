@@ -2,7 +2,7 @@
 
 ## Collections implement the appropriate iter traits (M-COLLECTION-TRAITS) { #M-COLLECTION-TRAITS }
 
-<why>To ensure collections compose.</why>
+<why>composable collections.</why>
 
 Custom collections should implement the iterator-facing traits the standard library offers.
 

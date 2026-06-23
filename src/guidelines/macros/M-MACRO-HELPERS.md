@@ -2,7 +2,7 @@
 
 ## Third party items come from hidden `_private` module (M-MACRO-HELPERS) { #M-MACRO-HELPERS }
 
-<why>To prevent surprising compilation errors.</why>
+<why>predictable compilation.</why>
 
 When a macro expansion needs to refer to third-party items, the host crate should re-export those from a hidden module, and the macro should emit fully-qualified paths through that module rather than expecting the user's crate to depend on the third-party crate directly.
 

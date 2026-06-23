@@ -2,7 +2,7 @@
 
 ## Builders validate in final `.build()` (M-BUILD-RESULT) { #M-BUILD-RESULT }
 
-<why>To de-noise error builder usage.</why>
+<why>clean builder error handling.</why>
 
 A builder's per-field setters should accept input without failing, final validation should be done by `.build()`.
 

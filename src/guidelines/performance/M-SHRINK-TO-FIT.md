@@ -2,7 +2,7 @@
 
 ## Shrink collections to fit after building (M-SHRINK-TO-FIT) { #M-SHRINK-TO-FIT }
 
-<why>To reduce memory footprint.</why>
+<why>a minimal memory footprint.</why>
 
 Where large, long-lived, growable collections such as `Vec` or `String` were built without an exact size reservation (compare [M-INITIAL-CAPACITY](./#M-INITIAL-CAPACITY)), the resulting collection should be shrunk via `shrink_to_fit` before storing it.
 

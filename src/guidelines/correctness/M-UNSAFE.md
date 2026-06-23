@@ -2,7 +2,7 @@
 
 ## Unsafe needs reason, should be avoided (M-UNSAFE) { #M-UNSAFE }
 
-<why>To prevent undefined behavior, attack surface, and similar 'happy little accidents'.</why>
+<why>memory safety and a minimal attack surface.</why>
 
 You must have a valid reason to use `unsafe`. The only valid reasons are
 

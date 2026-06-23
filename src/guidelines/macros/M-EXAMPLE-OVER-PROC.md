@@ -2,7 +2,7 @@
 
 ## Prefer 'macros by example' over proc macros (M-EXAMPLE-OVER-PROC) { #M-EXAMPLE-OVER-PROC }
 
-<why>For easier macro inspection and faster compilation.</why>
+<why>easy macro inspection and fast compilation.</why>
 
 When a 'macro by example' can do the job, it should be preferred over proc macros.
 

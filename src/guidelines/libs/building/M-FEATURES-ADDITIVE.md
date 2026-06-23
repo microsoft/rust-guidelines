@@ -2,7 +2,7 @@
 
 ## Features are additive (M-FEATURES-ADDITIVE) { #M-FEATURES-ADDITIVE }
 
-<why>To prevent compilation breakage in large and complex projects.</why>
+<why>reliable compilation in large, complex projects.</why>
 
 All library features must be additive, and any combination must work, as long as the feature itself would work on the current platform. This implies:
 

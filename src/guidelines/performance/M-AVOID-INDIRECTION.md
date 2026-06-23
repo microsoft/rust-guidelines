@@ -2,7 +2,7 @@
 
 ## Nested type hierarchies should avoid needless indirection (M-AVOID-INDIRECTION) { #M-AVOID-INDIRECTION }
 
-<why>To avoid costly stalls waiting for DRAM.</why>
+<why>fast, cache-friendly memory access.</why>
 
 Hot types should avoid nested heap indirection and consider lifting hot, cacheable deep fields to improve cache utilization.  
 

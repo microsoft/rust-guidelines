@@ -2,7 +2,7 @@
 
 ## Use the proper type family (M-STRONG-TYPES) { #M-STRONG-TYPES }
 
-<why>To have and maintain the right data and safety variants, at the right time.</why>
+<why>the right data and safety invariants, at the right time.</why>
 
 Use the appropriate `std` type for your task. In general you should use the strongest type available, as early as possible in your API flow. Common offenders are
 

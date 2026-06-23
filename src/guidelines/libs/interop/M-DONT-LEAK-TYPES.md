@@ -2,7 +2,7 @@
 
 ## Don't leak external types (M-DONT-LEAK-TYPES) { #M-DONT-LEAK-TYPES }
 
-<why>To prevent accidental breakage and long-term maintenance cost.</why>
+<why>stable APIs and low long-term maintenance cost.</why>
 
 Where possible, you should prefer `std`<sup>1</sup> types in public APIs over types coming from external crates. Exceptions should be carefully considered.
 

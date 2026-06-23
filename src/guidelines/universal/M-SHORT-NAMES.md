@@ -2,7 +2,7 @@
 
 ## Names of items are short (M-SHORT-NAMES) { #M-SHORT-NAMES }
 
-<why>To make Rust code idiomatic.</why>
+<why>idiomatic code.</why>
 
 The Rust convention that item identifiers are short should be followed:
 

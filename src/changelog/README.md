@@ -2,11 +2,11 @@
 
 # Changelog
 
-This page tracks notable changes to the Pragmatic Rust Guidelines. 
+This page tracks notable changes to the Pragmatic Rust Guidelines.
 
 ## 2026.6
 
-The 2026 update substantially expanded the guidelines, adding 42 new entries spanning
+This update substantially expanded the guidelines, adding 41 new entries spanning
 macros, performance, project layout, FFI, AI-assisted development, and more:
 
 | Guideline | Title |
@@ -28,7 +28,6 @@ macros, performance, project layout, FFI, AI-assisted development, and more:
 | [M-FOREIGN-REEXPORTS](../guidelines/libs/interop/#M-FOREIGN-REEXPORTS) | Items come from their original crate |
 | [M-FROM-ERROR](../guidelines/libs/ux/#M-FROM-ERROR) | Canonical error conversion uses `From`, not `map_err` |
 | [M-INITIAL-CAPACITY](../guidelines/performance/#M-INITIAL-CAPACITY) | Collections are created with sufficient initial capacity |
-| [M-INTEGRATION-TEST-UTILS](../guidelines/libs/resilience/#M-INTEGRATION-TEST-UTILS) | Integration test utilities live in a separate crate |
 | [M-INTEGRATION-TESTS](../guidelines/libs/resilience/#M-INTEGRATION-TESTS) | Integration tests live under `tests/` |
 | [M-LATEST-EDITION](../guidelines/project/#M-LATEST-EDITION) | New crates target latest edition |
 | [M-LOG-NOT-PRINT](../guidelines/libs/resilience/#M-LOG-NOT-PRINT) | Production code uses telemetry, not println |
@@ -54,6 +53,7 @@ macros, performance, project layout, FFI, AI-assisted development, and more:
 | [M-TARGET-CPU](../guidelines/apps/#M-TARGET-CPU) | Applications target highest viable target-cpu |
 | [M-TAUTOLOGICAL-TESTS](../guidelines/ai/#M-TAUTOLOGICAL-TESTS) | Tests do not assert ground truth |
 
+We also removed the guideline-specific versioning.
 
 ## 2025
 

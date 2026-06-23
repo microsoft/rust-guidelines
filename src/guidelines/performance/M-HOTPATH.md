@@ -2,7 +2,7 @@
 
 ## Identify, profile, optimize the hot path early (M-HOTPATH) { #M-HOTPATH }
 
-<why>To end up with high performance code.</why>
+<why>high-performance code.</why>
 
 You should, early in the development process, identify if your crate is performance or COGS relevant. If it is:
 

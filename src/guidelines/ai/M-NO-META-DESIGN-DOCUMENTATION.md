@@ -2,7 +2,7 @@
 
 ## Avoid meta design documentation (M-NO-META-DESIGN-DOCUMENTATION) { #M-NO-META-DESIGN-DOCUMENTATION }
 
-<why>to avoid confusing users with information not relevant to them.</why>
+<why>docs focused on what is relevant to users.</why>
 
 Crate and module documentation must be free of meta design narratives that were only relevant during the creation of a crate. In other words, it is the end-state that is to be documented, not the design journey.
 

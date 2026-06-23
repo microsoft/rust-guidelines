@@ -2,7 +2,7 @@
 
 ## All crates are siblings in one folder (M-CRATES-FLAT-FOLDER) { #M-CRATES-FLAT-FOLDER }
 
-<why>To simplify project navigation and follow established Rust standards.</why>
+<why>simple project navigation and a standard Rust layout.</why>
 
 A repository should contain a single workspace `Cargo.toml`, and all Rust crates should be subordinate to it. All crates should then live in a single, direct subdirectory (e.g., `crates/`) below the workspace (for up to 1-2 dozen of crates), beyond that some folder hierarchy should be used (e.g., `common/`, `server/`, `client/`) to organize siblings.
 

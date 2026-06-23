@@ -2,7 +2,7 @@
 
 ## Macros assume main crate (M-MACRO-MAIN-CRATE) { #M-MACRO-MAIN-CRATE }
 
-<why>To simplify macro logic.</why>
+<why>simple macro logic.</why>
 
 Procedural macros can (and should) assume they are used through their main crate and emit paths for that.
 

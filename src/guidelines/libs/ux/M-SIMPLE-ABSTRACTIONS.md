@@ -2,7 +2,7 @@
 
 ## Abstractions don't visibly nest (M-SIMPLE-ABSTRACTIONS) { #M-SIMPLE-ABSTRACTIONS }
 
-<why>To prevent cognitive load and a bad out of the box UX.</why>
+<why>low cognitive load and a good out-of-the-box UX.</why>
 
 When designing your public types and primary API surface, avoid exposing nested or complex parametrized types to your users.
 

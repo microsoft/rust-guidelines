@@ -2,7 +2,7 @@
 
 ## Panic means 'stop the program' (M-PANIC-IS-STOP) { #M-PANIC-IS-STOP }
 
-<why>To ensure soundness and predictability.</why>
+<why>soundness and predictability.</why>
 
 Panics are not exceptions. Instead, they suggest immediate program termination.
 
