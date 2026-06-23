@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Documentation Has Canonical Sections (M-CANONICAL-DOCS) { #M-CANONICAL-DOCS }
+## Documentation has canonical sections (M-CANONICAL-DOCS) { #M-CANONICAL-DOCS }
 
-<why>To follow established and expected Rust best practices.</why>
-<version>1.0</version>
+<why>established Rust documentation practices.</why>
 
 Public library items must contain the canonical doc sections. The summary sentence must always be present. Extended documentation and examples
 are strongly encouraged. The other sections must be present when applicable.

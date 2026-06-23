@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Use Mimalloc for Apps (M-MIMALLOC-APPS) { #M-MIMALLOC-APPS }
+## Use mimalloc for apps (M-MIMALLOC-APPS) { #M-MIMALLOC-APPS }
 
-<why>To get significant performance for free.</why>
-<version>0.1</version>
+<why>significant performance at no cost.</why>
 
 Applications should set [mimalloc](https://crates.io/crates/mimalloc) as their global allocator. This usually results in notable performance
 increases along allocating hot paths; we have seen up to 25% benchmark improvements.

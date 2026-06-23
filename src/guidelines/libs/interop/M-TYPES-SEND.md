@@ -2,8 +2,7 @@
 
 ## Types are Send (M-TYPES-SEND) { #M-TYPES-SEND }
 
-<why>To enable the use of types in Tokio and behind runtime abstractions</why>
-<version>1.0</version>
+<why>use in Tokio and behind runtime abstractions.</why>
 
 Public types should be `Send` for compatibility reasons:
 

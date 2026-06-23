@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Public Types are Debug (M-PUBLIC-DEBUG) { #M-PUBLIC-DEBUG }
+## Public types are Debug (M-PUBLIC-DEBUG) { #M-PUBLIC-DEBUG }
 
-<why>To simplify debugging and prevent leaking sensitive data.</why>
-<version>1.0</version>
+<why>easy debugging without leaking sensitive data.</why>
 
 All public types exposed by a crate should implement `Debug`. Most types can do so via `#[derive(Debug)]`:
 

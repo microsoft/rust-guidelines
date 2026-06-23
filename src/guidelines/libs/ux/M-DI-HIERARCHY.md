@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Prefer Types over Generics, Generics over Dyn Traits (M-DI-HIERARCHY) { #M-DI-HIERARCHY }
+## Prefer types over generics, generics over dyn traits (M-DI-HIERARCHY) { #M-DI-HIERARCHY }
 
-<why>To prevent patterns that don't compose, and design lock-in.</why>
-<version>0.1</version>
+<why>composable patterns and freedom from design lock-in.</why>
 
 When asking for async dependencies, prefer concrete types over generics, and generics over `dyn Trait`.
 

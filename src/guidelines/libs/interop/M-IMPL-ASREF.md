@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Accept `impl AsRef<>` Where Feasible (M-IMPL-ASREF) { #M-IMPL-ASREF }
+## Accept `impl AsRef<>` where feasible (M-IMPL-ASREF) { #M-IMPL-ASREF }
 
-<why>To give users flexibility calling in with their own types.</why>
-<version>1.0</version>
+<why>flexibility for callers to use their own types.</why>
 
 In **function** signatures, accept `impl AsRef<T>` for types that have a
 [clear reference hierarchy](https://doc.rust-lang.org/stable/std/convert/trait.AsRef.html#implementors), where you

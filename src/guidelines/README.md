@@ -4,6 +4,8 @@
 
 A collection of pragmatic design guidelines helping application and library developers to produce idiomatic Rust that scales.
 
+Version: 2026.6
+
 ## Meta Design Principles
 
 We build on existing high-quality guidelines, most notably the [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/checklist.html),
@@ -32,12 +34,6 @@ issues and we should update it, or it does not apply (and we might update it any
 >
 > Before attempting to work around a guideline, you should understand why it exists and what it tries to safeguard.
 > Likewise, you should not blindly follow a guideline if it becomes apparent that doing so would violate its underlying motivation!
-
-## Guideline Maturity
-
-We expect our guidelines to evolve over time, taking into account lessons learned, and following changes to the
-language. Each guideline therefore comes with a version number, analogous to Rust's semver usage in
-spirit.
 
 ## Submitting New Guidelines
 

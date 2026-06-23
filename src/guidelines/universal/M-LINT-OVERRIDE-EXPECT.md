@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Lint Overrides Should Use `#[expect]` (M-LINT-OVERRIDE-EXPECT) { #M-LINT-OVERRIDE-EXPECT }
+## Lint overrides should use `#[expect]` (M-LINT-OVERRIDE-EXPECT) { #M-LINT-OVERRIDE-EXPECT }
 
-<why>To prevent the accumulation of outdated lints.</why>
-<version>1.0</version>
+<why>a current, tidy lint set.</why>
 
 When overriding project-global lints inside a submodule or item, you should do so via `#[expect]`, not `#[allow]`.
 

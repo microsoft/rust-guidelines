@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Isolate DLL State Between FFI Libraries (M-ISOLATE-DLL-STATE) { #M-ISOLATE-DLL-STATE }
+## Isolate DLL state between FFI libraries (M-ISOLATE-DLL-STATE) { #M-ISOLATE-DLL-STATE }
 
-<why>To prevent data corruption and undefined behavior.</why>
-<version>0.1</version>
+<why>data integrity and defined behavior across DLL boundaries.</why>
 
 When loading multiple Rust-based dynamic libraries (DLLs) within one application, you may only share 'portable' state between these libraries.
 Likewise, when authoring such libraries, you must only accept or provide 'portable' data from foreign DLLs.

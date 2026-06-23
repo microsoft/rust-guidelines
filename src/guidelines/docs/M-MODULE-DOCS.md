@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Has Comprehensive Module Documentation (M-MODULE-DOCS) { #M-MODULE-DOCS }
+## Has comprehensive module documentation (M-MODULE-DOCS) { #M-MODULE-DOCS }
 
-<why>To allow for better API docs navigation.</why>
-<version>1.1</version>
+<why>easy API docs navigation.</why>
 
 Any public library module must have `//!` module documentation, and the first sentence must follow [M-DOC-FIRST-SENTENCE].
 

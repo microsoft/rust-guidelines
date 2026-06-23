@@ -1,14 +1,13 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Panic Means 'Stop the Program' (M-PANIC-IS-STOP) { #M-PANIC-IS-STOP }
+## Panic means 'stop the program' (M-PANIC-IS-STOP) { #M-PANIC-IS-STOP }
 
-<why>To ensure soundness and predictability.</why>
-<version>1.0</version>
+<why>soundness and predictability.</why>
 
 Panics are not exceptions. Instead, they suggest immediate program termination.
 
-Although your code must be [panic-safe](https://doc.rust-lang.org/nomicon/exception-safety.html) (i.e., a survived panic may not lead to
-inconsistent state), invoking a panic means _this program should stop now_. It is not valid to:
+Although your code must be [_minimally_ panic-safe](https://doc.rust-lang.org/nomicon/exception-safety.html) (i.e., a survived panic may not lead to
+undefined state), invoking a panic means _this program should stop now_. It is not valid to:
 
 - use panics to communicate (errors) upstream,
 - use panics to handle self-inflicted error conditions,

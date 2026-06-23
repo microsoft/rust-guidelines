@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Detected Programming Bugs are Panics, Not Errors (M-PANIC-ON-BUG) { #M-PANIC-ON-BUG }
+## Detected programming bugs are panics, not errors (M-PANIC-ON-BUG) { #M-PANIC-ON-BUG }
 
-<why>To avoid impossible error handling code and ensure runtime consistency.</why>
-<version>1.0</version>
+<why>tractable error handling and runtime consistency.</why>
 
 As an extension of [M-PANIC-IS-STOP] above, when an unrecoverable programming error has been
 detected, libraries and applications must panic, i.e., request program termination.
@@ -41,4 +40,4 @@ fn parse_uri(s: &str) -> Result<Uri, ParseError> { };
 > For any user input or calling sequence that would otherwise panic, you should also explore if you can use the type
 > system to avoid panicking code paths altogether.
 
-[M-PANIC-IS-STOP]: ../universal/#M-PANIC-IS-STOP
+[M-PANIC-IS-STOP]: ./#M-PANIC-IS-STOP

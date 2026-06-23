@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Native Escape Hatches (M-ESCAPE-HATCHES) { #M-ESCAPE-HATCHES }
+## Native escape hatches (M-ESCAPE-HATCHES) { #M-ESCAPE-HATCHES }
 
-<why>To allow users to work around unsupported use cases until alternatives are available.</why>
-<version>0.1</version>
+<why>workarounds for unsupported use cases until alternatives exist.</why>
 
 Types wrapping native handles should provide `unsafe` escape hatches. In interop scenarios your users might have gotten a native handle from somewhere
 else, or they might have to pass your wrapped handle over FFI. To enable these use cases you should provide `unsafe` conversion methods.

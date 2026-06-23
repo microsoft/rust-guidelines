@@ -9,14 +9,17 @@
   - [UX](./guidelines/libs/ux/README.md)
   - [Resilience](./guidelines/libs/resilience/README.md)
   - [Building](./guidelines/libs/building/README.md)
+- [Macros](./guidelines/macros/README.md)
 - [Applications](./guidelines/apps/README.md)
 - [FFI](./guidelines/ffi/README.md)
-- [Safety](./guidelines/safety/README.md)
+- [Correctness](./guidelines/correctness/README.md)
 - [Performance](./guidelines/performance/README.md)
+- [Project](./guidelines/project/README.md)
 - [Documentation](./guidelines/docs/README.md)
 - [AI](./guidelines/ai/README.md)
 
 ---
 
 [Agents & LLMs](./agents/README.md)
+[Changelog](./changelog/README.md)
 [FAQ](./FAQ/README.md)

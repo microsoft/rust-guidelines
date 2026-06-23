@@ -1,9 +1,8 @@
 <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## Use Structured Logging with Message Templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
+## Use structured logging with message templates (M-LOG-STRUCTURED) { #M-LOG-STRUCTURED }
 
-<why>To minimize the cost of logging and to improve filtering capabilities.</why>
-<version>0.1</version>
+<why>low-cost logging with strong filtering.</why>
 
 Logging should use structured events with named properties and message templates following
 the [message templates](https://messagetemplates.org/) specification.

@@ -1,9 +1,8 @@
 ﻿<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
-## If in Doubt, Split the Crate (M-SMALLER-CRATES) { #M-SMALLER-CRATES }
+## If in doubt, split the crate (M-SMALLER-CRATES) { #M-SMALLER-CRATES }
 
-<why>To improve compile times and modularity.</why>
-<version>1.0</version>
+<why>fast compile times and good modularity.</why>
 
 You should err on the side of having too many crates rather than too few, as this leads to dramatic compile time improvements—especially
 during the development of these crates—and prevents cyclic component dependencies.
