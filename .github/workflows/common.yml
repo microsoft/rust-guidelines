@@ -50,4 +50,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: book
-        path: book/html
+        path: book
