@@ -11,7 +11,7 @@ Changing the allocator only takes a few lines of code. Add mimalloc to your `Car
 
 ```toml
 [dependencies]
-mimalloc = { version = "0.1" } # Or later version if available
+mimalloc = { version = "0.1", features = ["v3"] } # Or later version if available
 ```
 
 Then use it from your `main.rs`:
