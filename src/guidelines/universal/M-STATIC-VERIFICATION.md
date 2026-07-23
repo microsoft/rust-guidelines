@@ -47,7 +47,7 @@ style = { level = "warn", priority = -1 }
 suspicious = { level = "warn", priority = -1 }
 # nursery = { level = "warn", priority = -1 }  # optional, might cause more false positives
 
-# These lints are from the `restriction` lint group and prevent specific
+# Additional lints are from the `restriction` and `nursery` group that prevent specific
 # constructs being used in source code in order to drive up consistency,
 # quality, and brevity
 allow_attributes_without_reason = "warn"
@@ -71,6 +71,7 @@ unnecessary_safety_comment = "warn"
 unnecessary_safety_doc = "warn"
 unneeded_field_pattern = "warn"
 unused_result_ok = "warn"
+too_long_first_doc_paragraph = "warn"
 
 # May cause issues with structured logging otherwise.
 literal_string_with_formatting_args = "allow"
