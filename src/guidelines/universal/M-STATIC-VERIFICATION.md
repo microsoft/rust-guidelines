@@ -29,6 +29,7 @@ redundant_lifetimes = "warn"
 trivial_numeric_casts = "warn"
 unsafe_op_in_unsafe_fn = "warn"
 unused_lifetimes = "warn"
+missing_docs = "warn"
 ```
 
 ### Clippy Lints
