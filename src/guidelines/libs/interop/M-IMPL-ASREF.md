@@ -23,7 +23,7 @@ fn send_network(x: impl AsRef<[u8]>) {}
 
 // Further analysis needed. In these cases the function wants
 // ownership of some `String` or `Vec<u8>`. If those are
-// "low freqency, low volume" functions `AsRef` has better ergonomics,
+// "low frequency, low volume" functions `AsRef` has better ergonomics,
 // otherwise accepting a `String` or `Vec<u8>` will have better
 // performance.
 fn new_instance(x: impl AsRef<str>) -> HoldsString {}
