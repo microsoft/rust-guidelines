@@ -16,21 +16,7 @@ M-MACRO-VERSION-PIN does not apply to independently consumed macro libraries.
 Example:
 
 ```toml
-# my_crate/Cargo.toml
-[package]
-version = "1.2.3"
-
+# foo/Cargo.toml
 [dependencies]
-my_crate_macros = "=1.2.3"
-
-# my_crate_macros/Cargo.toml
-[package]
-version = "1.2.3"
-
-[dependencies]
-my_crate_macros_impl = "=1.2.3"
-
-# my_crate_macros_impl/Cargo.toml
-[package]
-version = "1.2.3"
+foo_macros = "=1.2.3"
 ```
