@@ -14,3 +14,4 @@ let lookup = HashMap::<UserID, Data>::with_capacity(1024);
 
 // Good, uses faster foldhash for internal keys.
 let lookup = foldhash::HashMap<UserID, Data>::with_capacity(1024);
+```
