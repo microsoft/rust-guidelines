@@ -56,6 +56,7 @@
   - [ ] Prefer 'macros by example' over proc macros ([M-EXAMPLE-OVER-PROC])
   - [ ] Macros don't lie about signatures ([M-MACROS-DONT-LIE])
   - [ ] Macros assume main crate ([M-MACRO-MAIN-CRATE])
+  - [ ] Pin supporting proc macro crates ([M-MACRO-VERSION-PIN])
   - [ ] Third party items come from hidden `_private` module ([M-MACRO-HELPERS])
   - [ ] Proc macros should have separate impl crate incl. tests ([M-PROC-IMPL])
   - [ ] Proc macros don't produce implied or hidden items ([M-PROC-IMPLIED-ITEMS])
@@ -203,6 +204,7 @@
 [M-EXAMPLE-OVER-PROC]: ../macros/#M-EXAMPLE-OVER-PROC
 [M-MACROS-DONT-LIE]: ../macros/#M-MACROS-DONT-LIE
 [M-MACRO-MAIN-CRATE]: ../macros/#M-MACRO-MAIN-CRATE
+[M-MACRO-VERSION-PIN]: ../macros/#M-MACRO-VERSION-PIN
 [M-MACRO-HELPERS]: ../macros/#M-MACRO-HELPERS
 [M-PROC-IMPL]: ../macros/#M-PROC-IMPL
 [M-PROC-IMPLIED-ITEMS]: ../macros/#M-PROC-IMPLIED-ITEMS

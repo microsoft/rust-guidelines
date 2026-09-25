@@ -6,6 +6,7 @@
 {{#include M-EXAMPLE-OVER-PROC.md}}
 {{#include M-MACROS-DONT-LIE.md}}
 {{#include M-MACRO-MAIN-CRATE.md}}
+{{#include M-MACRO-VERSION-PIN.md}}
 {{#include M-MACRO-HELPERS.md}}
 {{#include M-PROC-IMPL.md}}
 {{#include M-PROC-IMPLIED-ITEMS.md}}
