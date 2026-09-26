@@ -30,4 +30,4 @@ fn main() {
 
 Although the example above is slightly contrived, the side effects and interactions of a caught panic can be harder to identify, can have wide blast radius, and be subtle.
 
-Systems where many unrelated tasks are in flight (e.g., server request handlers) can use `catch_unwind` on a per-request basis, but should still promote an application restart after a request handler caused a panic. The purpose of `catch_unwind` here is not to continue execution indefinitely, but to allow all other requests to gracefully finish.
+Systems where many unrelated tasks are in flight (e.g., server request handlers or runtime worker threads) should promote an application restart after an observed panic.
