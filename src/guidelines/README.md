@@ -35,6 +35,13 @@ issues and we should update it, or it does not apply (and we might update it any
 > Before attempting to work around a guideline, you should understand why it exists and what it tries to safeguard.
 > Likewise, you should not blindly follow a guideline if it becomes apparent that doing so would violate its underlying motivation!
 
+## Agent Skill
+
+Use the [Pragmatic Rust Guidelines agent skill](../agents/README.md) to apply these guidelines in your own Rust repository.
+Download the self-contained package and install it in your agent's supported skills directory.
+The skill selects relevant guideline references rather than loading the entire book.
+It includes supporting images and treats draft guidelines as investigation prompts rather than established recommendations.
+
 ## Submitting New Guidelines
 
 Do you have a practical guideline that leads to better safety, COGS or maintainability? We'd love to hear from you!

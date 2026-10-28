@@ -4,6 +4,12 @@
 
 This page tracks notable changes to the Pragmatic Rust Guidelines.
 
+## 2026.10
+
+Added a downloadable [agent skill](../agents/README.md) for use in other Rust repositories.
+Each book publication generates a self-contained ZIP with instructions, category catalogs, guideline Markdown, and supporting images.
+The skill replaces the consolidated `all.txt` download and lets agents read relevant guidelines as needed.
+
 ## 2026.6
 
 This update substantially expanded the guidelines, adding 41 new entries spanning

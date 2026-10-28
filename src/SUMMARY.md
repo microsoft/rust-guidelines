@@ -20,6 +20,6 @@
 
 ---
 
-[Agents & LLMs](./agents/README.md)
+[Agent Skill](./agents/README.md)
 [Changelog](./changelog/README.md)
 [FAQ](./FAQ/README.md)

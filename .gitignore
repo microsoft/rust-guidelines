@@ -3,4 +3,5 @@ output
 .idea
 *.local.json
 .*/**/*.md
-
+/src/agents/pragmatic-rust-guidelines.zip
+__pycache__/

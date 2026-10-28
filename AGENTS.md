@@ -1,6 +1,6 @@
 <!-- markdownlint-disable no-bare-urls -->
 
-# CLAUDE.md
+# AGENTS.md
 
 ## Repository Overview
 
@@ -11,6 +11,8 @@ This repository contains the **Pragmatic Rust Guidelines** - a collection of des
 ```bash
 mdbook serve --open # Previews page
 mdbook build # Builds page
+python3 scripts/build_skill.py # Generates the distributable agent skill
+python3 scripts/test_build_skill.py # Tests skill packaging
 ```
 
 Requires [mdbook](https://github.com/rust-lang/mdBook) to be installed.
@@ -35,12 +37,18 @@ Content with code examples...
 - `src/SUMMARY.md` - mdBook table of contents
 - `src/guidelines/checklist/README.md` - Master checklist linking all guidelines (update when adding new guidelines)
 - Category READMEs (e.g., `src/guidelines/universal/README.md`) - Include guidelines via mdBook's `{{#include}}` directive
+- `skill/SKILL.md` - Template for the skill distributed to other Rust repositories, not installed for this repository
+- `scripts/build_skill.py` - Bundles canonical guidelines, category catalogs, and images into the downloadable skill
 
 ## Adding New Guidelines
 
 1. Create `M-YOUR-GUIDELINE.md` in the appropriate category folder
 2. Add the guideline to the category's `README.md` using `{{#include M-YOUR-GUIDELINE.md}}`
 3. Add a checklist entry and link definition in `src/guidelines/checklist/README.md`
+
+After changing guidelines or the skill template, regenerate the archive with `python3 scripts/build_skill.py`.
+Do not maintain separate authored copies of the reference Markdown.
+The build requires the guideline images to be downloaded through Git LFS.
 
 Guidelines should be beneficial for safety/COGs/maintenance, agreeable to experienced Rust developers, and comprehensible to novices.
 
