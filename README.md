@@ -4,6 +4,12 @@ A collection of pragmatic design guidelines helping developers to produce idioma
 
 👉 [**Pragmatic Rust Guidelines**](https://microsoft.github.io/rust-guidelines)
 
+## Agent Skill
+
+Use the [Pragmatic Rust Guidelines agent skill](src/agents/README.md) in your own Rust repository.
+The downloadable package contains instructions, category catalogs, the guideline Markdown, and its supporting images.
+Agents can read relevant guidelines without loading the entire book or checking out this repository.
+
 ## Development
 
 The guidelines use [mdbook](https://github.com/rust-lang/mdBook). Once installed you can view them locally via
@@ -11,6 +17,16 @@ The guidelines use [mdbook](https://github.com/rust-lang/mdBook). Once installed
 ```bash
 mdbook serve --open
 ```
+
+To build the distributable skill download, run:
+
+```bash
+python3 scripts/build_skill.py
+```
+
+The archive is generated at `src/agents/pragmatic-rust-guidelines.zip` and included in the published book.
+The `skill/` directory contains the packaging template, not a skill installed for this repository.
+The build requires the guideline images to be downloaded through Git LFS.
 
 To submit new guidelines, file a PR. They should be
 
