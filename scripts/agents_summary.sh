@@ -17,13 +17,17 @@ META_FILE="$SRC_DIR/agents/all.meta"
 # Create output directory if it doesn't exist
 mkdir -p "$(dirname "$OUTPUT_FILE")"
 
+# Date the file was generated, in the same format as the footer of the book
+GENERATED_ON=$(date +"%Y-%m-%d")
+
 # Start with header
-cat > "$OUTPUT_FILE" << 'EOF'
+cat > "$OUTPUT_FILE" << EOF
 <!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
 
 # Pragmatic Rust Guidelines
 
 This file contains all guidelines concatenated for easy reference.
+It was last generated on: $GENERATED_ON
 
 ---
 
