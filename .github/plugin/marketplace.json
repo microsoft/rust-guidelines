@@ -1,7 +1,7 @@
 {
   "name": "pragmatic-rust-guidelines",
   "owner": {
-    "name": "Vaiz"
+    "name": "Microsoft"
   },
   "metadata": {
     "description": "Pragmatic Rust Guidelines for GitHub Copilot."

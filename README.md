@@ -9,7 +9,7 @@ A collection of pragmatic design guidelines helping developers to produce idioma
 In GitHub Copilot CLI, add the marketplace and install the skill:
 
 ```shell
-copilot plugin marketplace add Vaiz/rust-guidelines
+copilot plugin marketplace add microsoft/rust-guidelines
 copilot plugin install rust-guidelines@pragmatic-rust-guidelines
 ```
 
