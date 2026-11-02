@@ -10,7 +10,19 @@ This repository is also a Copilot plugin marketplace with one plugin,
 `rust-guidelines`, containing one skill of the same name. The plugin lives in
 [`ai-skill`](ai-skill); the discovery catalog is
 [`.github/plugin/marketplace.json`](.github/plugin/marketplace.json).
-The skill reads the public guidelines on demand, so internet access is required.
+The skill bundles a trigger index and individual `rules/<ID>.md` files, loading
+only the guidelines applicable to the current task. It works offline after
+installation; the rules do not need to be fetched from the web.
+
+The skill is adapted from rust-dev's
+[`rust-core-guidelines`](https://github.com/agency-microsoft/playground/tree/0dca309355d50ee610b1b3c45f283019592b40d1/plugins/rust-dev/skills/rust-core-guidelines):
+the index and all 144 rule files are retained, the skill is renamed to
+`rust-guidelines`, and the dependency on the separate `rust-task-docs` skill is
+removed. The bundled rules cover the Pragmatic Rust Guidelines and the Rust API
+Guidelines. Their original
+[license notices](ai-skill/skills/rust-guidelines/licenses) are included.
+The rule files are a verbatim snapshot; their local Markdown lint configuration
+preserves upstream formatting without relaxing linting for the skill entry point.
 
 ### Copilot CLI
 

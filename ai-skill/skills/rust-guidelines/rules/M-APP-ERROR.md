@@ -1,0 +1,28 @@
+## Applications may use Anyhow or derivatives (M-APP-ERROR)
+
+Why: simple application-level error handling.
+
+> Note, this guideline is primarily a relaxation and clarification of [M-ERRORS-CANONICAL-STRUCTS].
+
+Applications, and crates in your own repository exclusively used from your application, may use [ohno::AppError](https://docs.rs/crate/ohno/latest#structs), [anyhow](https://github.com/dtolnay/anyhow),
+[eyre](https://github.com/eyre-rs/eyre) or similar application-level error crates instead of implementing their own types.
+
+For example, in your application crates you may just re-export and use eyre's common `Result` type, which should be able to automatically
+handle all third party library errors, in particular the ones following
+[M-ERRORS-CANONICAL-STRUCTS].
+
+```
+use ohno::AppError;
+
+fn start_application() -> Result<(), AppError> {
+    start_server()?;
+    Ok(())
+}
+```
+
+Once you selected your application error crate you should switch all application-level errors to that type, and you should not mix multiple
+application-level error types.
+
+Libraries (crates used by more than one crate) should always follow [M-ERRORS-CANONICAL-STRUCTS] instead.
+
+[M-ERRORS-CANONICAL-STRUCTS]: M-ERRORS-CANONICAL-STRUCTS.md
