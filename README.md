@@ -4,6 +4,18 @@ A collection of pragmatic design guidelines helping developers to produce idioma
 
 👉 [**Pragmatic Rust Guidelines**](https://microsoft.github.io/rust-guidelines)
 
+## Use with GitHub Copilot
+
+In GitHub Copilot CLI, add the marketplace and install the skill:
+
+```shell
+copilot plugin marketplace add microsoft/rust-guidelines
+copilot plugin install rust-guidelines@pragmatic-rust-guidelines
+```
+
+Start a new Copilot session and run `/skills list` to confirm that
+`rust-guidelines` is available.
+
 ## Development
 
 The guidelines use [mdbook](https://github.com/rust-lang/mdBook). Once installed you can view them locally via
