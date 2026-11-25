@@ -50,7 +50,7 @@ impl Library {
 }
 ```
 
-Behind the scenes, `LibraryCore` is a non-public enum, similar to [M-RUNTIME-ABSTRACTED], that either dispatches
+Behind the scenes, `LibraryCore` is a non-public enum that either dispatches
 calls to the respective sys call, or to an mocking controller.
 
 ```rust, ignore
@@ -96,7 +96,7 @@ mod mock {
 }
 ```
 
-Runtime-aware libraries already build on top of the [M-RUNTIME-ABSTRACTED] pattern should extend their runtime enum instead:
+Runtime-aware libraries that already dispatch through a runtime enum should extend that enum instead:
 
 ```rust, ignore
 enum Runtime {
@@ -121,5 +121,3 @@ impl Library {
     pub fn new_mocked_bad(&mut MockCtrl) -> Self { ... } // prone to misuse
 }
 ```
-
-[M-RUNTIME-ABSTRACTED]: ../ux/#M-RUNTIME-ABSTRACTED
