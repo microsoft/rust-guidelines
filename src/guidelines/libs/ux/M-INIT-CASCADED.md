@@ -20,7 +20,7 @@ also check if [C-NEWTYPE] is applicable:
 ```rust, ignore
 # struct Deposit;
 # struct Account;
-# struct Currency
+# struct Currency;
 impl Deposit {
     // Better, signature cleaner
     pub fn new(account: Account, amount: Currency) -> Self { }

@@ -151,7 +151,7 @@
 [M-INTEGRATION-TESTS]: ../libs/resilience/#M-INTEGRATION-TESTS
 [M-AVOID-STATICS]: ../libs/resilience/#M-AVOID-STATICS
 [M-OOBE]: ../libs/building/#M-OOBE
-[M-SYS-CRATES]: ../libs/resilience/#M-SYS-CRATES
+[M-SYS-CRATES]: ../libs/building/#M-SYS-CRATES
 [M-FEATURES-ADDITIVE]: ../libs/building/#M-FEATURES-ADDITIVE
 
 <!-- Apps -->

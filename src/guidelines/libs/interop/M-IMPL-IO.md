@@ -27,6 +27,7 @@ fn parse_data(data: impl std::io::Read) {}
 Synchronous functions should use [`std::io::Read`](https://doc.rust-lang.org/std/io/trait.Read.html) and
 [`std::io::Write`](https://doc.rust-lang.org/std/io/trait.Write.html). Asynchronous _functions_ targeting more than one runtime should use
 [`futures::io::AsyncRead`](https://docs.rs/futures/latest/futures/io/trait.AsyncRead.html) and similar.
-_Types_ that need to perform runtime-specific, continuous I/O should follow [M-RUNTIME-ABSTRACTED] instead.
+_Types_ that need to perform runtime-specific, continuous I/O should follow the runtime-dispatch enum pattern illustrated in
+[M-MOCKABLE-SYSCALLS] instead.
 
-[M-RUNTIME-ABSTRACTED]: ./#M-RUNTIME-ABSTRACTED
+[M-MOCKABLE-SYSCALLS]: ../resilience/#M-MOCKABLE-SYSCALLS

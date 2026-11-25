@@ -10,7 +10,7 @@ Your future might be executed in a runtime that cannot work around blocking or l
 considered bad design and cause runtime overhead. If your complex task performs I/O regularly it will simply utilize these await points to preempt itself:
 
 ```rust, ignore
-async fn process_items(items: &[items]) {
+async fn process_items(items: &[Item]) {
     // Keep processing items, the runtime will preempt you automatically.
     for i in items {
         read_item(i).await;
@@ -22,7 +22,7 @@ If your task performs long-running CPU operations without intermixed I/O, it sho
 
 ```rust, ignore
 async fn process_items(zip_file: File) {
-    let items = zip_file.read().async;
+    let items = zip_file.read().await;
     for i in items {
         decompress(i);
         yield_now().await;
