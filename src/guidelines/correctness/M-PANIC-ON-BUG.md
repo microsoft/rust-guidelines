@@ -30,7 +30,7 @@ fn divide_by_fast(x: u32, y: u32) -> u32 { ... }
 
 // Here, passing an invalid URI is not a contract violation.
 // Since parsing is inherently fallible, a Result must be returned.
-fn parse_uri(s: &str) -> Result<Uri, ParseError> { };
+fn parse_uri(s: &str) -> Result<Uri, ParseError> { ... }
 
 ```
 

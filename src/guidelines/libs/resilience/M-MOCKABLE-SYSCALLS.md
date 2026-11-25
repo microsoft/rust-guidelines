@@ -65,10 +65,11 @@ enum LibraryCore {
 
 impl LibraryCore {
     // Some function you'd forward to the operating system.
-    fn random_u32(&self) {
+    fn random_u32(&self) -> u32 {
         match self {
-            Self::Native => unsafe { os_random_u32() }
-            Self::Mocked(m) => m.random_u32()
+            Self::Native => unsafe { os_random_u32() },
+            #[cfg(feature = "test-util")]
+            Self::Mocked(m) => m.random_u32(),
         }
     }
 }
@@ -86,7 +87,7 @@ mod mock {
     // `MockCtrlInner` below.
     impl MockCtrl {
         pub fn set_next_u32(&self, x: u32) { ... }
-        pub fn random_u32(&self) { ... }
+        pub fn random_u32(&self) -> u32 { ... }
     }
 
     // Contains actual logic, e.g., the next random number we should return.
@@ -104,7 +105,7 @@ enum Runtime {
     Tokio(tokio::Tokio),
 
     #[cfg(feature="smol")]
-    Smol(smol::Smol)
+    Smol(smol::Smol),
 
     #[cfg(feature="test-util")]
     Mock(mock::MockCtrl)
@@ -118,6 +119,6 @@ instances shared a single controller:
 ```rust, ignore
 impl Library {
     pub fn new_mocked() -> (Self, MockCtrl) { ... } // good
-    pub fn new_mocked_bad(&mut MockCtrl) -> Self { ... } // prone to misuse
+    pub fn new_mocked_bad(mock: &mut MockCtrl) -> Self { ... } // prone to misuse
 }
 ```

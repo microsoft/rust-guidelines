@@ -14,13 +14,13 @@ You should prefer named constants over inline values.
 
 ```rust, ignore
 // Bad: it's relatively obvious that this waits for a day, but not why
-wait_timeout(60 * 60 * 24).await // Wait at most a day
+wait_timeout(60 * 60 * 24).await; // Wait at most a day
 
 // Better
-wait_timeout(60 * 60 * 24).await // Large enough value to ensure the server
-                                 // can finish. Setting this too low might
-                                 // make us abort a valid request. Based on
-                                 // `api.foo.com` timeout policies.
+wait_timeout(60 * 60 * 24).await; // Large enough value to ensure the server
+                                  // can finish. Setting this too low might
+                                  // make us abort a valid request. Based on
+                                  // `api.foo.com` timeout policies.
 
 // Best
 

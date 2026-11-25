@@ -13,5 +13,5 @@ Rust's default hasher is reasonably DoS safe on untrusted user input, but this c
 let lookup = HashMap::<UserID, Data>::with_capacity(1024);
 
 // Good, uses faster foldhash for internal keys.
-let lookup = foldhash::HashMap<UserID, Data>::with_capacity(1024);
+let lookup = foldhash::HashMap::<UserID, Data>::with_capacity(1024);
 ```

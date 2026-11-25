@@ -10,7 +10,7 @@ Any public library module must have `//!` module documentation, and the first se
 pub mod ffi {
     //! Contains FFI abstractions.
 
-    pub struct String {};
+    pub struct String {}
 }
 ```
 
