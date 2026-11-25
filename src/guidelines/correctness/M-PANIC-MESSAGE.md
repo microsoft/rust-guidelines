@@ -6,6 +6,8 @@
 
 When code panics intentionally (via `panic!`, `assert!`, `unreachable!`, `todo!`, or similar), a message must be present to clearly state what went wrong and, where applicable, include relevant values.
 
+Use `expect("reason")` instead of `unwrap()` so the panic message explains why an `Option` should contain a value or a `Result` should succeed.
+
 ```rust,ignore
 // Bad, the panic gives the developer little to act on.
 assert!(buffer.len() >= HEADER_SIZE);
