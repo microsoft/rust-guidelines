@@ -1,0 +1,16 @@
+{
+  "name": "pragmatic-rust-guidelines",
+  "owner": {
+    "name": "Microsoft"
+  },
+  "metadata": {
+    "description": "Pragmatic Rust Guidelines for GitHub Copilot."
+  },
+  "plugins": [
+    {
+      "name": "rust-guidelines",
+      "description": "Apply the Pragmatic Rust Guidelines when writing or reviewing Rust.",
+      "source": "./ai-skill"
+    }
+  ]
+}

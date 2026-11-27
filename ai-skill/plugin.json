@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rust-guidelines",
+  "version": "0.1.0",
+  "description": "Apply the Pragmatic Rust Guidelines when writing or reviewing Rust.",
+  "homepage": "https://microsoft.github.io/rust-guidelines",
+  "repository": "https://github.com/microsoft/rust-guidelines",
+  "license": "MIT",
+  "keywords": ["rust", "guidelines", "code-review"]
+}
