@@ -22,6 +22,6 @@ for m in messages {
 }
 
 // Best: If possible, let telemetry users reconstruct what happened offline 
-log(("Processing message batch", messages.batch_id()))
+log(("Processing message batch", messages.batch_id()));
 for m in messages { ... }
 ```

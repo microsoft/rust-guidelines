@@ -35,7 +35,7 @@ _on top_ of your inherent functions. Each trait should be relatively narrow, e.g
 trait is needed it should be made a subtrait, e.g., `trait DataAccess: StoreObject + LoadObject {}`.
 
 Code working with these traits should ideally accept them as generic type parameters as long as their use does not contribute to significant nesting
-(compare [M-ABSTRACTIONS-DONT-NEST]).
+(compare [M-SIMPLE-ABSTRACTIONS]).
 
 ```rust,ignore
 // Good, generic does not have infectious impact, uses only most specific trait
@@ -84,4 +84,4 @@ async fn read_database(x: &DataAccess) { ... }
 
 [M-AVOID-WRAPPERS]: ./#M-AVOID-WRAPPERS
 [M-MOCKABLE-SYSCALLS]: ../resilience/#M-MOCKABLE-SYSCALLS
-[M-ABSTRACTIONS-DONT-NEST]: ./#M-ABSTRACTIONS-DONT-NEST
+[M-SIMPLE-ABSTRACTIONS]: ./#M-SIMPLE-ABSTRACTIONS

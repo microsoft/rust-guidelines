@@ -32,6 +32,7 @@ impl ServiceA {
         // If we only need to access `common` from `new` we don't have
         // to store it. Otherwise, make a clone we store in `Self`.
         let common = common.clone();
+        Self { common }
     }
 }
 ```
@@ -43,13 +44,13 @@ Under the hood this `Clone` should **not** create a fat copy of the entire servi
 struct ServiceCommonInner {}
 
 #[derive(Clone)]
-pub ServiceCommon {
+pub struct ServiceCommon {
     inner: Arc<ServiceCommonInner>
 }
 
 impl ServiceCommon {
-    pub fn new() {
-        Self { inner: Arc::new(ServiceCommonInner::new()) }
+    pub fn new() -> Self {
+        Self { inner: Arc::new(ServiceCommonInner {}) }
     }
 
     // Method forwards ...

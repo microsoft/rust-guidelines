@@ -23,14 +23,14 @@ impl Message {
 A proper separation of concerns might collapse construction and transmission into a single FFI entry point in `foo-ffi`:
 
 ```rust,ignore
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn transmit_message(
     destination: *const [u8; 8],
     data: *const u8,
     data_len: usize,
 ) -> u8 {
-    let data = std::slice::from_raw_parts(data, data_len).to_vec();
-    match Message::new(*destination, data).transmit() {
+    let data = unsafe { std::slice::from_raw_parts(data, data_len) }.to_vec();
+    match Message::new(unsafe { *destination }, data).transmit() {
         Ok(()) => 0,
         Err(_) => 1,
     }

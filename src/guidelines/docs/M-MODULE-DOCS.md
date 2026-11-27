@@ -4,13 +4,13 @@
 
 <why>easy API docs navigation.</why>
 
-Any public library module must have `//!` module documentation, and the first sentence must follow [M-DOC-FIRST-SENTENCE].
+Any public library module must have `//!` module documentation, and the first sentence must follow [M-FIRST-DOC-SENTENCE].
 
 ```rust,edition2021,ignore
 pub mod ffi {
     //! Contains FFI abstractions.
 
-    pub struct String {};
+    pub struct String {}
 }
 ```
 
@@ -32,4 +32,4 @@ The rest of the module documentation should be comprehensive, i.e., cover the mo
 This does not mean every module should contain all of these items. But if there is something to say about the interaction of the contained types,
 their module documentation is the right place.
 
-[M-DOC-FIRST-SENTENCE]: ./#M-DOC-FIRST-SENTENCE
+[M-FIRST-DOC-SENTENCE]: ./#M-FIRST-DOC-SENTENCE

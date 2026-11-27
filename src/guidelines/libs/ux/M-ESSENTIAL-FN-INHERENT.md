@@ -39,7 +39,7 @@ impl HttpClient {
 // Forward calls to inherent impls. `HttpClient` can be used
 impl Download for HttpClient {
     fn download_file(&self, url: impl AsRef<str>) {
-        Self::download_file(self, url)
+        self.download_file(url)
     }
 }
 ```

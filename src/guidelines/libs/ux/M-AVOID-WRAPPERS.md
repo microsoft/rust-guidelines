@@ -4,7 +4,7 @@
 
 <why>low cognitive load and ergonomic APIs.</why>
 
-As a specialization of [M-ABSTRACTIONS-DONT-NEST], generic wrappers and smart pointers like
+As a specialization of [M-SIMPLE-ABSTRACTIONS], generic wrappers and smart pointers like
 `Rc<T>`, `Arc<T>`, `Box<T>`, or `RefCell<T>` should be avoided in public APIs.
 
 From a user perspective these are mostly implementation details, and introduce infectious complexity that users have to
@@ -28,4 +28,4 @@ Smart pointers in APIs are acceptable when:
 
 - The smart pointer, based on benchmarks, significantly improves performance and the complexity is justified.
 
-[M-ABSTRACTIONS-DONT-NEST]: ./#M-ABSTRACTIONS-DONT-NEST
+[M-SIMPLE-ABSTRACTIONS]: ./#M-SIMPLE-ABSTRACTIONS
